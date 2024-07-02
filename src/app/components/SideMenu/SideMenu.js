@@ -6,37 +6,52 @@ import { useSideMenuStore } from '../../stores/sideMenuStore';
 import CheckWindowWidth from '../../hooks/useWindowWidth';
 import { useLanguageStore } from '../../stores/languageStore';
 import content from '../../content.json';
+import { useEffect } from 'react';
 
 export default function SideMenu() {
   const menuActive = useSideMenuStore((state) => state.menuActive);
-  const toggleActive = useSideMenuStore((state) => state.toggleActive);
+  const menuClosing = useSideMenuStore((state) => state.menuClosing);
+  const setMenuActive = useSideMenuStore((state) => state.setMenuActive);
+  const setMenuClosing = useSideMenuStore((state) => state.setMenuClosing);
   const language = useLanguageStore((state) => state.language);
   const { screenWidth } = CheckWindowWidth();
-  
-  if(menuActive) {
-    const body = document.querySelector('body');
-    body.style.overflow = 'hidden';
 
-    return (
-      <>
-        {menuActive && screenWidth >= 1366 && <div className="overlay"></div>}
-        <nav className={`side-menu ${screenWidth < 1366 ? '' : 'side-menu-lg'}`}>
+  useEffect(() => {
+    if (menuActive) {
+      document.body.style.overflow = 'hidden';
+    } else if (!menuClosing) {
+      document.body.style.overflow = 'auto';
+    }
+  }, [menuActive, menuClosing]);
+
+  const handleClose = () => {
+    setMenuClosing(true);
+    setTimeout(() => {
+      setMenuActive(false);
+      setMenuClosing(false);
+    }, 500);
+  };
+
+  return (
+    <>
+      {menuActive && screenWidth >= 1366 && <div className="overlay" onClick={handleClose}></div>}
+      {(menuActive || menuClosing) && (
+        <nav
+          className={`side-menu ${screenWidth < 1366 ? '' : 'side-menu-lg'} ${menuClosing ? 'closing' : ''}`}
+        >
           <ul>
-            <Link href={'/'} onClick={toggleActive}>
+            <Link href={'/'} onClick={handleClose}>
               <li>{content[language].SideMenu.powerElectronics}</li>
             </Link>
-            <Link href={'/'} onClick={toggleActive}>
+            <Link href={'/'} onClick={handleClose}>
               <li>{content[language].SideMenu.embeddedSystems}</li>
             </Link>
-            <Link href={'/'} onClick={toggleActive}>
+            <Link href={'/'} onClick={handleClose}>
               <li>{content[language].SideMenu.contact}</li>
             </Link>
           </ul>
         </nav>
-      </>
-    )
-  } else {
-    const body = document.querySelector('body');
-    body.style.overflow = 'auto';
-  }
+      )}
+    </>
+  );
 }
