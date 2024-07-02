@@ -1,0 +1,22 @@
+{
+  "EN": {
+    "SideMenu": {
+      "powerElectronics": "Power Electronics",
+      "embeddedSystems": "Embedded Systems",
+      "contact": "Contact"
+    },
+    "HomePage": {
+      "title": "Designing today the products of tomorrow"
+    }
+  },
+  "ES": {
+    "SideMenu": {
+      "powerElectronics": "Electrónica de potencia",
+      "embeddedSystems": "Sistemas embebidos",
+      "contact": "Contacto"
+    },
+    "HomePage": {
+      "title": "Diseñando hoy los productos del mañana"
+    }
+  }
+}

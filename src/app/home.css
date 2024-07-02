@@ -1,0 +1,36 @@
+.home-section {
+	height: 100dvh;
+}
+
+.home-first-section {
+	height: calc(100dvh - 60px);
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	position: relative;
+}
+
+.home-title {
+	padding: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+	color: var(--dark-green);
+}
+
+.border-zoom-image {
+	width: 100%;
+	height: -webkit-fill-available;
+	position: relative;
+	z-index: -1;
+}
+
+.border-image {
+	object-fit: cover;
+}
+
+@media (min-width: 1366px) {
+	.border-zoom-image {
+		position: absolute;
+	}
+}
