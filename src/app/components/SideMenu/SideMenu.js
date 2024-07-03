@@ -19,7 +19,7 @@ export default function SideMenu() {
   useEffect(() => {
     if (menuActive) {
       document.body.style.overflow = 'hidden';
-    } else if (!menuClosing) {
+    } else {
       document.body.style.overflow = 'auto';
     }
   }, [menuActive, menuClosing]);
@@ -40,6 +40,9 @@ export default function SideMenu() {
           className={`side-menu ${screenWidth < 1366 ? '' : 'side-menu-lg'} ${menuClosing ? 'closing' : ''}`}
         >
           <ul>
+            <Link href={'/'} onClick={handleClose}>
+              <li>{content[language].SideMenu.home}</li>
+            </Link>
             <Link href={'/'} onClick={handleClose}>
               <li>{content[language].SideMenu.powerElectronics}</li>
             </Link>
