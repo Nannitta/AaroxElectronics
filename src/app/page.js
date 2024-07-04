@@ -13,6 +13,10 @@ import pcb1 from './assets/images/homePage/pcb1.webp';
 import pcb2 from './assets/images/homePage/pcb2.webp';
 import pcb3 from './assets/images/homePage/pcb3.webp';
 import pcb4 from './assets/images/homePage/pcb4.webp';
+import Link from 'next/link';
+import lineGreen from './assets/images/homePage/secondSection/greenLine.svg';
+import lineGreenLarge from './assets/images/homePage/secondSection/greenLineLarge.svg';
+import limeArrow from './assets/images/homePage/secondSection/limeArrowRight.svg';
 import './home.css';
 
 export default function Home() {
@@ -88,16 +92,42 @@ export default function Home() {
         </div>
         <div className='our-approach'>
           <p>{content[language].HomePage.stay}</p>
-          <button>
-            {content[language].HomePage.textButton}
-            <Image src={arrowRight} width={24} height={24} alt='Right arrow' className='bounce'/>
-          </button>
+          <Link href={'/'}>
+            <button>
+              {content[language].HomePage.textButton}
+              <Image src={arrowRight} width={24} height={24} alt='Right arrow' className='bounce'/>
+            </button>
+          </Link>
         </div>
       </section>
-      <section className='home-section'>
-        <h2>Navegación</h2>
+      <section className='home-second-section'>
+        <div className='line-container'>
+          <Image src={screenWidth >= 1366 ? lineGreenLarge : lineGreen} alt='Border Green' fill={true} className='green-line'/>
+        </div>
+        <div className='article-container'>
+          <article className='first-article'>
+            <h2>{content[language].HomePage.secondSection.title1}</h2>
+            <p>{content[language].HomePage.secondSection.def1}</p>
+            <Link href={'/'}>
+              <button>
+                {content[language].HomePage.secondSection.textButton1}
+                <Image src={limeArrow} width={16} height={16} alt='Right arrow' className='bounce'/>
+              </button>
+            </Link>
+          </article>
+          <article className='second-article'>
+            <h2>{content[language].HomePage.secondSection.title2}</h2>
+            <p>{content[language].HomePage.secondSection.def2}</p>
+            <Link href={'/'}>
+              <button>
+                {content[language].HomePage.secondSection.textButton2}
+                <Image src={limeArrow} width={16} height={16} alt='Right arrow' className='bounce'/>
+              </button>
+            </Link>
+          </article>
+        </div>
       </section>
-      <section className='home-section'>
+      <section className='home-third-section'>
         <h2>Secciones zoom</h2>
       </section>
     </main>
