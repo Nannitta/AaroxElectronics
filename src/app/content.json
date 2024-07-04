@@ -30,7 +30,15 @@
     "HomePage": {
       "title": "Diseñando hoy los productos del mañana",
       "stay": "VISITA",
-      "textButton": "Nuestro enfoque"
+      "textButton": "Nuestro enfoque",
+      "secondSection": {
+        "title1": "Electrónica de potencia",
+        "def1": "Diseñando sistemas de conversión de energía que hacen al planeta más verde",
+        "textButton1": "Electrónica de potencia",
+        "title2": "Sistemas Embebidos",
+        "def2": "Porque no es posible generar energía sin control",
+        "textButton2": "Sistemas embebidos"
+      }
     }
   }
 }
