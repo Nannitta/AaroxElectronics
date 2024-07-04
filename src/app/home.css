@@ -33,6 +33,7 @@
 .border-image {
 	object-fit: cover;
 	object-position: left;
+	z-index: 1;
 }
 
 .pcb-container {
@@ -43,7 +44,6 @@
 
 .pcb {
 	object-fit: cover;
-	z-index: -1;
 }
 
 .pcb-container .pcb.active {
