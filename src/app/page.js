@@ -28,7 +28,7 @@ export default function Home() {
       pcb.classList.add('zoom');
       setTimeout(() => {
         pcb.classList.remove('zoom');
-      }, 10000);
+      }, 9500);
     };
 
     animateZoom();
