@@ -1,5 +1,6 @@
 'use client';
 
+import { useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import content from './content.json';
 import Logo from './assets/images/logo.webp';
@@ -13,34 +14,32 @@ import pcb2 from './assets/images/homePage/pcb2.webp';
 import pcb3 from './assets/images/homePage/pcb3.webp';
 import pcb4 from './assets/images/homePage/pcb4.webp';
 import './home.css';
-import { useEffect, useState } from 'react';
 
 export default function Home() {
   const { screenWidth } = CheckWindowWidth();
   const language = useLanguageStore((state) => state.language);
-  const images = [pcb1, pcb2, pcb3, pcb4];
-  const [img, setImg] = useState(images[0]);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const pcbsRef = useRef([]);
 
   useEffect(() => {
-    const pcb = document.querySelector('.pcb');
-
     const animateZoom = () => {
-      pcb.classList.add('zoom');
-      setTimeout(() => {
-        pcb.classList.remove('zoom');
-      }, 9500);
+      const pcb = pcbsRef.current[activeIndex];
+      if (pcb) {
+        pcb.classList.add('zoom');
+        setTimeout(() => {
+          pcb.classList.remove('zoom');
+        }, 9500);
+      }
     };
 
     animateZoom();
-    const carousel = setInterval(() => {
-      const currentIndex = images.indexOf(img);
-      const nextIndex = (currentIndex + 1) % images.length;
-      setImg(images[nextIndex]);
-      animateZoom();
+
+    const interval = setInterval(() => {
+      setActiveIndex((prevIndex) => (prevIndex + 1) % 4);
     }, 10000);
 
-    return () => clearInterval(carousel);
-  });
+    return () => clearInterval(interval);
+  }, [activeIndex]);
 
   return (
     <main>
@@ -50,13 +49,41 @@ export default function Home() {
             src={Logo} 
             alt='Logo Aarox Electronics' 
             width={screenWidth < 768 ? 150 : 250} 
-            height={screenWidth < 768 ? 46 : 76}/>
+            height={screenWidth < 768 ? 46 : 76} 
+          />
           <h2>{content[language].HomePage.title}</h2>
         </div>
         <div className='border-zoom-image'>
           <Image src={screenWidth >= 1366 ? borderLarge : border} alt='Image container border' fill={true} className='border-image'/>
           <div className='pcb-container'>
-            <Image src={img} alt='PCB' fill={true} className='pcb'/>
+            <Image 
+              src={pcb1} 
+              alt='PCB 1' 
+              fill={true} 
+              className={`pcb ${activeIndex === 0 ? 'active' : 'inactive'}`} 
+              ref={(el) => (pcbsRef.current[0] = el)} 
+            />
+            <Image 
+              src={pcb2} 
+              alt='PCB 2' 
+              fill={true} 
+              className={`pcb ${activeIndex === 1 ? 'active' : 'inactive'}`} 
+              ref={(el) => (pcbsRef.current[1] = el)} 
+            />
+            <Image 
+              src={pcb3} 
+              alt='PCB 3' 
+              fill={true} 
+              className={`pcb ${activeIndex === 2 ? 'active' : 'inactive'}`} 
+              ref={(el) => (pcbsRef.current[2] = el)} 
+            />
+            <Image 
+              src={pcb4} 
+              alt='PCB 4' 
+              fill={true} 
+              className={`pcb ${activeIndex === 3 ? 'active' : 'inactive'}`} 
+              ref={(el) => (pcbsRef.current[3] = el)} 
+            />
           </div>
         </div>
         <div className='our-approach'>
@@ -76,3 +103,4 @@ export default function Home() {
     </main>
   );
 }
+
