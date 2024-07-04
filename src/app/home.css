@@ -24,7 +24,7 @@
 
 .border-zoom-image {
 	width: 100%;
-	height: -webkit-fill-available;
+	height: 100%;
 	position: relative;
 	z-index: -1;
 	clip-path: url("./assets/images/homePage/borderLarge.svg");
@@ -37,9 +37,23 @@
 
 .pcb-container {
 	position: relative;
-	height: 99.8%;
-	margin-bottom: 2px;
+	height: 100%;
 	overflow: hidden;
+}
+
+.pcb {
+	object-fit: cover;
+	z-index: -1;
+}
+
+.pcb-container .pcb.active {
+	opacity: 1;
+	animation: fadeIn 1s forwards, zoomAnimation 9.5s ease-in-out forwards;
+}
+
+.pcb-container .pcb.inactive {
+	opacity: 0;
+	animation: fadeOut 1s forwards;
 }
 
 .our-approach {
@@ -82,18 +96,6 @@
 	transform-origin: 50% 50%;
 }
 
-.pcb {
-	object-fit: cover;
-	position: absolute;
-	margin-top: 1px;
-	z-index: -1;
-	opacity: 0.3;
-}
-
-.zoom {
-	animation: zoomAnimation 9.5s ease-in-out forwards;
-}
-
 @keyframes bounce {
 	0%,
 	20%,
@@ -111,15 +113,30 @@
 @keyframes zoomAnimation {
 	0% {
 		transform: scale(1);
-		opacity: 0.3;
 	}
 	50% {
 		transform: scale(1.1);
-		opacity: 1;
 	}
 	100% {
 		transform: scale(1);
-		opacity: 0.3;
+	}
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
 	}
 }
 
@@ -134,10 +151,6 @@
 
 	.home-title h2 {
 		font-size: 2.5rem;
-	}
-
-	.pcb-container {
-		width: 99.9%;
 	}
 
 	.our-approach {
@@ -157,7 +170,6 @@
 @media (min-width: 1366px) {
 	.border-zoom-image {
 		position: absolute;
-		background-position: calc(100% - 2px) calc(100% - 1px);
 		clip-path: url("./assets/images/homePage/border.svg");
 	}
 
@@ -167,10 +179,6 @@
 
 	.home-title h2 {
 		width: 600px;
-	}
-
-	.pcb-container {
-		height: 99.7%;
 	}
 
 	.our-approach {
@@ -183,14 +191,6 @@
 	.home-title h2 {
 		width: 816px;
 		font-size: 3.5rem;
-	}
-
-	.border-zoom-image {
-		background-position: calc(100% - 1px);
-	}
-
-	.pcb-container {
-		height: 100%;
 	}
 
 	.our-approach {
