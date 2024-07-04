@@ -9,7 +9,15 @@
     "HomePage": {
       "title": "Designing today the products of tomorrow",
       "stay": "STAY",
-      "textButton": "Our approach"
+      "textButton": "Our approach",
+      "secondSection": {
+        "title1": "Power Electronics",
+        "def1": "Designing energy conversion systems that make the planet greener",
+        "textButton1": "Power Electronics",
+        "title2": "Embedded Systems",
+        "def2": "Because it is not possible to make power without control",
+        "textButton2": "Embedded Systems"
+      }
     }
   },
   "ES": {
