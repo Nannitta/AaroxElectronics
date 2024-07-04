@@ -2,10 +2,11 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 1rem;
-	position: sticky;
+	position: fixed;
 	z-index: 2;
 	top: 0;
 	background-color: var(--background);
+	width: 100%;
 }
 
 .language-menu-container {
