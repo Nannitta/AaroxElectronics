@@ -10,9 +10,7 @@ import { useEffect } from 'react';
 
 export default function SideMenu() {
   const menuActive = useSideMenuStore((state) => state.menuActive);
-  const menuClosing = useSideMenuStore((state) => state.menuClosing);
-  const setMenuActive = useSideMenuStore((state) => state.setMenuActive);
-  const setMenuClosing = useSideMenuStore((state) => state.setMenuClosing);
+  const closeMenu = useSideMenuStore((state) => state.toggleActive);
   const language = useLanguageStore((state) => state.language);
   const { screenWidth } = CheckWindowWidth();
 
@@ -22,22 +20,18 @@ export default function SideMenu() {
     } else {
       document.body.style.overflow = 'auto';
     }
-  }, [menuActive, menuClosing]);
+  }, [menuActive]);
 
   const handleClose = () => {
-    setMenuClosing(true);
-    setTimeout(() => {
-      setMenuActive(false);
-      setMenuClosing(false);
-    }, 500);
+    closeMenu();
   };
 
   return (
     <>
       {menuActive && screenWidth >= 1366 && <div className="overlay" onClick={handleClose}></div>}
-      {(menuActive || menuClosing) && (
+      {menuActive && (
         <nav
-          className={`side-menu ${screenWidth < 1366 ? '' : 'side-menu-lg'} ${menuClosing ? 'closing' : ''}`}
+          className={`side-menu ${screenWidth < 1366 ? '' : 'side-menu-lg'}`}
         >
           <ul>
             <Link href={'/'} onClick={handleClose}>
