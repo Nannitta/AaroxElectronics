@@ -47,61 +47,59 @@ export default function Home() {
 
   return (
     <main>
-      <div className='parallax-efect'>
-        <section className='home-first-section'>
-          <div className='home-title'>
+      <section className='home-first-section'>
+        <div className='home-title'>
+          <Image
+            src={Logo}
+            alt='Logo Aarox Electronics'
+            width={screenWidth < 768 ? 150 : 250}
+            height={screenWidth < 768 ? 46 : 76}
+          />
+          <h2>{content[language].HomePage.title}</h2>
+        </div>
+        <div className='border-zoom-image'>
+          <Image src={screenWidth >= 1366 ? borderLarge : border} alt='Image container border' fill={true} className='border-image'/>
+          <div className='pcb-container'>
             <Image
-              src={Logo}
-              alt='Logo Aarox Electronics'
-              width={screenWidth < 768 ? 150 : 250}
-              height={screenWidth < 768 ? 46 : 76}
+              src={pcb1}
+              alt='PCB 1'
+              fill={true}
+              className={`pcb ${activeIndex === 0 ? 'active' : 'inactive'}`}
+              ref={(el) => (pcbsRef.current[0] = el)}
             />
-            <h2>{content[language].HomePage.title}</h2>
+            <Image
+              src={pcb2}
+              alt='PCB 2'
+              fill={true}
+              className={`pcb ${activeIndex === 1 ? 'active' : 'inactive'}`}
+              ref={(el) => (pcbsRef.current[1] = el)}
+            />
+            <Image
+              src={pcb3}
+              alt='PCB 3'
+              fill={true}
+              className={`pcb ${activeIndex === 2 ? 'active' : 'inactive'}`}
+              ref={(el) => (pcbsRef.current[2] = el)}
+            />
+            <Image
+              src={pcb4}
+              alt='PCB 4'
+              fill={true}
+              className={`pcb ${activeIndex === 3 ? 'active' : 'inactive'}`}
+              ref={(el) => (pcbsRef.current[3] = el)}
+            />
           </div>
-          <div className='border-zoom-image'>
-            <Image src={screenWidth >= 1366 ? borderLarge : border} alt='Image container border' fill={true} className='border-image'/>
-            <div className='pcb-container'>
-              <Image
-                src={pcb1}
-                alt='PCB 1'
-                fill={true}
-                className={`pcb ${activeIndex === 0 ? 'active' : 'inactive'}`}
-                ref={(el) => (pcbsRef.current[0] = el)}
-              />
-              <Image
-                src={pcb2}
-                alt='PCB 2'
-                fill={true}
-                className={`pcb ${activeIndex === 1 ? 'active' : 'inactive'}`}
-                ref={(el) => (pcbsRef.current[1] = el)}
-              />
-              <Image
-                src={pcb3}
-                alt='PCB 3'
-                fill={true}
-                className={`pcb ${activeIndex === 2 ? 'active' : 'inactive'}`}
-                ref={(el) => (pcbsRef.current[2] = el)}
-              />
-              <Image
-                src={pcb4}
-                alt='PCB 4'
-                fill={true}
-                className={`pcb ${activeIndex === 3 ? 'active' : 'inactive'}`}
-                ref={(el) => (pcbsRef.current[3] = el)}
-              />
-            </div>
-          </div>
-          <div className='our-approach'>
-            <p>{content[language].HomePage.stay}</p>
-            <Link href={'/'}>
-              <button>
-                {content[language].HomePage.textButton}
-                <Image src={arrowRight} width={24} height={24} alt='Right arrow' className='bounce'/>
-              </button>
-            </Link>
-          </div>
-        </section>
-      </div>
+        </div>
+        <div className='our-approach'>
+          <p>{content[language].HomePage.stay}</p>
+          <Link href={'/'}>
+            <button>
+              {content[language].HomePage.textButton}
+              <Image src={arrowRight} width={24} height={24} alt='Right arrow' className='bounce'/>
+            </button>
+          </Link>
+        </div>
+      </section>
       <section className='home-second-section'>
         <div className='line-container'>
           <Image src={screenWidth >= 1366 ? lineGreenLarge : lineGreen} alt='Border Green' fill={true} className='green-line'/>

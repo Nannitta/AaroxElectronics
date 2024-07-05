@@ -219,7 +219,7 @@
 	background-repeat: no-repeat;
 	background-size: cover;
 	position: relative;
-	top: 100dvh;
+	top: 72px;
 	color: var(--background);
 }
 
@@ -279,6 +279,10 @@
 }
 
 @media (min-width: 768px) {
+	.home-second-section {
+		top: 96px;
+	}
+
 	.article-container {
 		padding: 0 1.5rem;
 		width: 100%;
@@ -340,6 +344,12 @@
 
 .home-third-section {
 	position: relative;
-	top: 100dvh;
+	top: 72px;
 	background-color: var(--background);
+}
+
+@media (min-width: 768px) {
+	.home-third-section {
+		top: 96px;
+	}
 }
