@@ -17,6 +17,20 @@
         "title2": "Embedded Systems",
         "def2": "Because it is not possible to make power without control",
         "textButton2": "Embedded Systems"
+      },
+      "thirdSection": {
+        "title1": "Automotive",
+        "paragraph1": "With extensive experience, designing highly complex products, like a family of OBC + DCDC for a TIER1",
+        "title2": "Industrial",
+        "paragraph2": "Designing many battery chargers and industrial controllers, covering from idea to mass production",
+        "title3": "Marine",
+        "paragraph3": "With the understanding of designing tech for the worst conditions, high mechanical stress and long durability",
+        "title4": "Consumer",
+        "paragraph4": "Experience in designing manufacturing and certifying products for several domestic appliances",
+        "title5": "Infrastructure",
+        "paragraph5": "Automation, connectivity, big data and artificial intelligence are the cores of our expertise in embedded system",
+        "title6": "Motor Sports",
+        "paragraph6": "Where technical performance, weight and robustness are the key for success"
       }
     }
   },
@@ -38,6 +52,20 @@
         "title2": "Sistemas Embebidos",
         "def2": "Porque no es posible generar energía sin control",
         "textButton2": "Sistemas embebidos"
+      },
+      "thirdSection": {
+        "title1": "Automotriz",
+        "paragraph1": "Con amplia experiencia, diseñando productos altamente complejos, como una familia de OBC + DCDC para un TIER1",
+        "title2": "Industrial",
+        "paragraph2": "Diseñando muchos cargadores de baterías y controladores industriales, cubriendo desde la idea hasta la producción en masa",
+        "title3": "Marina",
+        "paragraph3": "Con la comprensión de diseñar tecnología para las peores condiciones, alto estrés mecánico y larga durabilidad",
+        "title4": "Consumidor",
+        "paragraph4": "Experiencia en el diseño, fabricación y certificación de productos para varios electrodomésticos",
+        "title5": "Infraestructura",
+        "paragraph5": "Automatización, conectividad, big data e inteligencia artificial son los núcleos de nuestra experiencia en sistemas embebidos",
+        "title6": "Deportes de Motor",
+        "paragraph6": "Donde el rendimiento técnico, el peso y la robustez son la clave del éxito"
       }
     }
   }
