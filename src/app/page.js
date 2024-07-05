@@ -45,6 +45,20 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [activeIndex]);
 
+  const [hoveredArticle, setHoveredArticle] = useState(null);
+
+  const handleMouseEnter = (id) => {
+    setHoveredArticle(id);
+    const sector = document.querySelector(`#${id}`);
+    sector.children[0].style.backdropFilter = 'brightness(20%)';
+  };
+
+  const handleMouseLeave = (id) => {
+    setHoveredArticle(null);
+    const sector = document.querySelector(`#${id}`);
+    sector.children[0].style.backdropFilter = 'none';
+  };
+
   return (
     <main>
       <section className='home-first-section'>
@@ -128,7 +142,84 @@ export default function Home() {
         </div>
       </section>
       <section className='home-third-section'>
-        <h2>Secciones zoom</h2>
+        <article
+          className={`sectors ${hoveredArticle === 'first-sector' ? 'hovered' : ''}`}
+          id='first-sector'
+          onMouseEnter={() => handleMouseEnter('first-sector')}
+          onMouseLeave={() => handleMouseLeave('first-sector')}
+        >
+          <div className='overlay-sector'></div>
+          <div>
+            <span>01</span>
+            <h2>{content[language].HomePage.thirdSection.title1}</h2>
+          </div>
+          <p>{content[language].HomePage.thirdSection.paragraph1}</p>
+        </article>
+        <article
+          className={`sectors ${hoveredArticle === 'second-sector' ? 'hovered' : ''}`}
+          id='second-sector'
+          onMouseEnter={() => handleMouseEnter('second-sector')}
+          onMouseLeave={() => handleMouseLeave('second-sector')}
+        >
+          <div className='overlay-sector'></div>
+          <div>
+            <span>02</span>
+            <h2>{content[language].HomePage.thirdSection.title2}</h2>
+          </div>
+          <p>{content[language].HomePage.thirdSection.paragraph2}</p>
+        </article>
+        <article
+          className={`sectors ${hoveredArticle === 'third-sector' ? 'hovered' : ''}`}
+          id='third-sector'
+          onMouseEnter={() => handleMouseEnter('third-sector')}
+          onMouseLeave={() => handleMouseLeave('third-sector')}
+        >
+          <div className='overlay-sector'></div>
+          <div>
+            <span>03</span>
+            <h2>{content[language].HomePage.thirdSection.title3}</h2>
+          </div>
+          <p>{content[language].HomePage.thirdSection.paragraph3}</p>
+        </article>
+        <article
+          className={`sectors ${hoveredArticle === 'fourth-sector' ? 'hovered' : ''}`}
+          id='fourth-sector'
+          onMouseEnter={() => handleMouseEnter('fourth-sector')}
+          onMouseLeave={() => handleMouseLeave('fourth-sector')}
+        >
+          <div className='overlay-sector'></div>
+          <div>
+            <span>04</span>
+            <h2>{content[language].HomePage.thirdSection.title4}</h2>
+          </div>
+          <p>{content[language].HomePage.thirdSection.paragraph4}</p>
+        </article>
+        <article
+          className={`sectors ${hoveredArticle === 'fifth-sector' ? 'hovered' : ''}`}
+          id='fifth-sector'
+          onMouseEnter={() => handleMouseEnter('fifth-sector')}
+          onMouseLeave={() => handleMouseLeave('fifth-sector')}
+        >
+          <div className='overlay-sector'></div>
+          <div>
+            <span>05</span>
+            <h2>{content[language].HomePage.thirdSection.title5}</h2>
+          </div>
+          <p>{content[language].HomePage.thirdSection.paragraph5}</p>
+        </article>
+        <article
+          className={`sectors ${hoveredArticle === 'sixth-sector' ? 'hovered' : ''}`}
+          id='sixth-sector'
+          onMouseEnter={() => handleMouseEnter('sixth-sector')}
+          onMouseLeave={() => handleMouseLeave('sixth-sector')}
+        >
+          <div className='overlay-sector'></div>
+          <div>
+            <span>06</span>
+            <h2>{content[language].HomePage.thirdSection.title6}</h2>
+          </div>
+          <p>{content[language].HomePage.thirdSection.paragraph6}</p>
+        </article>
       </section>
     </main>
   );
