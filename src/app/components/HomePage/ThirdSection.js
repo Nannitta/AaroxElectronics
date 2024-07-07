@@ -1,10 +1,12 @@
 import Image from 'next/image';
 import content from '../../content.json';
 import { useState } from 'react';
-import pcb1 from '../../assets/images/homePage/pcb1.webp';
-import pcb2 from '../../assets/images/homePage/pcb2.webp';
-import pcb3 from '../../assets/images/homePage/pcb3.webp';
-import pcb4 from '../../assets/images/homePage/pcb4.webp';
+import automotive from '../../assets/images/homePage/thirdSection/automotive.webp';
+import industrial from '../../assets/images/homePage/thirdSection/industrial.webp';
+import marine from '../../assets/images/homePage/thirdSection/marine.webp';
+import consumer from '../../assets/images/homePage/thirdSection/consumer.webp';
+import infrastructure from '../../assets/images/homePage/thirdSection/infrastructure.webp';
+import motor from '../../assets/images/homePage/thirdSection/motor.webp';
 import { useLanguageStore } from '../../stores/languageStore';
 import './thirdSection.css';
 
@@ -33,7 +35,7 @@ export default function ThirdSection() {
         onMouseLeave={() => handleMouseLeave('first-sector')}
       >
         <div className='overlay-sector'></div>
-        <Image src={pcb1} alt='Automotive image' fill={true} className={`${hoveredArticle === 'first-sector' ? 'hovered sector-bg' : 'hidden-sector'}`}/>
+        <Image src={automotive} alt='Automotive image' fill={true} className={`${hoveredArticle === 'first-sector' ? 'hovered sector-bg' : 'hidden-sector'}`}/>
         <div>
           <span>01</span>
           <h2>{content[language].HomePage.thirdSection.title1}</h2>
@@ -47,7 +49,7 @@ export default function ThirdSection() {
         onMouseLeave={() => handleMouseLeave('second-sector')}
       >
         <div className='overlay-sector'></div>
-        <Image src={pcb2} alt='Industrial image' fill={true} className={`${hoveredArticle === 'second-sector' ? 'hovered sector-bg' : 'hidden-sector'}`}/>
+        <Image src={industrial} alt='Industrial image' fill={true} className={`${hoveredArticle === 'second-sector' ? 'hovered sector-bg' : 'hidden-sector'}`}/>
         <div>
           <span>02</span>
           <h2>{content[language].HomePage.thirdSection.title2}</h2>
@@ -61,7 +63,7 @@ export default function ThirdSection() {
         onMouseLeave={() => handleMouseLeave('third-sector')}
       >
         <div className='overlay-sector'></div>
-        <Image src={pcb3} alt='Marine image' fill={true} className={`${hoveredArticle === 'third-sector' ? 'hovered sector-bg' : 'hidden-sector'}`}/>
+        <Image src={marine} alt='Marine image' fill={true} className={`${hoveredArticle === 'third-sector' ? 'hovered sector-bg' : 'hidden-sector'}`}/>
         <div>
           <span>03</span>
           <h2>{content[language].HomePage.thirdSection.title3}</h2>
@@ -75,7 +77,7 @@ export default function ThirdSection() {
         onMouseLeave={() => handleMouseLeave('fourth-sector')}
       >
         <div className='overlay-sector'></div>
-        <Image src={pcb4} alt='Consumer image' fill={true} className={`${hoveredArticle === 'fourth-sector' ? 'hovered sector-bg' : 'hidden-sector'}`}/>
+        <Image src={consumer} alt='Consumer image' fill={true} className={`${hoveredArticle === 'fourth-sector' ? 'hovered sector-bg' : 'hidden-sector'}`}/>
         <div>
           <span>04</span>
           <h2>{content[language].HomePage.thirdSection.title4}</h2>
@@ -89,7 +91,7 @@ export default function ThirdSection() {
         onMouseLeave={() => handleMouseLeave('fifth-sector')}
       >
         <div className='overlay-sector'></div>
-        <Image src={pcb1} alt='Infrastructure image' fill={true} className={`${hoveredArticle === 'fifth-sector' ? 'hovered sector-bg' : 'hidden-sector'}`}/>
+        <Image src={infrastructure} alt='Infrastructure image' fill={true} className={`${hoveredArticle === 'fifth-sector' ? 'hovered sector-bg' : 'hidden-sector'}`}/>
         <div>
           <span>05</span>
           <h2>{content[language].HomePage.thirdSection.title5}</h2>
@@ -103,7 +105,7 @@ export default function ThirdSection() {
         onMouseLeave={() => handleMouseLeave('sixth-sector')}
       >
         <div className='overlay-sector'></div>
-        <Image src={pcb2} alt='MotorSports image' fill={true} className={`${hoveredArticle === 'sixth-sector' ? 'hovered sector-bg' : 'hidden-sector'}`}/>
+        <Image src={motor} alt='MotorSports image' fill={true} className={`${hoveredArticle === 'sixth-sector' ? 'hovered sector-bg' : 'hidden-sector'}`}/>
         <div>
           <span>06</span>
           <h2>{content[language].HomePage.thirdSection.title6}</h2>
