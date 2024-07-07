@@ -354,6 +354,15 @@
 	justify-content: center;
 	border-top: 1px solid #c3c3c350;
 	padding: 2rem 0;
+	position: relative;
+}
+
+.hidden-sector {
+	display: none;
+}
+
+.sector-bg {
+	display: none;
 }
 
 .sectors div {
@@ -417,12 +426,15 @@
 		width: 100%;
 		height: 100%;
 		position: absolute;
+		z-index: 1;
 	}
 
-	.sectors:hover {
-		/* Cambiar para que a cada sector le salga su imagen */
-		background-image: url("./assets/images/homePage/pcb1.webp");
-		background-size: cover;
+	.sector-bg {
+		display: initial;
+		object-fit: cover;
+	}
+
+	.sectors.hovered {
 		flex: 1.6 1.6 0%;
 		transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 	}
