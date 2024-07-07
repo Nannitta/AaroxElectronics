@@ -1,11 +1,10 @@
 .home-third-section {
-	position: relative;
-	top: 72px;
 	background-color: var(--background);
 	display: flex;
 	flex-wrap: wrap;
 	padding: 0 1rem;
-	margin-top: 2rem;
+	margin-top: calc(2rem + 72px);
+	overflow: hidden;
 }
 
 .sectors {
@@ -65,7 +64,7 @@
 
 @media (min-width: 768px) {
 	.home-third-section {
-		top: 96px;
+		margin-top: calc(2rem + 96px);
 		padding: 0 1.5rem;
 	}
 }
@@ -73,7 +72,7 @@
 @media (min-width: 1366px) {
 	.home-third-section {
 		flex-direction: row;
-		margin-top: 0;
+		margin-top: 96px;
 		height: 70dvh;
 		align-items: center;
 	}
@@ -87,11 +86,13 @@
 		height: 100%;
 		position: absolute;
 		z-index: 1;
+		transform: scale(1.05);
 	}
 
 	.sector-bg {
 		display: initial;
 		object-fit: cover;
+		transform: scale(1.05);
 	}
 
 	.sectors.hovered {
