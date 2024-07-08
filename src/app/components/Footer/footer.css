@@ -46,6 +46,16 @@
 	gap: 0.5rem;
 }
 
+.contact {
+	display: flex;
+	gap: 1rem;
+}
+
+.contact a {
+	width: 32px;
+	height: 32px;
+}
+
 .privacy-cookies {
 	display: flex;
 	gap: 1rem;
@@ -85,7 +95,7 @@
 }
 
 .wave {
-	background: url("../../assets/images/wave.svg") repeat-x;
+	background: url("../../assets/images/footer/wave.svg") repeat-x;
 	position: absolute;
 	top: -198px;
 	width: 6400px;
