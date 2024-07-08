@@ -33,7 +33,7 @@ export default function Footer() {
         </div>
         <div className='privacy-cookies'>
           <Link href={'/privacy-policy'}>{content[language].Footer.policy}</Link>
-          <Link href={'/'}>{content[language].Footer.cookies}</Link>
+          <Link href={'/cookies'}>{content[language].Footer.cookies}</Link>
         </div>
         <div className='reserved'>
           <span>©Aarox Electronics</span>

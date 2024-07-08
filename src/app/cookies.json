@@ -1,0 +1,98 @@
+{
+  "EN": {
+    "title": "Cookies Policy",
+    "subtitle": "Bacause we have to have it",
+    "firstParagraph": "This Cookie Policy aims to provide the necessary information so that any user of the website “aaroxelectronics.es” may decide whether he or she wishes to allow the installation of the cookies used by Aarox Electronics, S.L. (hereinafter the Publisher) and learn how to manage them.",
+    "secondParagraph": "The information regarding the Cookie Policy that applies to the website cobaltomodules.com (hereinafter the Website) is provided through two layers: the first is a “notice” in the footer of the website that warns about the installation of non-exempt cookies —describing their purpose; the second information layer is a link to this Policy so that the user may know their content and operation in greater detail.",
+    "thirdParagraph": "This Policy is public and permanently accessible through the link provided on the website —named “Cookie Policy”—, and may be updated at any time, either due to a regulatory change or due to modifications to the configuration of the cookies used.",
+    "fourthParagraph": "The Publisher may use cookies, and other similar technologies, to store and retrieve information on/from the terminals of the users of its websites (hereinafter, collectively referred to as “Cookies”). Cookies are computer files or programs, sent to a browser through a web server, that store information on the user’s device, when accessing or browsing a website, and allow such information to be accessed once they are installed. In other words, they are pieces of information installed by a website on your device when you visit it. These devices may contain information about the users’ browsing habits or about the equipment on which they are installed, and they can even be used to identify the user.",
+    "typesSection": "There are several types of cookies, based on the purpose they serve. The following cookies are used on the website aaroxelectronics.es:",
+    "linkTitle": "here",
+    "analytics": {
+      "title": "Analytics",
+      "desc": "Cookies that allow tracking and analysis of the website users’ behaviour. They make it possible to tally up the number of users and, thus, measure and statistically analyse the usage of the website by the users. This is done by analysing the user’s browsing on the website in order to improve the products or services on offer. For these analyses we use the Google Analytics service, whose terms and conditions are available here."
+    },
+    "technical": {
+      "title": "Technical",
+      "desc": {
+        "firstPart": "Cookies that allow the user to browse the website and use the different options or services that it offers, such as setting up the usage of the cookies employed by the website, identifying the session, controlling traffic and communicating data, or checking for fraud related to the security of the service. As an anti-spam security measure we use the RECaptcha service by Google —in order to tell humans and bots apart—, whose terms and conditions are available ",
+        "secondPart": "Likewise, in order to provide certain functionalities and contents we use the services offered by YouTube and Google Maps, whose terms and conditions are available "
+      },
+      "recaptcha": "https://policies.google.com/privacy?hl=en#infocollect",
+      "youtubeMaps": "https://policies.google.com/privacy?hl=en"
+    },
+    "marketing": {
+      "title": "Marketing",
+      "desc": "Likewise, in order to provide certain functionalities and contents we use the services offered by YouTube and Google Maps, whose terms and conditions are available ",
+      "link": "https://policies.google.com/privacy?hl=en" 
+    },
+    "socials": {
+      "title": "Socials",
+      "desc": "Cookies that social media service providers may install when the user elects to share certain contents of the website on the social media they operate. The terms and conditions for these services are available on the following addresses: ",
+      "linkedin": "https://www.linkedin.com/legal/cookie-policy?"
+    },
+    "fifthParagraph": "Likewise, depending on the entity that manages the equipment or domain from which the cookies are sent and that processes the collected data, cookies can be classified as own or third party. According to this classification, the Website uses the following cookies:",
+    "own": {
+      "title": "Own",
+      "desc": "Those installed and managed directly by the Publisher.",
+      "table": {
+        "purpose": "Purpose",
+        "purposeDesc": "Technical",
+        "name": "Name",
+        "description": "Description",
+        "aecDesc": "It is used to make sure the requests within a browsing session are made by the user, not by other sites.",
+        "socsDesc": "It is used to store a user’s status regarding his or her cookie options.",
+        "duration": "Duration",
+        "months": "5 months"
+      }
+    }
+  },
+  "ES": {
+    "title": "Política de Cookies",
+    "subtitle": "Porque tenemos que tenerla",
+    "firstParagraph": "La presente Política de Cookies pretende proporcionar la información necesaria para que cualquier usuario del sitio web ‘cobaltomodules.com’ pueda decidir si desea permitir la instalación de las cookies utilizadas por Aarox Electronics, S.L. (en adelante, el Editor) y cómo gestionarlas.",
+    "secondParagraph": "La información sobre la Política de cookies aplicable al sitio web cobaltomodules.com (en adelante, el Sitio Web) se proporciona a través de dos capas: la primera, un “aviso” en el pie de página del sitio web, en el que se advierte de la instalación de cookies no exentas -describiendo su finalidad- y se proporciona un enlace a la presente Política para que el usuario pueda conocer con más detalle su contenido y funcionamiento, siendo ésta la segunda capa de información.",
+    "thirdParagraph": "Esta Política es pública y permanentemente accesible a través del enlace habilitado en el Sitio Web -denominado “Política de Cookies”-, y puede ser actualizada en cualquier momento, como consecuencia de un cambio normativo o como consecuencia de cualquier cambio en la configuración de las cookies utilizadas.",
+    "fourthParagraph": "El Editor puede utilizar cookies, y otras tecnologías similares, para almacenar y recuperar información de los equipos terminales de los usuarios de sus sitios web (en adelante, denominadas conjuntamente “Cookies”). Las cookies son archivos o programas informáticos, enviados a un navegador por medio de un servidor web, que almacenan información en el equipo del usuario, al acceder o navegar por un sitio web, y permiten que se acceda a ésta tras su instalación. En otras palabras, son elementos de información que un sitio web instala en su dispositivo cuando lo visita. Estos dispositivos pueden contener información sobre los hábitos de navegación de los usuarios o del equipo en que se instalan, o incluso pueden utilizarse para reconocer el usuario.",
+    "typesSection": "Existen diversos tipos de cookies en función de la finalidad para la que se utilizan. En el sitio web aaroxelectronics.es se utilizan las siguientes cookies:",
+    "linkTitle": "aquí",
+    "analytics": {
+      "title": "Analíticas",
+      "desc": "Son aquéllas que permiten realizar el seguimiento y análisis del comportamiento de los usuarios del sitio web. Permiten cuantificar el número de usuarios y así realizar la medición y análisis estadístico de la utilización que hacen los usuarios del sitio web. Para ello se analiza la navegación el usuario en la página web con el fin de mejorar la oferta de productos o servicios que se ofrecen. Para realizar estos análisis utilizamos el servicio Google Analitycs, cuyas condiciones pueden consultarse aquí."
+    },
+    "technical": {
+      "title": "Técnicas",
+      "desc": {
+        "firstPart": "Son aquéllas que permiten al usuario la navegación a través de la página web y la utilización de las diferentes opciones o servicios que existen en ella como, por ejemplo, configurar el uso de las cookies utilizadas por el sitio web, identificar la sesión, controlar el tráfico y la comunicación de datos, o controlar el fraude vinculado a la seguridad del servicio. Como medida de seguridad contra el spam utilizamos el servicio de Google RECaptcha, para distinguir entre humanos y bots, cuyas condiciones pueden consultarse ",
+        "secondPart": "Del mismo modo, se utilizan los servicios de Youtube y Google Maps, para la provisión de determinadas funcionalidades y contenidos, cuyas condiciones pueden consultarse en "
+      },      
+      "recaptcha": "https://policies.google.com/privacy?hl=es#infocollect",
+      "youtubeMaps": "https://policies.google.com/privacy?hl=es"
+    },
+    "marketing": {
+      "title": "Marketing",
+      "desc": "Son aquellas que permiten analizar los hábitos de navegación de los usuarios en Internet para que poder mostrarle publicidad relacionada con su perfil de navegación. Con este fin empleamos el servicio de Google Ads cuyas condiciones pueden consultarse ",
+      "link": "https://policies.google.com/privacy?hl=es" 
+    },
+    "socials": {
+      "title": "Sociales",
+      "desc": "Son aquéllas que los proveedores de servicios de redes sociales pueden instalar cuando el usuario selecciona compartir un determinado contenido del sitio web en la red social que operan. Las condiciones de estos servicios pueden consultarse en las siguientes direcciones: ",
+      "linkedin": "https://es.linkedin.com/legal/cookie-policy?"
+    },
+    "fifthParagraph": "Del mismo modo, según quien sea la entidad que gestione el equipo o dominio desde donde se envían las cookies y trate los datos que se obtengan, puede distinguirse entre cookies propias y cookies de Terceros. En atención a esta clasificación, el sitio web utiliza las siguientes cookies:",
+    "own": {
+      "title": "Propias",
+      "desc": "Son aquellas que se instalan y gestionan directamente por el Editor.",
+      "table": {
+        "purpose": "Finalidad",
+        "purposeDesc": "Técnica",
+        "name": "Nombre",
+        "description": "Descripción",
+        "aecDesc": "Se emplea para asegurar que las solicitudes dentro de una sesión de navegación sean realizadas por el usuario, y no por otros sitios.",
+        "socsDesc": "Se utiliza para almacenar el estado de un usuario con respecto a sus opciones de cookies.",
+        "duration": "Duración",
+        "months": "5 meses"
+      }
+    }
+  }
+}
