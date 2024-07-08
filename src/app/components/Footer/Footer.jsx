@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import content from '../../content.json';
-import { useLanguageStore } from '../../stores/languageStore';
+import { useLanguageStore } from '../../stores/languageStore.jsx';
 import linkedin from '../../assets/images/linkedin.svg';
 import logo from '../../assets/images/logo.webp';
 import './footer.css';
@@ -34,9 +34,9 @@ export default function Footer() {
           <span>{content[language].Footer.reserved}</span>
         </div>
       </div>
-      <div class="ocean">
-        <div class="wave"></div>
-        <div class="wave"></div>
+      <div className="ocean">
+        <div className="wave"></div>
+        <div className="wave"></div>
       </div>
     </footer>
   )

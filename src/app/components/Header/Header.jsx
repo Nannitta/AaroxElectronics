@@ -4,9 +4,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import './header.css';
 import smallLogo from '../../assets/images/smallLogo.webp';
-import { useSideMenuStore } from '../../stores/sideMenuStore';
-import CheckWindowWidth from '../../hooks/useWindowWidth';
-import ToggleLanguage from '../ToggleLanguage/ToggleLanguage';
+import { useSideMenuStore } from '../../stores/sideMenuStore.jsx';
+import CheckWindowWidth from '../../hooks/useWindowWidth.jsx';
+import ToggleLanguage from '../ToggleLanguage/ToggleLanguage.jsx';
 
 export default function Header() {
   const menuActive = useSideMenuStore((state) => state.menuActive);

@@ -2,9 +2,9 @@
 
 import Link from 'next/link';
 import './sideMenu.css'
-import { useSideMenuStore } from '../../stores/sideMenuStore';
-import CheckWindowWidth from '../../hooks/useWindowWidth';
-import { useLanguageStore } from '../../stores/languageStore';
+import { useSideMenuStore } from '../../stores/sideMenuStore.jsx';
+import CheckWindowWidth from '../../hooks/useWindowWidth.jsx';
+import { useLanguageStore } from '../../stores/languageStore.jsx';
 import content from '../../content.json';
 import { useEffect } from 'react';
 

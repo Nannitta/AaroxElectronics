@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import content from '../../content.json';
-import CheckWindowWidth from '../../hooks/useWindowWidth';
-import { useLanguageStore } from '../../stores/languageStore';
+import CheckWindowWidth from '../../hooks/useWindowWidth.jsx';
+import { useLanguageStore } from '../../stores/languageStore.jsx';
 import lineGreenLarge from '../../assets/images/homePage/secondSection/greenLineLarge.svg';
 import lineGreen from '../../assets/images/homePage/secondSection/greenLine.svg';
 import limeArrow from '../../assets/images/homePage/secondSection/limeArrowRight.svg';

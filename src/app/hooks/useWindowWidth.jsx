@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 
 function CheckWindowWidth() {
-  const [screenWidth, setScreenWidth] = useState<number>(0);
+  const [screenWidth, setScreenWidth] = useState(0);
   
   useEffect(() => {
     const handleSize = async () => {
-      const screenWidth: number = window.innerWidth;          
+      const screenWidth = window.innerWidth;          
 
       setScreenWidth(screenWidth);
     };

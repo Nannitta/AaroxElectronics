@@ -1,5 +1,5 @@
 import './toggleLanguage.css';
-import { useLanguageStore } from '../../stores/languageStore';
+import { useLanguageStore } from '../../stores/languageStore.jsx';
 
 export default function ToggleLanguage() {
   const language = useLanguageStore((state) => state.language);

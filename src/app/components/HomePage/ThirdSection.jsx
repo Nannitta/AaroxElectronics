@@ -7,7 +7,7 @@ import marine from '../../assets/images/homePage/thirdSection/marine.webp';
 import consumer from '../../assets/images/homePage/thirdSection/consumer.webp';
 import infrastructure from '../../assets/images/homePage/thirdSection/infrastructure.webp';
 import motor from '../../assets/images/homePage/thirdSection/motor.webp';
-import { useLanguageStore } from '../../stores/languageStore';
+import { useLanguageStore } from '../../stores/languageStore.jsx';
 import './thirdSection.css';
 
 export default function ThirdSection() {
