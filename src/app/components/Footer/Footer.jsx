@@ -4,7 +4,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 import content from '../../content.json';
 import { useLanguageStore } from '../../stores/languageStore.jsx';
-import linkedin from '../../assets/images/linkedin.svg';
+import linkedin from '../../assets/images/footer/linkedin.svg';
+import email from '../../assets/images/footer/email.svg';
 import logo from '../../assets/images/logo.webp';
 import './footer.css';
 
@@ -21,9 +22,14 @@ export default function Footer() {
         </div>
         <div className='connect'>
           <span>{content[language].Footer.connect}</span>
-          <Link href={'https://www.linkedin.com/company/aaroxelectronics/'} target='_blank'>
-            <Image src={linkedin} alt='Linkedin contact'/>
-          </Link>
+          <div className='contact'>
+            <Link href={'https://www.linkedin.com/company/aaroxelectronics/'} target='_blank'>
+              <Image src={linkedin} alt='Linkedin contact'/>
+            </Link>
+            <Link href={'mailto:aarox@aaroxelectronics.es'} target='_blank'>
+              <Image src={email} alt='Email contact'/>
+            </Link>
+          </div>
         </div>
         <div className='privacy-cookies'>
           <Link href={'/'}>{content[language].Footer.policy}</Link>
