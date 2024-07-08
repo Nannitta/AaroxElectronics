@@ -16,9 +16,17 @@
 	--emerald-opacity-90: #2dac4490;
 }
 
+html {
+	display: flex;
+	min-height: 100dvh;
+}
+
 body {
 	background: var(--background);
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
 }
 
 main {

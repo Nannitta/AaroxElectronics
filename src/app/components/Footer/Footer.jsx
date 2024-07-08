@@ -32,7 +32,7 @@ export default function Footer() {
           </div>
         </div>
         <div className='privacy-cookies'>
-          <Link href={'/'}>{content[language].Footer.policy}</Link>
+          <Link href={'/privacy-policy'}>{content[language].Footer.policy}</Link>
           <Link href={'/'}>{content[language].Footer.cookies}</Link>
         </div>
         <div className='reserved'>
