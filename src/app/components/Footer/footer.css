@@ -125,7 +125,7 @@
 }
 
 @media (min-width: 1366px) {
-	.footer {
+	.footer-home {
 		position: relative;
 		top: 100dvh;
 	}
