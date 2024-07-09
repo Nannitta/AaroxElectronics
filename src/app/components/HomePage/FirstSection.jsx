@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import content from '../../content.json';
-import Logo from '../../assets/images/logo.webp';
+import Logo from '../../assets/images/logo.svg';
 import CheckWindowWidth from '../../hooks/useWindowWidth.jsx';
 import { useLanguageStore } from '../../stores/languageStore.jsx';
 import borderLarge from '../../assets/images/homePage/borderLarge.svg';

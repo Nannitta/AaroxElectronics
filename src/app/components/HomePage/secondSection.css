@@ -120,7 +120,7 @@
 @media (min-width: 1920px) {
 	.first-article p,
 	.second-article p {
-		width: 50%;
+		max-width: 300px;
 		text-align: center;
 	}
 }

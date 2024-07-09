@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import './header.css';
-import smallLogo from '../../assets/images/smallLogo.webp';
+import smallLogo from '../../assets/images/smallLogo.svg';
 import { useSideMenuStore } from '../../stores/sideMenuStore.jsx';
 import CheckWindowWidth from '../../hooks/useWindowWidth.jsx';
 import ToggleLanguage from '../ToggleLanguage/ToggleLanguage.jsx';

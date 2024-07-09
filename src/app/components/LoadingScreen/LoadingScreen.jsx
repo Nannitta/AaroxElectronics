@@ -1,6 +1,6 @@
 'use client';
 
-import logo from '../../assets/images/logo.webp';
+import logo from '../../assets/images/logo.svg';
 import Image from 'next/image';
 import { useEffect } from 'react';
 import './loading.css';
