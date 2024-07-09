@@ -72,9 +72,11 @@
 @media (min-width: 1366px) {
 	.home-third-section {
 		flex-direction: row;
-		margin-top: 96px;
+		margin-top: 0;
 		height: 70dvh;
 		align-items: center;
+		position: relative;
+		top: 0;
 	}
 
 	#first-sector {
@@ -109,7 +111,6 @@
 
 	.sectors {
 		flex: 1 1 0%;
-		border-right: 1px solid #c3c3c350;
 		border-top: none;
 		height: 100%;
 		position: relative;

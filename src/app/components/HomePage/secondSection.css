@@ -17,6 +17,7 @@
 	height: 100%;
 	width: 100%;
 	background-color: rgba(23, 63, 53, 0.8);
+	padding-left: 18px;
 }
 
 .article-container {
@@ -85,6 +86,15 @@
 }
 
 @media (min-width: 1366px) {
+	.home-second-section {
+		top: 0;
+		overflow: hidden;
+	}
+
+	.line-container {
+		width: 103.7%;
+	}
+
 	.article-container {
 		flex-direction: row;
 		align-items: center;
@@ -118,6 +128,10 @@
 }
 
 @media (min-width: 1920px) {
+	.line-container {
+		width: 100%;
+	}
+
 	.first-article p,
 	.second-article p {
 		max-width: 300px;
