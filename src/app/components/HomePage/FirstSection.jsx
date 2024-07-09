@@ -41,7 +41,8 @@ export default function FirstSection() {
   }, [activeIndex]);
 
   return(
-    <section className='home-first-section'>
+    <div className='container-first-section'>
+      <section className='home-first-section'>
         <div className='home-title'>
           <Image
             src={Logo}
@@ -94,5 +95,6 @@ export default function FirstSection() {
           </Link>
         </div>
       </section>
+    </div>
   )
 }
