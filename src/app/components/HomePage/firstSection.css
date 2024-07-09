@@ -179,6 +179,12 @@
 }
 
 @media (min-width: 1366px) {
+	.container-first-section {
+		position: fixed;
+		top: 0;
+		width: 100dvw;
+	}
+
 	.home-first-section {
 		top: 0;
 		height: 100dvh;
