@@ -25,6 +25,7 @@
 	position: relative;
 	z-index: -1;
 	clip-path: url("../../assets/images/homePage/borderLarge.svg");
+	-webkit-clip-path: url("../../assets/images/homePage/borderLarge.svg");
 	margin-top: 1rem;
 }
 
@@ -159,6 +160,7 @@
 	.border-zoom-image {
 		position: absolute;
 		clip-path: url("../../assets/images/homePage/border.svg");
+		-webkit-clip-path: url("../../assets/images/homePage/border.svg");
 		margin-top: 14rem;
 	}
 
