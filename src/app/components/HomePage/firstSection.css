@@ -25,6 +25,7 @@
 	position: relative;
 	z-index: -1;
 	clip-path: url("../../assets/images/homePage/borderLarge.svg");
+	margin-top: 1rem;
 }
 
 .border-image {
@@ -155,9 +156,15 @@
 		font-size: 2.5rem;
 	}
 
+	.border-zoom-image {
+		position: absolute;
+		clip-path: url("../../assets/images/homePage/border.svg");
+		margin-top: 14rem;
+	}
+
 	.our-approach {
-		bottom: 8rem;
-		right: 16rem;
+		bottom: 1.5rem;
+		right: 5rem;
 	}
 
 	.our-approach p {
@@ -170,22 +177,27 @@
 }
 
 @media (min-width: 1366px) {
-	.border-zoom-image {
-		position: absolute;
-		clip-path: url("../../assets/images/homePage/border.svg");
+	.home-first-section {
+		top: 0;
+		height: 100dvh;
 	}
 
 	.home-title {
-		padding: 1rem 1rem 1rem 4.25rem;
+		padding: 6.5rem 1rem 1rem 4.25rem;
 	}
 
 	.home-title h2 {
 		width: 600px;
 	}
 
+	.border-zoom-image {
+		margin-top: 0;
+		height: 101%;
+	}
+
 	.our-approach {
 		bottom: 6rem;
-		right: 7rem;
+		right: 5rem;
 	}
 }
 
@@ -193,6 +205,10 @@
 	.home-title h2 {
 		width: 816px;
 		font-size: 3.5rem;
+	}
+
+	.border-zoom-image {
+		height: 100%;
 	}
 
 	.our-approach {

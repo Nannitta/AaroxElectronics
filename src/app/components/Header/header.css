@@ -5,7 +5,7 @@
 	position: fixed;
 	z-index: 2;
 	top: 0;
-	background-color: var(--background);
+	background-color: #fefffa90;
 	width: 100%;
 }
 
