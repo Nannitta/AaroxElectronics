@@ -7,6 +7,7 @@ import CheckWindowWidth from '../../hooks/useWindowWidth.jsx';
 import { useLanguageStore } from '../../stores/languageStore.jsx';
 import content from '../../content.json';
 import { useEffect } from 'react';
+import { screenSizes } from '../../lib/screenSizes';
 
 export default function SideMenu() {
   const menuActive = useSideMenuStore((state) => state.menuActive);
@@ -28,10 +29,10 @@ export default function SideMenu() {
 
   return (
     <>
-      {menuActive && screenWidth >= 1366 && <div className="overlay" onClick={handleClose}></div>}
+      {menuActive && screenWidth >= screenSizes.laptop && <div className="overlay" onClick={handleClose}></div>}
       {menuActive && (
         <nav
-          className={`side-menu ${screenWidth < 1366 ? '' : 'side-menu-lg'}`}
+          className={`side-menu ${screenWidth < screenSizes.laptop ? '' : 'side-menu-lg'}`}
         >
           <ul>
             <Link href={'/'} onClick={handleClose}>

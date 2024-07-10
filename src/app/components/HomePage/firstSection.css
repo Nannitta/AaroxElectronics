@@ -4,7 +4,7 @@
 	justify-content: space-between;
 	position: relative;
 	top: 72px;
-	height: calc(100dvh - 72px);
+	height: calc(100vh - 72px);
 }
 
 .home-title {
@@ -109,6 +109,20 @@
 	}
 }
 
+@keyframes bounceDown {
+	0%,
+	20%,
+	50%,
+	80%,
+	100% {
+		transform: translateY(10px);
+	}
+
+	50% {
+		transform: translateY(-20px);
+	}
+}
+
 @keyframes zoomAnimation {
 	0% {
 		transform: scale(1);
@@ -142,7 +156,7 @@
 @media (min-width: 768px) {
 	.home-first-section {
 		top: 96px;
-		height: calc(100dvh - 96px);
+		height: calc(100vh - 96px);
 	}
 
 	.home-title {
@@ -165,8 +179,8 @@
 	}
 
 	.our-approach {
-		bottom: 1.5rem;
-		right: 5rem;
+		bottom: 4rem;
+		right: 9rem;
 	}
 
 	.our-approach p {
@@ -185,13 +199,23 @@
 		width: 100dvw;
 	}
 
+	.scroll-arrow {
+		position: fixed;
+		z-index: 2;
+		bottom: 2rem;
+		left: 4rem;
+		animation: bounceDown 2s ease-in-out infinite;
+		transform-origin: 50% 50%;
+		cursor: pointer;
+	}
+
 	.home-first-section {
 		top: 0;
-		height: 100dvh;
+		height: 100vh;
 	}
 
 	.home-title {
-		padding: 6.5rem 1rem 1rem 4.25rem;
+		padding: 8rem 1rem 1rem 4.25rem;
 	}
 
 	.home-title h2 {
@@ -204,14 +228,14 @@
 	}
 
 	.our-approach {
-		bottom: 6rem;
-		right: 5rem;
+		bottom: 4rem;
+		right: 3rem;
 	}
 }
 
 @media (min-width: 1920px) {
 	.home-title h2 {
-		width: 816px;
+		max-width: 600px;
 		font-size: 3.5rem;
 	}
 

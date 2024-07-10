@@ -17,7 +17,7 @@ export default function Footer() {
   return(
     <footer className={`footer ${pathname === '/' ? 'footer-home' : ''}`}>
       <div className='container-logo-footer'>
-        <Image src={logo} alt='Logo Aarox Electronics' width={150} height={46} className='logo-footer'/>
+        <Image src={logo} alt='Logo Aarox Electronics' width={200} height={60} className='logo-footer'/>
       </div>
       <div className='container-footer'>
         <div className='connect'>
