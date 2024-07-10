@@ -7,7 +7,7 @@
 }
 
 .check-language .toggle + .toggle-btn {
-	outline: 1px solid var(--dark-green);
+	border: 1px solid var(--dark-green);
 	display: block;
 	width: 57px;
 	height: 27px;
@@ -35,7 +35,7 @@
 .check-language .toggle + .toggle-btn:before {
 	display: inline;
 	position: absolute;
-	top: 6px;
+	top: 5px;
 }
 
 .check-language .toggle:checked + .toggle-btn:after {

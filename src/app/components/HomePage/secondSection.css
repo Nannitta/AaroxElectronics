@@ -5,7 +5,7 @@
 	position: relative;
 	top: 72px;
 	color: var(--background);
-	height: 100vh;
+	height: 80vh;
 }
 
 .green-line {
@@ -89,6 +89,7 @@
 	.home-second-section {
 		top: 100vh;
 		overflow: hidden;
+		height: 100vh;
 	}
 
 	.line-container {
