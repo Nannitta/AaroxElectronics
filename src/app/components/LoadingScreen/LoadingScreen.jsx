@@ -3,9 +3,13 @@
 import logo from '../../assets/images/logo.svg';
 import Image from 'next/image';
 import { useEffect } from 'react';
+import { useFirstSesionStore } from '../../stores/firstSesionStore';
 import './loading.css';
 
 export default function LoadingScreen({ setLoading }) {
+  const firstSesion = useFirstSesionStore((state) => state.firstSesion);
+  const toggleFirstSesion = useFirstSesionStore((state) => state.toggleFirstSesion);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
@@ -14,11 +18,23 @@ export default function LoadingScreen({ setLoading }) {
     return () => clearTimeout(timer);
   }, [setLoading]);
 
-  return(
-    <div className='loading-screen'>
-      <div className='logo-loading'>
-        <Image src={logo} alt='Logo Aarox Electronics' fill={true}/>
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      toggleFirstSesion(false);
+    }, 1000);
+
+    return () => clearTimeout(timer);
+  })
+
+  if(firstSesion) {
+    return(
+      <div className='loading-screen'>
+        <div className='logo-loading'>
+          <Image src={logo} alt='Logo Aarox Electronics' fill={true}/>
+        </div>
       </div>
-    </div>
-  )
+    )
+  }
+
+  return null;
 }

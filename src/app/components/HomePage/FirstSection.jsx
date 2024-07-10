@@ -63,11 +63,16 @@ export default function FirstSection() {
             alt='Logo Aarox Electronics'
             width={screenWidth < screenSizes.tablet ? 150 : 250}
             height={screenWidth < screenSizes.tablet ? 46 : 76}
+            priority={true}
           />
-          <h2>{content[language].HomePage.title}</h2>
+          <h2>
+            {content[language].HomePage.title}
+            <br/>
+            {content[language].HomePage.subtitle}
+          </h2>
         </div>
         <div className='border-zoom-image'>
-          <Image src={screenWidth >= screenSizes.laptop ? borderLarge : border} alt='Image container border' fill={true} className='border-image'/>
+          <Image src={screenWidth >= screenSizes.laptop ? borderLarge : border} alt='Image container border' fill={true} className='border-image' priority={true}/>
           <div className='pcb-container'>
             <Image
               src={pcb1}

@@ -12,15 +12,18 @@
       "contact": "Contact"
     },
     "HomePage": {
-      "title": "Designing today the products of tomorrow",
+      "title": "Designing today the",
+      "subtitle": "products of tomorrow",
       "stay": "OUR WORK",
       "textButton": "Gallery",
       "secondSection": {
         "title1": "Power Electronics",
-        "def1": "Designing energy conversion systems that make the planet greener",
+        "def1": "Designing energy conversion systems",
+        "def2": "that make the planet greener",
         "textButton1": "Our approach",
         "title2": "Embedded Systems",
-        "def2": "Because it is not possible to make power without control",
+        "def3": "Because it is not possible to",
+        "def4": "make power without control",
         "textButton2": "What we can do"
       },
       "thirdSection": {
@@ -58,7 +61,8 @@
       "contact": "Contacto"
     },
     "HomePage": {
-      "title": "Diseñando hoy los productos del mañana",
+      "title": "Diseñando hoy los",
+      "subtitle": "productos del mañana",
       "stay": "NUESTRO TRABAJO",
       "textButton": "Galería",
       "secondSection": {

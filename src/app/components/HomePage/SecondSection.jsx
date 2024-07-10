@@ -22,6 +22,7 @@ export default function SecondSection() {
         <article className='first-article'>
           <h2>{content[language].HomePage.secondSection.title1}</h2>
           <p>{content[language].HomePage.secondSection.def1}</p>
+          <p>{content[language].HomePage.secondSection.def2}</p>
           <Link href={'/'}>
             <button>
               {content[language].HomePage.secondSection.textButton1}
@@ -31,7 +32,8 @@ export default function SecondSection() {
         </article>
         <article className='second-article'>
           <h2>{content[language].HomePage.secondSection.title2}</h2>
-          <p>{content[language].HomePage.secondSection.def2}</p>
+          <p>{content[language].HomePage.secondSection.def3}</p>
+          <p>{content[language].HomePage.secondSection.def4}</p>
           <Link href={'/'}>
             <button>
               {content[language].HomePage.secondSection.textButton2}
