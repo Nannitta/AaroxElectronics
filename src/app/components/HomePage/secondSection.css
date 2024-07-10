@@ -22,6 +22,7 @@
 
 .article-container {
 	height: 100%;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-around;
@@ -34,8 +35,12 @@
 .second-article {
 	display: flex;
 	flex-direction: column;
-	gap: 1rem;
 	width: 90%;
+}
+
+.first-article h2,
+.second-article h2 {
+	padding-bottom: 1rem;
 }
 
 .second-article {
@@ -50,6 +55,11 @@
 
 .second-article p {
 	text-align: right;
+}
+
+.first-article a,
+.second-article a {
+	padding-top: 1rem;
 }
 
 .first-article a button,
@@ -124,7 +134,6 @@
 
 	.first-article p,
 	.second-article p {
-		height: 50px;
 		max-width: 300px;
 		text-align: center;
 	}

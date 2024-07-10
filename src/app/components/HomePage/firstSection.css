@@ -5,6 +5,7 @@
 	position: relative;
 	top: 72px;
 	height: calc(100vh - 72px);
+	animation: fadeIn 1.5s forwards;
 }
 
 .home-title {
@@ -24,8 +25,6 @@
 	height: 100%;
 	position: relative;
 	z-index: -1;
-	clip-path: url("../../assets/images/homePage/borderLarge.svg");
-	-webkit-clip-path: url("../../assets/images/homePage/borderLarge.svg");
 	margin-top: 1rem;
 }
 
@@ -173,13 +172,11 @@
 
 	.border-zoom-image {
 		position: absolute;
-		clip-path: url("../../assets/images/homePage/border.svg");
-		-webkit-clip-path: url("../../assets/images/homePage/border.svg");
-		margin-top: 14rem;
+		margin-top: 16rem;
 	}
 
 	.our-approach {
-		bottom: 4rem;
+		bottom: 3rem;
 		right: 9rem;
 	}
 
@@ -216,6 +213,7 @@
 
 	.home-title {
 		padding: 8rem 1rem 1rem 4.25rem;
+		gap: 1.5rem;
 	}
 
 	.home-title h2 {
