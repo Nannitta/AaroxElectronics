@@ -36,7 +36,7 @@ export default function Footer() {
           <Link href={'/cookies'}>{content[language].Footer.cookies}</Link>
         </div>
         <div className='reserved'>
-          <span>©Aarox Electronics {content[language].Footer.reserved}</span>
+          <span>Copyright © 2024 Aarox Electronics. {content[language].Footer.reserved}</span>
         </div>
       </div>
       <div className="ocean">
