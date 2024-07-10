@@ -73,10 +73,10 @@
 	.home-third-section {
 		flex-direction: row;
 		margin-top: 0;
-		height: 70dvh;
+		height: 70vh;
 		align-items: center;
 		position: relative;
-		top: 100dvh;
+		top: 100vh;
 	}
 
 	#first-sector {

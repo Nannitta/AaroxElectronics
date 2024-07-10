@@ -11,7 +11,9 @@ import pcb2 from '../../assets/images/homePage/pcb2.webp';
 import pcb3 from '../../assets/images/homePage/pcb3.webp';
 import pcb4 from '../../assets/images/homePage/pcb4.webp';
 import arrowRight from '../../assets/images/homePage/arrowRight.svg';
+import ScrollArrow from '../HomePage/scrollArrow.jsx';
 import { useEffect, useRef, useState } from 'react';
+import { screenSizes } from '../../lib/screenSizes';
 import './firstSection.css';
 
 export default function FirstSection() {
@@ -40,20 +42,32 @@ export default function FirstSection() {
     return () => clearInterval(interval);
   }, [activeIndex]);
 
+  const handleScroll = () => {
+    window.scrollTo({
+      top: window.innerHeight,
+      behavior: 'smooth',
+    });
+  };
+
   return(
     <div className='container-first-section'>
+      { screenWidth >= 1366 &&
+          <div className='scroll-arrow' onClick={handleScroll}>
+            <ScrollArrow/>
+          </div>
+      }
       <section className='home-first-section'>
         <div className='home-title'>
           <Image
             src={Logo}
             alt='Logo Aarox Electronics'
-            width={screenWidth < 768 ? 150 : 250}
-            height={screenWidth < 768 ? 46 : 76}
+            width={screenWidth < screenSizes.tablet ? 150 : 250}
+            height={screenWidth < screenSizes.tablet ? 46 : 76}
           />
           <h2>{content[language].HomePage.title}</h2>
         </div>
         <div className='border-zoom-image'>
-          <Image src={screenWidth >= 1366 ? borderLarge : border} alt='Image container border' fill={true} className='border-image'/>
+          <Image src={screenWidth >= screenSizes.laptop ? borderLarge : border} alt='Image container border' fill={true} className='border-image'/>
           <div className='pcb-container'>
             <Image
               src={pcb1}

@@ -7,6 +7,7 @@ import smallLogo from '../../assets/images/smallLogo.svg';
 import { useSideMenuStore } from '../../stores/sideMenuStore.jsx';
 import CheckWindowWidth from '../../hooks/useWindowWidth.jsx';
 import ToggleLanguage from '../ToggleLanguage/ToggleLanguage.jsx';
+import { screenSizes } from '../../lib/screenSizes';
 
 export default function Header() {
   const menuActive = useSideMenuStore((state) => state.menuActive);
@@ -16,7 +17,7 @@ export default function Header() {
   return (
     <header className='header'>
       <Link href={'/'}>
-        <Image src={smallLogo} alt='Logo Aarox Electronics' width={`${screenWidth < 768 ? 36 : 44}`} height={`${screenWidth < 768 ? 36 : 44}`}/>
+        <Image src={smallLogo} alt='Logo Aarox Electronics' width={`${screenWidth < screenSizes.tablet ? 36 : 64}`} height={`${screenWidth < screenSizes.tablet ? 36 : 64}`}/>
       </Link>
       <div className='language-menu-container'>
         <ToggleLanguage/>

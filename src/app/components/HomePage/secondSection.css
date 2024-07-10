@@ -5,7 +5,7 @@
 	position: relative;
 	top: 72px;
 	color: var(--background);
-	height: 100dvh;
+	height: 100vh;
 }
 
 .green-line {
@@ -87,12 +87,12 @@
 
 @media (min-width: 1366px) {
 	.home-second-section {
-		top: 100dvh;
+		top: 100vh;
 		overflow: hidden;
 	}
 
 	.line-container {
-		width: 103.8%;
+		width: 102.5%;
 	}
 
 	.article-container {
@@ -124,17 +124,13 @@
 	.first-article p,
 	.second-article p {
 		height: 50px;
+		max-width: 300px;
+		text-align: center;
 	}
 }
 
 @media (min-width: 1920px) {
 	.line-container {
-		width: 100.9%;
-	}
-
-	.first-article p,
-	.second-article p {
-		max-width: 300px;
-		text-align: center;
+		width: 100%;
 	}
 }

@@ -84,5 +84,6 @@
 @media (width >= 768px) {
 	.check-language {
 		margin-top: 2px;
+		margin-bottom: 21px;
 	}
 }

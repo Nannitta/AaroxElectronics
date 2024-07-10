@@ -8,15 +8,15 @@
     },
     "HomePage": {
       "title": "Designing today the products of tomorrow",
-      "stay": "STAY",
-      "textButton": "Our approach",
+      "stay": "OUR WORK",
+      "textButton": "Gallery",
       "secondSection": {
         "title1": "Power Electronics",
         "def1": "Designing energy conversion systems that make the planet greener",
-        "textButton1": "Power Electronics",
+        "textButton1": "Our approach",
         "title2": "Embedded Systems",
         "def2": "Because it is not possible to make power without control",
-        "textButton2": "Embedded Systems"
+        "textButton2": "What we can do"
       },
       "thirdSection": {
         "title1": "Automotive",
@@ -49,15 +49,15 @@
     },
     "HomePage": {
       "title": "Diseñando hoy los productos del mañana",
-      "stay": "VISITA",
-      "textButton": "Nuestro enfoque",
+      "stay": "NUESTRO TRABAJO",
+      "textButton": "Galería",
       "secondSection": {
         "title1": "Electrónica de potencia",
         "def1": "Diseñando sistemas de conversión de energía que hacen al planeta más verde",
-        "textButton1": "Electrónica de potencia",
+        "textButton1": "Nuestro enfoque",
         "title2": "Sistemas Embebidos",
         "def2": "Porque no es posible generar energía sin control",
-        "textButton2": "Sistemas embebidos"
+        "textButton2": "Qué podemos hacer"
       },
       "thirdSection": {
         "title1": "Automotriz",
