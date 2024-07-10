@@ -1,5 +1,10 @@
 {
   "EN": {
+    "ConsentCookies": "We use cookies to ensure that we give you the best experience on our website. If you continue without changing your setting, we'll assume that you have accepted the use of cookies on our website. However, you can change your cookie settings at any time in this ",
+    "link": "link",
+    "cookiesAccept": "Continue",
+    "cookiesMore": "Find out more",
+    "ConsentCookies2": "Click 'Continue' to hide this message." , 
     "SideMenu": {
       "home": "Home",
       "powerElectronics": "Power Electronics",
@@ -36,11 +41,16 @@
     "Footer": {
       "policy": "Privacy policy",
       "cookies": "Cookies",
-      "reserved": "All Rights Reserved 2024",
+      "reserved": "All rights reserved.",
       "connect": "Stay connected"
     }
   },
   "ES": {
+    "ConsentCookies": "Utilizamos cookies para asegurarnos de brindarle la mejor experiencia en nuestro sitio web. Si continúa sin cambiar su configuración, asumiremos que ha aceptado el uso de cookies en nuestro sitio web. Sin embargo, puede cambiar la configuración de las cookies en cualquier momento en este ",
+    "link": "enlace",
+    "cookiesAccept": "Continuar",
+    "cookiesMore": "Saber más",
+    "ConsentCookies2": "Haga clic en 'Continuar' para ocultar este mensaje." ,
     "SideMenu": {
       "home": "Inicio",
       "powerElectronics": "Electrónica de potencia",
@@ -77,7 +87,7 @@
     "Footer": {
       "policy": "Política de privacidad",
       "cookies": "Política de cookies",
-      "reserved": "Todos los derechos reservados 2024",
+      "reserved": "Todos los derechos reservados.",
       "connect": "Conecta"
     }
   }

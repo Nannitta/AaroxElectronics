@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from './components/Header/Header.jsx';
 import SideMenu from './components/SideMenu/SideMenu.jsx';
 import Footer from './components/Footer/Footer.jsx';
+import CookiesConsent from './components/CookiesConsent/CookiesConsent';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,6 +20,7 @@ export default function RootLayout({ children }) {
         <Header/>
         {children}
         <Footer/>
+        <CookiesConsent/>
       </body>
     </html>
   );
