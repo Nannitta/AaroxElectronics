@@ -88,18 +88,11 @@
 		height: 100%;
 		position: absolute;
 		z-index: 1;
-		transform: scale(1.05);
 	}
 
 	.sector-bg {
 		display: initial;
 		object-fit: cover;
-		transform: scale(1.05);
-	}
-
-	.sectors.hovered {
-		flex: 1.6 1.6 0%;
-		transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 	.sectors:hover div span,
@@ -115,6 +108,16 @@
 		border-left: 1px solid #c3c3c350;
 		height: 100%;
 		position: relative;
+		transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+	}
+
+	.sectors.hovered {
+		flex: 1.6 1.6 0%;
+	}
+
+	.sectors:not(.hovered) {
+		flex: 1 1 0%;
+		transition: flex 0.8s cubic-bezier(0.4, 0, 0.2, 1);
 	}
 
 	.sectors div {
