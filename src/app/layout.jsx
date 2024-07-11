@@ -15,20 +15,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link
-          rel="preload"
-          href="./assets/images/homePage/borderLarge.svg"
-          as="image"
-          type="image/svg+xml"
-        />
-        <link
-          rel="preload"
-          href="./assets/images/homePage/border.svg"
-          as="image"
-          type="image/svg+xml"
-        />
-      </head>
       <body className={inter.className}>
         <SideMenu/>
         <Header/>

@@ -4,9 +4,16 @@ import cookies from '../cookies.json';
 import { useLanguageStore } from '../stores/languageStore';
 import Link from 'next/link';
 import './cookies.css';
+import { useEffect } from 'react';
+import { useNotFoundStore } from '../stores/notFoundStore';
 
 export default function Cookies() {
   const language = useLanguageStore((state) => state.language);
+  const setNotFound = useNotFoundStore((state) => state.setNotFound);
+  
+  useEffect(() => {
+    setNotFound(false);
+  });
 
   return(
     <main className='cookies-main'>

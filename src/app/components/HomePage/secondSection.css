@@ -134,7 +134,6 @@
 
 	.first-article p,
 	.second-article p {
-		max-width: 300px;
 		text-align: center;
 	}
 }
