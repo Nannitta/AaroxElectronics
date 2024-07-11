@@ -34,7 +34,7 @@ export default function SecondSection() {
           <h2>{content[language].HomePage.secondSection.title2}</h2>
           <p>{content[language].HomePage.secondSection.def3}</p>
           <p>{content[language].HomePage.secondSection.def4}</p>
-          <Link href={'/'}>
+          <Link href={'/embedded-systems'}>
             <button>
               {content[language].HomePage.secondSection.textButton2}
               <Image src={limeArrow} width={16} height={16} alt='Right arrow' className='bounce'/>

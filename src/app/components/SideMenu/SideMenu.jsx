@@ -41,7 +41,7 @@ export default function SideMenu() {
             <Link href={'/'} onClick={handleClose}>
               <li>{content[language].SideMenu.powerElectronics}</li>
             </Link>
-            <Link href={'/'} onClick={handleClose}>
+            <Link href={'/embedded-systems'} onClick={handleClose}>
               <li>{content[language].SideMenu.embeddedSystems}</li>
             </Link>
             <Link href={'/'} onClick={handleClose}>
