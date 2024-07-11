@@ -41,6 +41,9 @@
         "paragraph6": "Where technical performance, weight and robustness are the key for success"
       }
     },
+    "EmbeddedSystems": {
+      "scroll": "Scroll"
+    },
     "Footer": {
       "policy": "Privacy policy",
       "cookies": "Cookies",
@@ -87,6 +90,9 @@
         "title6": "Deportes de Motor",
         "paragraph6": "Donde el rendimiento técnico, el peso y la robustez son la clave del éxito"
       }
+    },
+    "EmbeddedSystems": {
+      "scroll": "Desliza"
     },
     "Footer": {
       "policy": "Política de privacidad",

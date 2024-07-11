@@ -133,7 +133,8 @@
 		max-width: 1150px;
 	}
 
-	.cookies-table1 {
+	.cookies-table1,
+	.cookies-table2 {
 		overflow: auto;
 	}
 
