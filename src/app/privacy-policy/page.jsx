@@ -1,11 +1,18 @@
 'use client';
 
+import { useEffect } from 'react';
 import privacy from '../privacy.json';
 import { useLanguageStore } from '../stores/languageStore';
+import { useNotFoundStore } from '../stores/notFoundStore';
 import './privacy-policy.css';
 
 export default function PrivacyPolicy() {
   const language = useLanguageStore((state) => state.language);
+  const setNotFound = useNotFoundStore((state) => state.setNotFound);
+    
+  useEffect(() => {
+    setNotFound(false);
+  });
 
   return(
     <main className='privacy-main'>

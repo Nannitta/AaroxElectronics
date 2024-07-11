@@ -49,6 +49,10 @@
       "cookies": "Cookies",
       "reserved": "All rights reserved.",
       "connect": "Stay connected"
+    },
+    "NotFound": {
+      "message": "Oops, something went wrong",
+      "textButton": "Back to Home"
     }
   },
   "ES": {
@@ -70,10 +74,12 @@
       "textButton": "Galería",
       "secondSection": {
         "title1": "Electrónica de potencia",
-        "def1": "Diseñando sistemas de conversión de energía que hacen al planeta más verde",
+        "def1": "Diseñando sistemas de conversión de energía",
+        "def2": "que hacen al planeta más verde",
         "textButton1": "Nuestro enfoque",
         "title2": "Sistemas Embebidos",
-        "def2": "Porque no es posible generar energía sin control",
+        "def3": "Porque no es posible",
+        "def4": "generar energía sin control",
         "textButton2": "Qué podemos hacer"
       },
       "thirdSection": {
@@ -99,6 +105,10 @@
       "cookies": "Política de cookies",
       "reserved": "Todos los derechos reservados.",
       "connect": "Conecta"
+    },
+    "NotFound": {
+      "message": "Vaya, algo ha salido mal",
+      "textButton": "Volver al inicio"
     }
   }
 }
