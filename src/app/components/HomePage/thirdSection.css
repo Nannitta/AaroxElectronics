@@ -1,50 +1,39 @@
 .home-third-section {
 	background-color: var(--background);
 	display: flex;
+	flex-direction: column;
 	flex-wrap: wrap;
 	padding: 0 1rem;
 	margin-top: calc(2rem + 72px);
 	overflow: hidden;
 }
 
-.sectors {
+.sector {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	border-top: 1px solid #c3c3c350;
 	padding: 2rem 0;
+}
+
+.number-sector {
+	color: var(--forest-green);
+	font-size: 1.3rem;
+	font-weight: 300;
+}
+
+.title-sector {
+	color: var(--forest-green);
 	position: relative;
 }
 
-.hidden-sector {
-	display: none;
-}
-
-.sector-bg {
-	display: none;
-}
-
-.sectors div {
+.container-content div {
+	width: fit-content;
 	display: flex;
 	gap: 1rem;
 }
 
-.sectors div span {
-	color: var(--forest-green);
-	font-size: 1.3rem;
-	font-weight: 300;
-	display: flex;
-	align-items: center;
-}
-
-.sectors div h2 {
-	color: var(--forest-green);
-	position: relative;
-	display: inline-block;
-	width: fit-content;
-}
-
-.sectors div h2::after {
+.title-sector::after {
 	content: "";
 	position: absolute;
 	left: 0;
@@ -54,12 +43,13 @@
 	background-color: var(--lime-green);
 }
 
-.sectors p {
+.content-sector {
 	padding-top: 2rem;
 	padding-left: 2.5rem;
 	font-weight: 300;
 	line-height: 1.3em;
 	text-wrap: balance;
+	color: var(--black);
 }
 
 @media (min-width: 768px) {
@@ -79,61 +69,81 @@
 		top: 100vh;
 	}
 
+	.sector {
+		position: relative;
+		max-height: 70vh;
+		overflow: hidden;
+		transition-property: all;
+		transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+		transition-duration: 0.5s;
+		height: 800px;
+		flex: 1 1 0%;
+		border-top: none;
+		border-right: 1px solid #c3c3c350;
+	}
+
 	#first-sector {
 		border-left: 1px solid #c3c3c350;
 	}
 
-	.overlay-sector {
-		width: 100%;
-		height: 100%;
+	.img-sector {
 		position: absolute;
-		z-index: 1;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		z-index: 2;
+		height: auto;
+		width: 100%;
+		background-size: cover;
+		background-position: 50%;
+		opacity: 0;
+		transition-duration: 0.5s;
+		display: block;
 	}
 
-	.sector-bg {
-		display: initial;
-		object-fit: cover;
-	}
-
-	.sectors:hover div span,
-	.sectors:hover div h2,
-	.sectors:hover p {
-		color: var(--background);
-		z-index: 1;
-	}
-
-	.sectors {
-		flex: 1 1 0%;
-		border-top: none;
-		border-left: 1px solid #c3c3c350;
+	.overlay-sector {
 		height: 100%;
-		position: relative;
-		transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+		width: 100%;
+		background-color: #000000af;
 	}
 
-	.sectors.hovered {
+	.sector:hover {
+		position: relative;
 		flex: 1.6 1.6 0%;
 	}
 
-	.sectors:not(.hovered) {
-		flex: 1 1 0%;
-		transition: flex 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+	.sector:hover .img-sector {
+		background-position: 50%;
+		opacity: 1;
+		transform: scale(1.2);
 	}
 
-	.sectors div {
+	.container-content {
+		position: relative;
+		z-index: 2;
+	}
+
+	.container-content div {
 		flex-direction: column;
 		padding-left: 2.5rem;
 	}
 
-	.sectors p {
-		height: 250px;
+	.content-sector {
 		max-width: 175px;
+		height: 250px;
+	}
+
+	.sector:hover .number-sector,
+	.sector:hover .title-sector,
+	.sector:hover .content-sector {
+		color: var(--background);
+		transition: none;
 	}
 }
 
 @media (min-width: 1920px) {
-	.sectors p {
-		height: 150px;
-		max-width: 250px;
+	.content-sector {
+		max-width: 240px;
 	}
 }
