@@ -206,7 +206,7 @@
 	}
 
 	.embedded-section .content-table-container h2 {
-		max-width: 460px;
+		max-width: 330px;
 	}
 
 	.embedded-table1 {
@@ -221,7 +221,7 @@
 
 @media (min-width: 1920px) {
 	.embedded-table1 {
-		width: 40%;
+		width: 25%;
 	}
 
 	.embedded-table1 td {
