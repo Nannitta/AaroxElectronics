@@ -1,7 +1,7 @@
 .cookies-manage {
 	position: fixed;
 	bottom: 0;
-	z-index: 2;
+	z-index: 10;
 	background-color: #fefffae8;
 	padding: 1.5rem 1rem;
 	display: flex;

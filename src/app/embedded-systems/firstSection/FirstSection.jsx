@@ -37,6 +37,6 @@ export default function FirstSection() {
           <p>{content[language].EmbeddedSystems.firstSection.cost}</p>
           <p>{content[language].EmbeddedSystems.firstSection.lifetime}</p>
         </aside>
-      </section>
+       </section>
   )
 }

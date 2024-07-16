@@ -3,7 +3,7 @@
 	justify-content: space-between;
 	padding: 1rem;
 	position: fixed;
-	z-index: 3;
+	z-index: 10;
 	top: 0;
 	background-color: #fefffa90;
 	width: 100%;
