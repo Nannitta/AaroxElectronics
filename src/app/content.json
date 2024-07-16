@@ -55,6 +55,11 @@
         "weight": "Weight",
         "cost": "Cost",
         "lifetime": "Lifetime"
+      },
+      "secondSection": {
+        "text1": "Taking",
+        "texthighlighted": "all variables",
+        "text2": "into account from day one"
       }
     },
     "Footer": {
@@ -124,6 +129,11 @@
         "weight": "Peso",
         "cost": "Costo",
         "lifetime": "Durabilidad"
+      },
+      "secondSection": {
+        "text1": "Teniendo en cuenta",
+        "texthighlighted": "todas las variables",
+        "text2": "desde el día uno"
       }
     },
     "Footer": {
