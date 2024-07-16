@@ -10,7 +10,7 @@ export default function EmbeddedSystems() {
   const secondSectionRef = useRef(null);
 
   return(
-    <main>
+    <main className='aaa'>
 {/*       <nav className='nav-embedded'>
         <ul>
           <li>CONCEPT & SPECIFICATION</li>
