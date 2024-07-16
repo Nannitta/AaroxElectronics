@@ -43,11 +43,11 @@
     },
     "EmbeddedSystems": {
       "scroll": "Scroll",
-      "title": "From concept to production",
-      "subtitle": " We can start from a spec or even from a blanksheet, we can",
-      "support": "support",
-      "subtitle2": "you through the whole process.",
-      "table1": {
+      "firstSection": {
+        "title": "From concept to production",
+        "subtitle": " We can start from a spec or even from a blank sheet, we can",
+        "support": "support",
+        "subtitle2": "you through the whole process.",
         "application": "Application",
         "industry": "Industry",
         "standards": "Standards",
@@ -112,11 +112,11 @@
     },
     "EmbeddedSystems": {
       "scroll": "Desliza",
-      "title": "Del concepto a producción",
-      "subtitle": "Podemos empezar por una especificación o incluso desde una hoja en blanco, podemos",
-      "support": "apoyarte",
-      "subtitle2": "a través de todo el proceso.",
-      "table1": {
+      "firstSection": {
+        "title": "Del concepto a producción",
+        "subtitle": "Podemos empezar por una especificación o incluso desde una hoja en blanco, podemos",
+        "support": "apoyarte",
+        "subtitle2": "a través de todo el proceso.",
         "application": "Aplicación",
         "industry": "Industria",
         "standards": "Estándares",
