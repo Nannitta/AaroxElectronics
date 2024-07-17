@@ -1,119 +1,61 @@
-/* .embedded-secondSection {
-	height: 100vh;
+.embedded-secondSection {
+	height: 200vh;
+	position: relative;
 	background-color: var(--dark-green);
 	color: var(--background);
-	padding-left: 1rem;
-	padding-right: 1rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	position: relative;
+	padding-left: 1rem;
+	padding-right: 1rem;
 }
 
-.embedded-secondSection h2 {
+.embedded-secondSection .title-secondSection {
+	position: sticky;
+	top: 0;
 	padding-top: 6.5rem;
 	text-align: center;
 	font-size: 1.5rem;
+	transition: opacity 0.5s;
+	font-weight: 500;
 }
 
-.embedded-secondSection h2 span {
+.embedded-secondSection .title-secondSection span {
 	color: var(--lime-green);
 	font-size: 1.5rem;
+	font-weight: 500;
 }
 
 .container-pyramid {
-	position: relative;
-	margin-top: 2.5rem;
-	object-fit: cover;
 	width: 100%;
-	height: 60%;
-}
-
-.pyramid {
-	display: none;
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	top: -100%;
-	opacity: 0;
-	transition: opacity 1s ease-in-out, top 1s ease-in-out;
-}
-
-.pyramid.visible {
-	display: block;
-	top: 0;
-	opacity: 1;
+	height: 80vh;
+	position: sticky;
+	top: 180px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-top: 2rem;
 }
 
 @media (min-width: 768px) {
-	.embedded-secondSection h2 {
+	.embedded-secondSection .title-secondSection {
 		font-size: 2rem;
 		width: 500px;
 		padding-top: 10rem;
 	}
 
-	.embedded-secondSection h2 span {
+	.embedded-secondSection .title-secondSection span {
 		font-size: 2rem;
 	}
 
 	.container-pyramid {
-		width: 80%;
+		width: 90%;
 	}
 }
 
 @media (min-width: 1366px) {
 	.container-pyramid {
-		width: 35%;
-		height: 55%;
-		margin-top: 0.5rem;
-	}
-}
-
-@media (min-width: 1920px) {
-	.container-pyramid {
-		width: 40%;
-		height: 65%;
-	}
-} */
-
-.embedded-secondSection {
-	height: 100vh;
-	position: relative;
-	background-color: var(--dark-green);
-	color: var(--background);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-}
-
-.embedded-secondSection h2 {
-	padding-top: 6.5rem;
-	text-align: center;
-	font-size: 1.5rem;
-}
-
-.embedded-secondSection h2 span {
-	color: var(--lime-green);
-	font-size: 1.5rem;
-}
-
-.container-pyramid {
-	width: 100%;
-	height: 100vh;
-	position: sticky;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
-}
-
-@media (min-width: 768px) {
-	.embedded-secondSection h2 {
-		font-size: 2rem;
-		width: 500px;
-		padding-top: 10rem;
-	}
-
-	.embedded-secondSection h2 span {
-		font-size: 2rem;
+		width: 50%;
+		height: 70vh;
 	}
 }
