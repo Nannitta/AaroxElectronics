@@ -1,5 +1,5 @@
 .embedded-thirdSection {
-	height: 120vh;
+	height: 110vh;
 	background-color: var(--dark-green);
 	color: var(--background);
 	padding-left: 1rem;
@@ -86,6 +86,11 @@
 
 	.pcb-bg-container {
 		width: 50%;
+	}
+}
+
+@media (min-width: 1920px) {
+	.pcb-bg-container {
 		height: 650px;
 	}
 }
