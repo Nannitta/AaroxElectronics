@@ -1,0 +1,91 @@
+.embedded-thirdSection {
+	height: 120vh;
+	background-color: var(--dark-green);
+	color: var(--background);
+	padding-left: 1rem;
+	padding-right: 1rem;
+	position: relative;
+	overflow: hidden;
+}
+
+.embedded-thirdSection h2 {
+	font-size: 2.5rem;
+	padding-top: 6rem;
+	text-wrap: balance;
+}
+
+.embedded-thirdSection h3 {
+	padding-top: 1.5rem;
+	line-height: 1.5;
+	font-weight: 500;
+}
+
+.embedded-thirdSection h3 p {
+	display: contents;
+}
+
+.embedded-thirdSection h3 span {
+	color: var(--lime-green);
+}
+
+.embedded-thirdSection h2,
+.embedded-thirdSection h3 {
+	transition: opacity 0.5s ease-out;
+}
+
+.embedded-thirdSection h2.hidden,
+.embedded-thirdSection h3.hidden {
+	opacity: 0;
+}
+
+.pcb-bg-container {
+	object-fit: cover;
+	width: 100%;
+	height: 224px;
+	position: relative;
+	top: 82px;
+	transition: transform 0.5s ease-out;
+}
+
+@media (min-width: 768px) {
+	.embedded-thirdSection {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+
+	.embedded-thirdSection h2 {
+		padding-top: 9rem;
+		text-align: center;
+	}
+
+	.embedded-thirdSection h3 {
+		text-align: center;
+		font-size: 2rem;
+	}
+
+	.pcb-bg-container {
+		height: 490px;
+		top: 240px;
+	}
+}
+
+@media (min-width: 1366px) {
+	.embedded-thirdSection {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.embedded-thirdSection h2 {
+		font-size: 3.5rem;
+	}
+
+	.embedded-thirdSection h3 {
+		max-width: 800px;
+	}
+
+	.pcb-bg-container {
+		width: 50%;
+		height: 650px;
+	}
+}
