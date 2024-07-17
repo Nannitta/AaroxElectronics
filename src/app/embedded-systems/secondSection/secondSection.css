@@ -59,3 +59,10 @@
 		height: 70vh;
 	}
 }
+
+@media (min-width: 1920px) {
+	.embedded-secondSection .title-secondSection,
+	.embedded-secondSection .title-secondSection span {
+		font-size: 2.5rem;
+	}
+}
