@@ -3,10 +3,13 @@ import content from '../../content.json';
 import { useLanguageStore } from '../../stores/languageStore';
 import pcbBG from '../../assets/images/embedded/pcbBG.webp';
 import Image from 'next/image';
+import { screenSizes } from '../../lib/screenSizes';
+import CheckWindowWidth from '../../hooks/useWindowWidth';
 import './thirdSection.css';
 
 export default function ThirdSection() {
   const language = useLanguageStore((state) => state.language);
+  const { screenWidth } = CheckWindowWidth();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,7 +26,11 @@ export default function ThirdSection() {
         textElements.forEach(el => {
           el.style.opacity = opacity;
         });
-        imageContainer.style.transform = `translateY(${sectionTop / 2.5}px)`;
+        if(screenWidth < screenSizes.laptop) {
+          imageContainer.style.transform = `translateY(${(sectionTop / 4) / 2}px)`;
+        } else {
+          imageContainer.style.transform = `translateY(${sectionTop / 2.5}px)`;
+        }
       }
     };
 
@@ -31,7 +38,7 @@ export default function ThirdSection() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [screenWidth]);
 
   return (
     <section className='embedded-thirdSection'>

@@ -78,6 +78,7 @@
 
 	.embedded-thirdSection h2 {
 		font-size: 3.5rem;
+		max-width: 860px;
 	}
 
 	.embedded-thirdSection h3 {

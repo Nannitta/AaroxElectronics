@@ -1,3 +1,4 @@
+import TechCarousel from './TechCarousel';
 import './fourthSection.css';
 
 export default function FourthSection() {
@@ -8,6 +9,7 @@ export default function FourthSection() {
         Power Supply Calculations, Tolerances, Filters, Power Consumption, Thermals, 
         Worst Case Analysis, Battery Life...
       </h3>
+      <TechCarousel/>
     </section>
   )
 }
