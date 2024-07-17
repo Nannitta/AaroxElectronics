@@ -23,7 +23,7 @@ export default function ThirdSection() {
         textElements.forEach(el => {
           el.style.opacity = opacity;
         });
-        imageContainer.style.transform = `translateY(${sectionTop / 2}px)`;
+        imageContainer.style.transform = `translateY(${sectionTop / 2.5}px)`;
       }
     };
 

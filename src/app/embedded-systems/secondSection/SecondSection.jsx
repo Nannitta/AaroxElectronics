@@ -58,7 +58,7 @@ export default function SecondSection({ refSection }) {
       containerPyramid.style.backgroundImage = `url(${img.src})`;
     };
 
-    const opacity = 1 - (positiveTop / height);
+    const opacity = 1 - ((positiveTop / height)*1.5);
 
     if (title) {
       title.style.opacity = opacity;

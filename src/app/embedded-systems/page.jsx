@@ -4,6 +4,7 @@ import './embedded.css';
 import FirstSection from './firstSection/FirstSection';
 import SecondSection from './secondSection/SecondSection';
 import ThirdSection from './thirdSection/ThirdSection';
+import FourthSection from './fourthSection/FourthSection';
 import { useRef } from 'react';
 import ScrollButton from './scroll/ScrollButton';
 /* import content from '../content.json';
@@ -29,7 +30,7 @@ export default function EmbeddedSystems() {
       <FirstSection/>
       <SecondSection refSection={secondSectionRef}/>
       <ThirdSection/>
-      <section className='test'></section>
+      <FourthSection/>
       <ScrollButton refSection={secondSectionRef}/>
     </main>
   )
