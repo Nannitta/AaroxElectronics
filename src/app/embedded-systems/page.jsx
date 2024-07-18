@@ -1,37 +1,92 @@
 'use client';
 
-import './embedded.css';
+import { useEffect, useRef, useState } from 'react';
 import FirstSection from './firstSection/FirstSection';
 import SecondSection from './secondSection/SecondSection';
 import ThirdSection from './thirdSection/ThirdSection';
 import FourthSection from './fourthSection/FourthSection';
-import { useRef } from 'react';
+import FifthSection from './fifthSection/FifthSection';
+import NavBar from './navBar/NavBar';
 import ScrollButton from './scroll/ScrollButton';
-/* import content from '../content.json';
-import { useLanguageStore } from '../stores/languageStore'; */
 
 export default function EmbeddedSystems() {
+  const firstSectionRef = useRef(null);
   const secondSectionRef = useRef(null);
-/*   const language = useLanguageStore((state) => state.language); */
+  const thirdSectionRef = useRef(null);
+  const fourthSectionRef = useRef(null);
+  const fifthSectionRef = useRef(null);
+
+  const [activeSection, setActiveSection] = useState('concept');
+  const [nextSection, setNextSection] = useState('architecture');
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = [
+        { ref: firstSectionRef, id: 'concept' },
+        { ref: secondSectionRef, id: 'architecture' },
+        { ref: thirdSectionRef, id: 'calculations' },
+        { ref: fourthSectionRef, id: 'component' },
+        { ref: fifthSectionRef, id: 'schematics' }
+      ];
+
+      let foundActive = false;
+      for (let i = 0; i < sections.length; i++) {
+        const rect = sections[i].ref.current.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+          setActiveSection(sections[i].id);
+          setNextSection(sections[i + 1]?.id || null);
+          foundActive = true;
+          break;
+        }
+      }
+
+      if (!foundActive) {
+        setNextSection(null);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToSection = (sectionRef) => {
+    window.scrollTo({
+      top: sectionRef.current.offsetTop,
+      behavior: 'smooth'
+    });
+  };
+
+  const handleScrollSection = (section) => {
+    switch (section) {
+      case 'concept':
+        scrollToSection(firstSectionRef);
+        break;
+      case 'architecture':
+        scrollToSection(secondSectionRef);
+        break;
+      case 'calculations':
+        scrollToSection(thirdSectionRef);
+        break;
+      case 'component':
+        scrollToSection(fourthSectionRef);
+        break;
+      case 'schematics':
+        scrollToSection(fifthSectionRef);
+        break;
+      default:
+        break;
+    }
+  }
 
   return(
-    <main className='aaa'>
-{/*       <nav className='nav-embedded'>
-        <ul>
-          <li>CONCEPT & SPECIFICATION</li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-          <li></li>
-        </ul>
-      </nav> */}
-      <FirstSection/>
-      <SecondSection refSection={secondSectionRef}/>
-      <ThirdSection/>
-      <FourthSection/>
-      <ScrollButton refSection={secondSectionRef}/>
-    </main>
+    <main>
+    <NavBar activeSection={activeSection} handleScrollSection={handleScrollSection}/>
+    <div ref={firstSectionRef}><FirstSection /></div>
+    <div ref={secondSectionRef}><SecondSection /></div>
+    <div ref={thirdSectionRef}><ThirdSection /></div>
+    <div ref={fourthSectionRef}><FourthSection /></div>
+    <div ref={fifthSectionRef}><FifthSection /></div>
+    <ScrollButton nextSection={nextSection} handleScrollSection={handleScrollSection}/>
+  </main>
   )
 }
