@@ -4,21 +4,17 @@ import CheckWindowWidth from '../../hooks/useWindowWidth';
 import { screenSizes } from '../../lib/screenSizes';
 import './scrollButton.css';
 
-export default function ScrollButton({ refSection }) {
+export default function ScrollButton({ nextSection, handleScrollSection }) {
   const language = useLanguageStore((state) => state.language);
   const { screenWidth } = CheckWindowWidth();
 
-  const scrollToNextSection = (refSection) => {
-    refSection.current.scrollIntoView({ behavior: 'smooth' });
-  };
-
-  if(screenWidth >= screenSizes.tablet) {
-    return(
-      <div className='scroll' onClick={() => scrollToNextSection(refSection)}>
+  if (screenWidth >= screenSizes.tablet && nextSection) {
+    return (
+      <div className='scroll' onClick={() => handleScrollSection(nextSection)}>
         <p>{content[language].EmbeddedSystems.scroll}</p>
         <span></span>
       </div>
-    )
+    );
   }
 
   return null;

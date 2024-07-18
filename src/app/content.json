@@ -72,6 +72,13 @@
         "tested": "tested",
         "and": "and",
         "proven": "proven"
+      },
+      "navBar": {
+        "concept": "CONCEPT & SPECIFICATIONS",
+        "architecture": "ARCHITECTURE DESIGN",
+        "calculations": "CALCULATIONS & SIMULATION",
+        "component": "COMPONENTS & MECHANICAL",
+        "schematic": "SCHEMATICS & PCB DESIGNS"
       }
     },
     "Footer": {
@@ -158,6 +165,13 @@
         "tested": "testado",
         "and": "y",
         "proven": "probado"
+      },
+      "navBar": {
+        "concept": "CONCEPTO & ESPECIFICACIONES",
+        "architecture": "DISEÑO DE ARQUITECTURA",
+        "calculations": "CÁLCULOS & SIMULACIÓN",
+        "component": "COMPONENTSS & MECÁNICA",
+        "schematic": "ESQUEMAS & DISEÑOS DE PCB"
       }
     },
     "Footer": {
