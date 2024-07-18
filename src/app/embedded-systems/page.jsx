@@ -31,8 +31,8 @@ export default function EmbeddedSystems() {
 
       let foundActive = false;
       for (let i = 0; i < sections.length; i++) {
-        const rect = sections[i].ref.current.getBoundingClientRect();
-        if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+        const rect = sections[i].ref.current?.getBoundingClientRect();
+        if (rect?.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
           setActiveSection(sections[i].id);
           setNextSection(sections[i + 1]?.id || null);
           foundActive = true;
@@ -80,13 +80,13 @@ export default function EmbeddedSystems() {
 
   return(
     <main>
-    <NavBar activeSection={activeSection} handleScrollSection={handleScrollSection}/>
-    <div ref={firstSectionRef}><FirstSection /></div>
-    <div ref={secondSectionRef}><SecondSection /></div>
-    <div ref={thirdSectionRef}><ThirdSection /></div>
-    <div ref={fourthSectionRef}><FourthSection /></div>
-    <div ref={fifthSectionRef}><FifthSection /></div>
-    <ScrollButton nextSection={nextSection} handleScrollSection={handleScrollSection}/>
-  </main>
+      <NavBar activeSection={activeSection} handleScrollSection={handleScrollSection}/>
+      <div ref={firstSectionRef}><FirstSection /></div>
+      <div ref={secondSectionRef}><SecondSection /></div>
+      <div ref={thirdSectionRef}><ThirdSection /></div>
+      <div ref={fourthSectionRef}><FourthSection /></div>
+      <div ref={fifthSectionRef}><FifthSection /></div>
+      <ScrollButton nextSection={nextSection} handleScrollSection={handleScrollSection}/>
+    </main>
   )
 }

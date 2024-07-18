@@ -14,11 +14,11 @@ export default function FourthSection() {
   useEffect(() => {
     const handleScroll = () => {
       const section = document.querySelector('.embedded-fourthSection');
-      const textElements = section.querySelectorAll('h2, h3');
-      const imageContainer = section.querySelector('.pcb-bg-container');
+      const textElements = section?.querySelectorAll('h2, h3');
+      const imageContainer = section?.querySelector('.pcb-bg-container');
       
-      const rect = section.getBoundingClientRect();
-      const sectionTop = rect.top;
+      const rect = section?.getBoundingClientRect();
+      const sectionTop = rect?.top;
       const windowHeight = window.innerHeight;
 
       if (sectionTop <= 0 && sectionTop >= -windowHeight) {

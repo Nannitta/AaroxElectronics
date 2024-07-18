@@ -44,8 +44,8 @@ export default function SecondSection({ refSection }) {
   }
 
   function getFrameRates() {
-    const rect = embeddedSection.getBoundingClientRect();
-    const positiveTop = rect.top <= 0 ? Math.abs(rect.top) : 0;
+    const rect = embeddedSection?.getBoundingClientRect();
+    const positiveTop = rect?.top <= 0 ? Math.abs(rect?.top) : 0;
     const height = rect.height - window.innerHeight
     const finalPercentage = Math.floor((totalFrames * positiveTop) / height);
     let frames = finalPercentage <= totalFrames ? finalPercentage : totalFrames;
