@@ -62,6 +62,11 @@
         "text2": "into account from day one"
       },
       "thirdSection": {
+        "title": "Step by step",
+        "design": "design",
+        "subtitle": "Power Supply Calculations, Tolerances, Filters, Power Consumption, Thermals, Worst Case Analysis, Battery Life..."
+      },
+      "fourthSection": {
         "title": "With many components in our toolcase",
         "text1": "PSU ICs, Microcontrollers, Processors, Memories, Transceivers, Passives, EMC Components, Relays, Displays, Connectors...",
         "tested": "tested",
@@ -143,6 +148,11 @@
         "text2": "desde el día uno"
       },
       "thirdSection": {
+        "title": "Paso a paso",
+        "design": "diseñado",
+        "subtitle": "Cálculos de suministro de energía, tolerancias, filtros, consumo de energía, térmicas, análisis del peor de los casos, duración de la batería..."
+      },
+      "fourthSection": {
         "title": "Con muchos componentes en nuestra caja de herramientas",
         "text1": "PSU ICs, Microcontroladores, Procesadores, Memorias, Transceptores, Pasivos, Componentes EMC, Relés, Pantallas, Conectores...",
         "tested": "testado",
