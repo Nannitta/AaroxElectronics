@@ -49,12 +49,12 @@
 	cursor: pointer;
 	border-radius: 0.2rem;
 	padding: 0.7rem 0;
-}
-
-.showmore-cookies a {
 	color: var(--dark-green);
 	font-size: 1rem;
 }
+
+/* .showmore-cookies a {
+} */
 
 @media (min-width: 768px) {
 	.cookies-manage {
@@ -93,10 +93,6 @@
 	.showmore-cookies:hover {
 		background-color: var(--dark-green);
 		transition: all 0.5s ease;
-	}
-
-	.showmore-cookies:hover a {
 		color: var(--background);
-		transition: all 0.5s ease;
 	}
 }

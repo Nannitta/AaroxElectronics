@@ -37,9 +37,11 @@ export default function CookiesConsent() {
           <button className='accept-cookies' onClick={handleAccept}>
             {content[language].cookiesAccept}
           </button>
-          <button className='showmore-cookies'>
-            <Link href='/cookies'>{content[language].cookiesMore}</Link>
-          </button>
+          <Link href='/cookies'>
+            <button className='showmore-cookies'>
+              {content[language].cookiesMore}
+            </button>
+          </Link>
         </div>
       </div>
     );

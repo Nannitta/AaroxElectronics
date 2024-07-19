@@ -23,10 +23,10 @@ export default function Footer() {
         <div className='connect'>
           <span>{content[language].Footer.connect}</span>
           <div className='contact'>
-            <Link href={'https://www.linkedin.com/company/aaroxelectronics/'} target='_blank'>
+            <Link href={'https://www.linkedin.com/company/aaroxelectronics/'} target='_blank' aria-label='Visit Linkedin'>
               <Linkedin />
             </Link>
-            <Link href={'mailto:aarox@aaroxelectronics.es'} target='_blank'>
+            <Link href={'mailto:aarox@aaroxelectronics.es'} target='_blank' aria-label='Send email'>
               <Email />
             </Link>
           </div>
