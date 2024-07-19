@@ -15,6 +15,21 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <title>{metadata.title}</title>
+        <meta name="description" content={metadata.description} />
+        <meta property="og:url" content="https://aaroxelectronics.es" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content={metadata.title} />
+        <meta property="og:description" content={metadata.description} />
+        <meta property="og:image" content="https://i.imgur.com/wEZBXbk.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta property="twitter:domain" content="aaroxelectronics.es" />
+        <meta property="twitter:url" content="https://aaroxelectronics.es" />
+        <meta name="twitter:title" content={metadata.title} />
+        <meta name="twitter:description" content={metadata.description} />
+        <meta name="twitter:image" content="https://i.imgur.com/wEZBXbk.png" />
+      </head>
       <body className={inter.className}>
         <SideMenu/>
         <Header/>
