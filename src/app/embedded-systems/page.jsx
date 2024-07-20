@@ -13,7 +13,7 @@ export default function EmbeddedSystems() {
   const firstSectionRef = useRef(null);
   const secondSectionRef = useRef(null);
   const thirdSectionRef = useRef(null);
-  const fourthSectionRef = useRef(null);
+/*   const fourthSectionRef = useRef(null); */
   const fifthSectionRef = useRef(null);
 
   const [activeSection, setActiveSection] = useState('concept');
@@ -25,7 +25,7 @@ export default function EmbeddedSystems() {
         { ref: firstSectionRef, id: 'concept' },
         { ref: secondSectionRef, id: 'architecture' },
         { ref: thirdSectionRef, id: 'calculations' },
-        { ref: fourthSectionRef, id: 'component' },
+/*         { ref: fourthSectionRef, id: 'component' }, */
         { ref: fifthSectionRef, id: 'schematics' }
       ];
 
@@ -67,9 +67,9 @@ export default function EmbeddedSystems() {
       case 'calculations':
         scrollToSection(thirdSectionRef);
         break;
-      case 'component':
+/*       case 'component':
         scrollToSection(fourthSectionRef);
-        break;
+        break; */
       case 'schematics':
         scrollToSection(fifthSectionRef);
         break;
@@ -84,7 +84,7 @@ export default function EmbeddedSystems() {
       <div ref={firstSectionRef}><FirstSection /></div>
       <div ref={secondSectionRef}><SecondSection /></div>
       <div ref={thirdSectionRef}><ThirdSection /></div>
-      <div ref={fourthSectionRef}><FourthSection /></div>
+{/*       <div ref={fourthSectionRef}><FourthSection /></div> */}
       <div ref={fifthSectionRef}><FifthSection /></div>
       <ScrollButton nextSection={nextSection} handleScrollSection={handleScrollSection}/>
     </main>
