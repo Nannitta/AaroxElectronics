@@ -1,10 +1,37 @@
 import { useEffect, useState } from 'react';
+import content from '../../content.json';
+import { useLanguageStore } from '../../stores/languageStore';
+import PcbTools from './PcbTools';
 import './fifthSection.css';
 
 export default function FifthSection() {
+  const language = useLanguageStore((state) => state.language);
   const [embeddedSection, setEmbeddedSection] = useState(null);
   const [containerPcb3d, setContainerPcb3d] = useState(null);
-  const totalFrames = 31;
+  const totalFrames = 128;
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const section = document.querySelector('.embedded-fifthSection');
+      const textElements = section?.querySelectorAll('.fifthSection-title, .fifthSection-subtitle');
+      
+      const rect = section?.getBoundingClientRect();
+      const sectionTop = rect?.top;
+      const windowHeight = window.innerHeight;
+
+      if (sectionTop <= 0 && sectionTop >= -windowHeight) {
+        const opacity = 1 + ((sectionTop / windowHeight) * 5);
+        textElements.forEach(el => {
+          el.style.opacity = opacity;
+        });
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   useEffect(() => {
     const start = () => {
@@ -55,6 +82,16 @@ export default function FifthSection() {
 
   return(
     <section className="embedded-fifthSection">
+      <h2 className='fifthSection-title'>{content[language].EmbeddedSystems.fourthSection.title}</h2>
+      <h3 className='fifthSection-subtitle'>
+        {content[language].EmbeddedSystems.fourthSection.text1}
+        <span> {content[language].EmbeddedSystems.fourthSection.tested} </span>
+        <p>{content[language].EmbeddedSystems.fourthSection.and}</p>
+        <span> {content[language].EmbeddedSystems.fourthSection.proven} </span>
+      </h3>
+      <div className='pcb-tools-container'>
+        <PcbTools/>
+      </div>
        <div className="container-pcb3d">
            <canvas id="canvas-pcb3d"></canvas>
        </div>
