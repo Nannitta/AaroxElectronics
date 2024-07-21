@@ -1,106 +1,61 @@
 .embedded-fourthSection {
-	height: 110vh;
-	background-color: var(--dark-green);
-	color: var(--background);
-	padding-left: 1rem;
-	padding-right: 1rem;
-	position: relative;
-	overflow: hidden;
-}
-
-.embedded-fourthSection h2 {
-	font-size: 2.5rem;
-	padding-top: 5rem;
-	text-wrap: balance;
-}
-
-.embedded-fourthSection h3 {
-	padding-top: 2rem;
-	line-height: 1.5;
-	font-weight: 500;
-}
-
-.embedded-fourthSection h3 p {
-	display: contents;
-}
-
-.embedded-fourthSection h3 span {
-	color: var(--lime-green);
-}
-
-.embedded-fourthSection h2,
-.embedded-fourthSection h3 {
-	transition: opacity 0.5s ease-out;
-}
-
-.embedded-fourthSection h2.hidden,
-.embedded-fourthSection h3.hidden {
-	opacity: 0;
-}
-
-.pcb-bg-container {
-	object-fit: cover;
 	width: 100%;
-	height: 224px;
+	height: 350vh;
 	position: relative;
-	top: 82px;
-	transition: transform 0.5s ease-out;
+	color: var(--background);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
 }
 
-@media (min-width: 768px) {
-	.embedded-fourthSection {
-		height: 100vh;
-		padding-left: 1.5rem;
-		padding-right: 1.5rem;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-	}
+.container-pcb3d {
+	width: 100%;
+	height: 100vh;
+	position: sticky;
+	background-size: cover;
+	background-repeat: no-repeat;
+	top: 0;
+}
 
-	.embedded-fourthSection h2 {
-		padding-top: 7rem;
-		text-align: center;
-	}
+.pcb-tools-container {
+	position: absolute;
+	top: 20rem;
+	z-index: 1;
+	align-self: flex-end;
+}
 
-	.embedded-fourthSection h3 {
-		text-align: center;
-		font-size: 2rem;
-		padding-top: 3rem;
-	}
-
-	.pcb-bg-container {
-		height: 338px;
-		width: 504px;
-		top: 180px;
-	}
+.pcb-tools-container div img {
+	object-fit: contain;
 }
 
 @media (min-width: 1366px) {
-	.embedded-fourthSection {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		height: 130vh;
-	}
-
-	.embedded-fourthSection h2 {
+	.embedded-fourthSection .fourthSection-title {
+		text-wrap: balance;
+		position: absolute;
+		top: 9rem;
+		z-index: 1;
 		font-size: 3.5rem;
 		max-width: 860px;
 	}
 
-	.embedded-fourthSection h3 {
+	.embedded-fourthSection .fourthSection-subtitle {
+		line-height: 1.5;
+		font-weight: 500;
+		position: absolute;
+		top: 20rem;
+		z-index: 1;
 		max-width: 800px;
+		font-size: 2rem;
 	}
 
-	.pcb-bg-container {
-		width: 660px;
-		height: 442px;
-		top: 100px;
+	.embedded-fourthSection .fourthSection-subtitle p {
+		display: contents;
+		font-size: 2rem;
+	}
+
+	.embedded-fourthSection .fourthSection-subtitle span {
+		color: var(--lime-green);
+		font-size: 2rem;
 	}
 }
-
-/* @media (min-width: 1920px) {
-	.pcb-bg-container {
-		height: 442px;
-	}
-} */
