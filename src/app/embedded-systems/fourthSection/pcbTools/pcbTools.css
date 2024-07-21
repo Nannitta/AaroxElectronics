@@ -1,0 +1,28 @@
+.container-tools {
+	position: fixed;
+	z-index: 1;
+	align-self: flex-end;
+	opacity: 0;
+	transition: opacity 1s;
+}
+
+.container-tools.tools {
+	top: 52%;
+	transform: translateY(-50%);
+}
+
+.pcb-tools-container div img {
+	object-fit: contain;
+}
+
+@media (min-width: 1366px) {
+	.container-tools {
+		margin-right: 6rem;
+	}
+}
+
+@media (min-width: 1920px) {
+	.container-tools.tools {
+		top: 55%;
+	}
+}

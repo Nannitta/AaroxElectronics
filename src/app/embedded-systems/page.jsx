@@ -5,7 +5,6 @@ import FirstSection from './firstSection/FirstSection';
 import SecondSection from './secondSection/SecondSection';
 import ThirdSection from './thirdSection/ThirdSection';
 import FourthSection from './fourthSection/FourthSection';
-import FifthSection from './fifthSection/FifthSection';
 import NavBar from './navBar/NavBar';
 import ScrollButton from './scroll/ScrollButton';
 
@@ -13,8 +12,7 @@ export default function EmbeddedSystems() {
   const firstSectionRef = useRef(null);
   const secondSectionRef = useRef(null);
   const thirdSectionRef = useRef(null);
-/*   const fourthSectionRef = useRef(null); */
-  const fifthSectionRef = useRef(null);
+  const fourthSectionRef = useRef(null);
 
   const [activeSection, setActiveSection] = useState('concept');
   const [nextSection, setNextSection] = useState('architecture');
@@ -25,8 +23,7 @@ export default function EmbeddedSystems() {
         { ref: firstSectionRef, id: 'concept' },
         { ref: secondSectionRef, id: 'architecture' },
         { ref: thirdSectionRef, id: 'calculations' },
-/*         { ref: fourthSectionRef, id: 'component' }, */
-        { ref: fifthSectionRef, id: 'schematics' }
+        { ref: fourthSectionRef, id: 'schematics' }
       ];
 
       let foundActive = false;
@@ -67,11 +64,8 @@ export default function EmbeddedSystems() {
       case 'calculations':
         scrollToSection(thirdSectionRef);
         break;
-/*       case 'component':
-        scrollToSection(fourthSectionRef);
-        break; */
       case 'schematics':
-        scrollToSection(fifthSectionRef);
+        scrollToSection(fourthSectionRef);
         break;
       default:
         break;
@@ -84,8 +78,7 @@ export default function EmbeddedSystems() {
       <div ref={firstSectionRef}><FirstSection /></div>
       <div ref={secondSectionRef}><SecondSection /></div>
       <div ref={thirdSectionRef}><ThirdSection /></div>
-{/*       <div ref={fourthSectionRef}><FourthSection /></div> */}
-      <div ref={fifthSectionRef}><FifthSection /></div>
+      <div ref={fourthSectionRef}><FourthSection /></div>
       <ScrollButton nextSection={nextSection} handleScrollSection={handleScrollSection}/>
     </main>
   )
