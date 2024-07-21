@@ -16,6 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta charset="UTF-8"></meta>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
         <meta property="og:url" content="https://aaroxelectronics.es" />
