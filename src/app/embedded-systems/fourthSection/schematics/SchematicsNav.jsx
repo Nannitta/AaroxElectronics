@@ -1,4 +1,4 @@
-import './fourthSection.css';
+import './schematics.css';
 
 export default function SchematicsNav() {
   return(

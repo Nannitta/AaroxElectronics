@@ -1,10 +1,11 @@
 import Image from 'next/image';
-import altium from '../../assets/images/embedded/pcbTools/altium.svg';
-import blender from '../../assets/images/embedded/pcbTools/blender.svg';
-import solidWorks from '../../assets/images/embedded/pcbTools/solidWorks.svg';
-import zuken from '../../assets/images/embedded/pcbTools/zuken.svg';
-import CheckWindowWidth from '../../hooks/useWindowWidth';
-import { screenSizes } from '../../lib/screenSizes';
+import altium from '../../../assets/images/embedded/pcbTools/altium.svg';
+import blender from '../../../assets/images/embedded/pcbTools/blender.svg';
+import solidWorks from '../../../assets/images/embedded/pcbTools/solidWorks.svg';
+import zuken from '../../../assets/images/embedded/pcbTools/zuken.svg';
+import CheckWindowWidth from '../../../hooks/useWindowWidth';
+import { screenSizes } from '../../../lib/screenSizes';
+import './pcbTools.css';
 
 export default function PcbTools() {
   const { screenWidth } = CheckWindowWidth();

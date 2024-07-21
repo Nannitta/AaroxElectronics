@@ -1,4 +1,4 @@
-import './fourthSection.css';
+import './components.css';
 
 export default function ComponentsNav() {
   return(
