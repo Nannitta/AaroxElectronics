@@ -79,6 +79,7 @@ export default function EmbeddedSystems() {
       <div ref={secondSectionRef}><SecondSection /></div>
       <div ref={thirdSectionRef}><ThirdSection /></div>
       <div ref={fourthSectionRef}><FourthSection /></div>
+{/*       <section style={{backgroundColor: 'red', height: '100vh'}}></section> */}
       <ScrollButton nextSection={nextSection} handleScrollSection={handleScrollSection}/>
     </main>
   )
