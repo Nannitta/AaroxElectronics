@@ -21,7 +21,7 @@ export default function handleVisibility(frame, screenWidth, screenSizes) {
 
   if(containerTools) {
     if(screenWidth >= screenSizes.laptop) {
-      if (frame >= 12 && frame <= 23) {
+      if (frame >= 6 && frame <= 23) {
         containerTools.style.opacity = 1;
       } else {
         containerTools.style.opacity = 0;
@@ -80,31 +80,31 @@ export default function handleVisibility(frame, screenWidth, screenSizes) {
       if(frame >= 59 && frame <= 66) {
         layerStack.style.color = '#cafb4b';
       } else {
-        layerStack.style.color = '#fefffa';
+        layerStack.style.color = '#2dac44';
       }
 
       if(frame >= 67 && frame <= 75) {
         signal.style.color = '#cafb4b';
       } else {
-        signal.style.color = '#fefffa';
+        signal.style.color = '#2dac44';
       }
 
       if(frame >= 77 && frame <= 86) {
         impedance.style.color = '#cafb4b';
       } else {
-        impedance.style.color = '#fefffa';
+        impedance.style.color = '#2dac44';
       }
 
       if(frame >= 88 && frame <= 101) {
         ddr.style.color = '#cafb4b';
       } else {
-        ddr.style.color = '#fefffa';
+        ddr.style.color = '#2dac44';
       }
 
       if(frame >= 102 && frame <= 109) {
         antena.style.color = '#cafb4b';
       } else {
-        antena.style.color = '#fefffa';
+        antena.style.color = '#2dac44';
       }
     }
   }

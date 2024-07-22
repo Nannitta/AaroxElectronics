@@ -17,7 +17,7 @@ export default function FourthSection() {
   const [containerPcb3d, setContainerPcb3d] = useState(null);
   const totalFrames = 169;
   const shrinkStartFrame = 157;
-  const minScale = 0.6; // Valor mínimo de escala para el elemento
+  const minScale = 0.6;
 
   useEffect(() => {
     const handleScroll = () => {
@@ -89,21 +89,21 @@ export default function FourthSection() {
       containerPcb3d.style.backgroundImage = `url(${img.src})`;
     };
 
-    // Ajuste de encogimiento basado en el frame actual
     if (frames >= shrinkStartFrame) {
       const scrollPosition = positiveTop - ((shrinkStartFrame / totalFrames) * height);
       const maxScrollPosition = (height * (1 - (shrinkStartFrame / totalFrames))) * 0.6;
       const actualScrollPosition = Math.min(scrollPosition, maxScrollPosition);
 
-      // Calcular escala y traslación
       const scaleValue = Math.max(minScale, 1 - (actualScrollPosition / maxScrollPosition) * 0.4);
-      const translateYValue = ((1 - scaleValue) / 2) * 100; // Mantener el elemento en el centro verticalmente
+      const translateYValue = ((1 - scaleValue) / 2) * 100;
 
       containerPcb3d.style.transform = `translateY(-${translateYValue}%) scale(${scaleValue})`;
       containerPcb3d.style.borderRadius = '2.5rem';
+      containerPcb3d.style.boxShadow = '0px 2px 100px 0px #1e5a38c5'
     } else {
       containerPcb3d.style.transform = 'initial';
       containerPcb3d.style.borderRadius = 'initial';
+      containerPcb3d.style.boxShadow = 'initial'
     }
 
     handleVisibility(frames, screenWidth, screenSizes);
