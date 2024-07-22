@@ -68,13 +68,31 @@ export default function FourthSection() {
   });
 
   function currentFrame(frame) {
-    return `./embedded/pcb3d/pcb3d${frame}.png`;
+    return `./embedded/pcb3d/pcb3d${frame}.webp`;
   }
 
   function getFrameRates() {
     const rect = embeddedSection?.getBoundingClientRect();
     const positiveTop = rect?.top <= 0 ? Math.abs(rect?.top) : 0;
     const height = rect.height - window.innerHeight;
+    
+    const sectionBottom = rect?.bottom;
+    const windowHeight = window.innerHeight;
+
+    if (sectionBottom <= windowHeight) {
+      const positiveBottom = windowHeight - sectionBottom;
+      const scrollPosition = Math.min(positiveBottom, height);
+
+      const scaleValue = 1 - (scrollPosition / height);
+      const translateYValue = (scrollPosition / height) * 700;
+
+      containerPcb3d.style.transform = `translateY(-${translateYValue}%) scale(${scaleValue})`;
+      containerPcb3d.style.borderRadius = '2.5rem';
+    } else {
+      containerPcb3d.style.transform = 'initial';
+      containerPcb3d.style.borderRadius = 'initial';
+    }
+
     const finalPercentage = Math.floor((totalFrames * positiveTop) / height);
     let frames = finalPercentage <= totalFrames ? finalPercentage : totalFrames;
 
