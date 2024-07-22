@@ -111,37 +111,37 @@ export default function handleVisibility(frame, screenWidth, screenSizes) {
 
   if(pcbMechanical) {
     if(screenWidth >= screenSizes.laptop) {
-      if (frame >= 117 && frame <= 154) {
+      if (frame >= 115 && frame <= 157) {
         pcbMechanical.style.opacity = 1
       } else {
         pcbMechanical.style.opacity = 0
       }
 
-      if(frame >= 117 && frame <= 122) {
+      if(frame >= 117 && frame <= 124) {
         dfm.style.color = '#cafb4b';
       } else {
         dfm.style.color = '#fefffa';
       }
 
-      if(frame >= 123 && frame <= 129) {
+      if(frame >= 125 && frame <= 132) {
         mechanical.style.color = '#cafb4b';
       } else {
         mechanical.style.color = '#fefffa';
       }
 
-      if(frame >= 130 && frame <= 135) {
+      if(frame >= 133 && frame <= 141) {
         modeling.style.color = '#cafb4b';
       } else {
         modeling.style.color = '#fefffa';
       }
 
-      if(frame >= 136 && frame <= 140) {
+      if(frame >= 142 && frame <= 149) {
         prototyping.style.color = '#cafb4b';
       } else {
         prototyping.style.color = '#fefffa';
       }
 
-      if(frame >= 141 && frame <= 153) {
+      if(frame >= 150 && frame <= 157) {
         production.style.color = '#cafb4b';
       } else {
         production.style.color = '#fefffa';

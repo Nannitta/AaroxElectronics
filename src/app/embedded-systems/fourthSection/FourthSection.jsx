@@ -15,7 +15,9 @@ export default function FourthSection() {
   const { screenWidth } = CheckWindowWidth();
   const [embeddedSection, setEmbeddedSection] = useState(null);
   const [containerPcb3d, setContainerPcb3d] = useState(null);
-  const totalFrames = 155;
+  const totalFrames = 169;
+  const shrinkStartFrame = 157;
+  const minScale = 0.6; // Valor mínimo de escala para el elemento
 
   useEffect(() => {
     const handleScroll = () => {
@@ -75,23 +77,6 @@ export default function FourthSection() {
     const rect = embeddedSection?.getBoundingClientRect();
     const positiveTop = rect?.top <= 0 ? Math.abs(rect?.top) : 0;
     const height = rect.height - window.innerHeight;
-    
-    const sectionBottom = rect?.bottom;
-    const windowHeight = window.innerHeight;
-
-    if (sectionBottom <= windowHeight) {
-      const positiveBottom = windowHeight - sectionBottom;
-      const scrollPosition = Math.min(positiveBottom, height);
-
-      const scaleValue = 1 - (scrollPosition / height);
-      const translateYValue = (scrollPosition / height) * 700;
-
-      containerPcb3d.style.transform = `translateY(-${translateYValue}%) scale(${scaleValue})`;
-      containerPcb3d.style.borderRadius = '2.5rem';
-    } else {
-      containerPcb3d.style.transform = 'initial';
-      containerPcb3d.style.borderRadius = 'initial';
-    }
 
     const finalPercentage = Math.floor((totalFrames * positiveTop) / height);
     let frames = finalPercentage <= totalFrames ? finalPercentage : totalFrames;
@@ -104,10 +89,27 @@ export default function FourthSection() {
       containerPcb3d.style.backgroundImage = `url(${img.src})`;
     };
 
+    // Ajuste de encogimiento basado en el frame actual
+    if (frames >= shrinkStartFrame) {
+      const scrollPosition = positiveTop - ((shrinkStartFrame / totalFrames) * height);
+      const maxScrollPosition = (height * (1 - (shrinkStartFrame / totalFrames))) * 0.6;
+      const actualScrollPosition = Math.min(scrollPosition, maxScrollPosition);
+
+      // Calcular escala y traslación
+      const scaleValue = Math.max(minScale, 1 - (actualScrollPosition / maxScrollPosition) * 0.4);
+      const translateYValue = ((1 - scaleValue) / 2) * 100; // Mantener el elemento en el centro verticalmente
+
+      containerPcb3d.style.transform = `translateY(-${translateYValue}%) scale(${scaleValue})`;
+      containerPcb3d.style.borderRadius = '2.5rem';
+    } else {
+      containerPcb3d.style.transform = 'initial';
+      containerPcb3d.style.borderRadius = 'initial';
+    }
+
     handleVisibility(frames, screenWidth, screenSizes);
   }
 
-  return(
+  return (
     <section className="embedded-fourthSection">
       <h2 className='fourthSection-title'>{content[language].EmbeddedSystems.fourthSection.title}</h2>
       <h3 className='fourthSection-subtitle'>
@@ -117,20 +119,20 @@ export default function FourthSection() {
         <span> {content[language].EmbeddedSystems.fourthSection.proven} </span>
       </h3>
       <div className='pcb-tools-container container-tools tools'>
-        <PcbTools/>
+        <PcbTools />
       </div>
       <div className='pcb-schematics'>
-        <SchematicsNav/>
+        <SchematicsNav />
       </div>
       <div className='pcb-components'>
-        <ComponentsNav/>
+        <ComponentsNav />
       </div>
       <div className='pcb-mechanical'>
-        <MechanicalNav/>
+        <MechanicalNav />
       </div>
-       <div className="container-pcb3d">
-           <canvas id="canvas-pcb3d"></canvas>
-       </div>
+      <div className="container-pcb3d">
+        <canvas id="canvas-pcb3d"></canvas>
+      </div>
     </section>
-  )
+  );
 }
