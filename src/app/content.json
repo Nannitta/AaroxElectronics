@@ -71,14 +71,36 @@
         "text1": "PSU ICs, Microcontrollers, Processors, Memories, Transceivers, Passives, EMC Components, Relays, Displays, Connectors...",
         "tested": "tested",
         "and": "and",
-        "proven": "proven"
+        "proven": "proven",
+        "navSchematics": {
+          "diagrams": "Top Diagrams",
+          "variants": "Variants",
+          "netClasses": "Net Classes",
+          "netNaming": "Net Naming",
+          "detailing": "PCB Detailing"
+        },
+        "navComponents": {
+          "layer": "Layer Stack",
+          "signal": "Signal Integrity",
+          "impedance": "Impedance Control",
+          "ddr": "DDR Routing",
+          "antena": "Antena Design"
+        },
+        "navMechanical": {
+          "dfm": "DFM & DFA",
+          "mechanical": "Mechanical",
+          "modeling": "3D Modeling",
+          "prototyping": "Prototyping",
+          "production": "Production"
+        }
       },
       "navBar": {
         "concept": "CONCEPT & SPECIFICATIONS",
         "architecture": "ARCHITECTURE DESIGN",
         "calculations": "CALCULATIONS & SIMULATION",
         "component": "COMPONENTS & MECHANICAL",
-        "schematic": "SCHEMATICS & PCB DESIGNS"
+        "schematic": "SCHEMATICS & PCB DESIGNS",
+        "marketSW": "FIRMWARE & SOFTWARE"
       }
     },
     "Footer": {
@@ -164,14 +186,36 @@
         "text1": "PSU ICs, Microcontroladores, Procesadores, Memorias, Transceptores, Pasivos, Componentes EMC, Relés, Pantallas, Conectores...",
         "tested": "testado",
         "and": "y",
-        "proven": "probado"
+        "proven": "probado",
+        "navSchematics": {
+          "diagrams": "Diagramas Superiores",
+          "variants": "Variantes",
+          "netClasses": "Clases de Red",
+          "netNaming": "Nombre de Clases",
+          "detailing": "Detalle de PCB"
+        },
+        "navComponents": {
+          "layer": "Pila de Capas",
+          "signal": "Integridad de la Señal",
+          "impedance": "Control de Impedancia",
+          "ddr": "Enrutamiento DDR",
+          "antena": "Diseño de Antena"
+        },  
+        "navMechanical": {
+          "dfm": "DFM y DFA",
+          "mechanical": "Mecánico",
+          "modeling": "Modelado 3D",
+          "prototyping": "Prototipos",
+          "production": "Producción"
+        }
       },
       "navBar": {
         "concept": "CONCEPTO & ESPECIFICACIONES",
         "architecture": "DISEÑO DE ARQUITECTURA",
         "calculations": "CÁLCULOS & SIMULACIÓN",
         "component": "COMPONENTSS & MECÁNICA",
-        "schematic": "ESQUEMAS & DISEÑOS DE PCB"
+        "schematic": "ESQUEMAS & DISEÑOS DE PCB",
+        "marketSW": "FIRMWARE & SOFTWARE"
       }
     },
     "Footer": {

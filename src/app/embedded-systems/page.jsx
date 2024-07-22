@@ -5,14 +5,17 @@ import FirstSection from './firstSection/FirstSection';
 import SecondSection from './secondSection/SecondSection';
 import ThirdSection from './thirdSection/ThirdSection';
 import FourthSection from './fourthSection/FourthSection';
+import FifthSection from './fifthSection/FifthSection';
 import NavBar from './navBar/NavBar';
 import ScrollButton from './scroll/ScrollButton';
+import './embedded.css';
 
 export default function EmbeddedSystems() {
   const firstSectionRef = useRef(null);
   const secondSectionRef = useRef(null);
   const thirdSectionRef = useRef(null);
   const fourthSectionRef = useRef(null);
+  const fifthSectionRef = useRef(null);
 
   const [activeSection, setActiveSection] = useState('concept');
   const [nextSection, setNextSection] = useState('architecture');
@@ -23,7 +26,8 @@ export default function EmbeddedSystems() {
         { ref: firstSectionRef, id: 'concept' },
         { ref: secondSectionRef, id: 'architecture' },
         { ref: thirdSectionRef, id: 'calculations' },
-        { ref: fourthSectionRef, id: 'schematics' }
+        { ref: fourthSectionRef, id: 'schematics' },
+        { ref: fifthSectionRef, id: 'market-sw'}
       ];
 
       let foundActive = false;
@@ -67,19 +71,21 @@ export default function EmbeddedSystems() {
       case 'schematics':
         scrollToSection(fourthSectionRef);
         break;
+      case 'market-sw':
+        scrollToSection(fifthSectionRef);
       default:
         break;
     }
   }
 
   return(
-    <main>
+    <main className='main-embedded'>
       <NavBar activeSection={activeSection} handleScrollSection={handleScrollSection}/>
       <div ref={firstSectionRef}><FirstSection /></div>
       <div ref={secondSectionRef}><SecondSection /></div>
       <div ref={thirdSectionRef}><ThirdSection /></div>
       <div ref={fourthSectionRef}><FourthSection /></div>
-{/*       <section style={{backgroundColor: 'red', height: '100vh'}}></section> */}
+      <div ref={fifthSectionRef} className='fifthSection-embedded'><FifthSection/></div>
       <ScrollButton nextSection={nextSection} handleScrollSection={handleScrollSection}/>
     </main>
   )

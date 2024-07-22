@@ -20,6 +20,9 @@ export default function NavBar({ activeSection, handleScrollSection }) {
         <li className={activeSection === 'schematics' ? 'active' : 'hidden'} onClick={() => handleScrollSection('schematics')}>
           {conten[language].EmbeddedSystems.navBar.schematic}
         </li>
+        <li className={activeSection === 'market-sw' ? 'active' : 'hidden'} onClick={() => handleScrollSection('market-sw')}>
+          {conten[language].EmbeddedSystems.navBar.marketSW}
+        </li>
       </ul>
     </nav>
   )

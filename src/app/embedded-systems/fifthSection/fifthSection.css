@@ -1,0 +1,72 @@
+.container-market,
+.container-sw {
+	background-color: var(--background-3dsection);
+	position: relative;
+	top: -19rem;
+	width: 60%;
+	display: flex;
+	align-self: center;
+	gap: 2rem;
+	height: 30rem;
+}
+
+.container-sw {
+	top: -15rem;
+}
+
+.market,
+.sw {
+	background-color: var(--forest-green);
+	box-shadow: #1e5a38c5 0px 2px 50px 0px;
+	width: 50%;
+	border-radius: 1.2rem;
+	padding: 3rem;
+	display: flex;
+	flex-direction: column;
+}
+
+.market h2,
+.sw h2 {
+	color: var(--lime-green);
+	font-size: 3rem;
+	font-weight: 600;
+	padding-bottom: 3rem;
+}
+
+.market p,
+.sw p {
+	color: var(--background);
+	font-size: 1.5rem;
+	line-height: 1.5;
+	text-wrap: balance;
+}
+
+.market-logos,
+.sw-logos {
+	background-color: #fefffa86;
+	box-shadow: #1e5a38c5 0px 2px 50px 0px;
+	width: 50%;
+	border-radius: 1.2rem;
+	padding: 3rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	align-items: center;
+	justify-content: center;
+}
+
+.container-logo img {
+	object-fit: contain;
+}
+
+@media (min-width: 1366px) {
+	.container-market,
+	.container-sw {
+		top: -15rem;
+		height: 40rem;
+	}
+
+	.container-sw {
+		top: -12rem;
+	}
+}
