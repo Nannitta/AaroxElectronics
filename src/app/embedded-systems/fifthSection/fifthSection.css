@@ -3,11 +3,12 @@
 	background-color: var(--background-3dsection);
 	position: relative;
 	top: -19rem;
-	width: 60%;
+	width: 100%;
 	display: flex;
+	flex-direction: column;
+	align-items: center;
 	align-self: center;
 	gap: 2rem;
-	height: 30rem;
 }
 
 .container-sw {
@@ -64,6 +65,9 @@
 	.container-sw {
 		top: -15rem;
 		height: 40rem;
+		flex-direction: row;
+		width: 60%;
+		align-items: normal;
 	}
 
 	.container-sw {

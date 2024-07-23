@@ -16,6 +16,7 @@
 	position: sticky;
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center;
 	top: 0;
 	transition: transform 0.5s ease-out, border-radius 0.5s ease-out;
 }

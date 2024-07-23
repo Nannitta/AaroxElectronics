@@ -1,3 +1,5 @@
+import { useLanguageStore } from '../../stores/languageStore';
+import content from '../../content.json';
 import Image from 'next/image';
 import npx from '../../assets/images/embedded/market/npx.svg';
 import microchip from '../../assets/images/embedded/market/microchip.svg';
@@ -11,9 +13,12 @@ import qt from '../../assets/images/embedded/sw/qt.svg';
 import grafana from '../../assets/images/embedded/sw/grafana.svg';
 import docker from '../../assets/images/embedded/sw/docker.svg';
 import wayland from '../../assets/images/embedded/sw/wayland.svg';
+import buildRoot from '../../assets/images/embedded/sw/buildRoot.webp';
 import './fifthSection.css';
 
 export default function FifthSection() {
+  const language = useLanguageStore((state) => state.language);
+
   return(
     <>
       <section className='container-market'>
@@ -41,14 +46,14 @@ export default function FifthSection() {
           </div>
         </div>
         <div className='market'>
-          <h2>We know the market</h2>
-          <p>With extensive experience writing software in multiple platforms and for different industries, using the main manufacturers</p>
+          <h2>{content[language].EmbeddedSystems.fifthSection.market.title}</h2>
+          <p>{content[language].EmbeddedSystems.fifthSection.market.text}</p>
         </div>
       </section>
       <section className='container-sw'>
       <div className='sw'>
-          <h2>SW up to the top level</h2>
-          <p>We can build custom Kernels, integrate and develop applications, design impressive dashboards and implement FW over-the-air systems</p>
+          <h2>{content[language].EmbeddedSystems.fifthSection.sw.title}</h2>
+          <p>{content[language].EmbeddedSystems.fifthSection.sw.text}</p>
         </div>
         <div className='sw-logos'>
           <div className='container-logo'>
@@ -59,6 +64,9 @@ export default function FifthSection() {
           </div>
           <div className='container-logo'>
             <Image src={grafana} alt='NPX logo' height={100} width={120}/>
+          </div>
+          <div className='container-logo'>
+            <Image src={buildRoot} alt='NPX logo' height={100} width={120}/>
           </div>
           <div className='container-logo'>
             <Image src={docker} alt='NPX logo' height={100} width={120}/>

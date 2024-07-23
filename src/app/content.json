@@ -94,6 +94,16 @@
           "production": "Production"
         }
       },
+      "fifthSection": {
+        "market": {
+          "title": "We know the market",
+          "text": "With extensive experience writing software in multiple platforms and for different industries, using the main manufacturers"
+        },
+        "sw": {
+          "title": "SW up to the top level",
+          "text": "We can build custom Kernels, integrate and develop applications, design impressive dashboards and implement FW over-the-air systems"
+        }
+      },
       "navBar": {
         "concept": "CONCEPT & SPECIFICATIONS",
         "architecture": "ARCHITECTURE DESIGN",
@@ -207,6 +217,16 @@
           "modeling": "Modelado 3D",
           "prototyping": "Prototipos",
           "production": "Producción"
+        } 
+      },
+      "fifthSection": {
+        "market": {
+          "title": "Nosotros conocemos el mercado",
+          "text": "Con amplia experiencia escribiendo software en múltiples plataformas y para diferentes industrias, utilizando los principales fabricantes"
+        },
+        "sw": {
+          "title": "SW hasta el nivel superior",
+          "text": "Podemos crear kernels personalizados, integrar y desarrollar aplicaciones, diseñar paneles de control impresionantes e implementar sistemas inalámbricos de FW"
         }
       },
       "navBar": {
