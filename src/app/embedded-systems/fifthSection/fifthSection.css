@@ -2,7 +2,6 @@
 .container-sw {
 	background-color: var(--background-3dsection);
 	position: relative;
-	top: -19rem;
 	width: 100%;
 	display: flex;
 	flex-direction: column;
@@ -12,7 +11,7 @@
 }
 
 .container-sw {
-	top: -15rem;
+	margin-top: 15rem;
 }
 
 .market,
@@ -51,8 +50,8 @@
 	padding: 3rem;
 	display: flex;
 	flex-wrap: wrap;
-	gap: 2rem;
 	align-items: center;
+	gap: 2rem;
 	justify-content: center;
 }
 
@@ -63,14 +62,34 @@
 @media (min-width: 1366px) {
 	.container-market,
 	.container-sw {
-		top: -15rem;
 		height: 40rem;
 		flex-direction: row;
 		width: 60%;
 		align-items: normal;
+		margin-top: calc(-25vh - 50px);
 	}
 
 	.container-sw {
-		top: -12rem;
+		margin-top: 3rem;
+		margin-bottom: 5rem;
+	}
+}
+
+@media (min-width: 1920px) {
+	.market-logos,
+	.sw-logos {
+		row-gap: 0;
+		column-gap: 4rem;
+	}
+
+	.container-market,
+	.container-sw {
+		margin-top: calc(-20vh - 50px);
+		height: 42rem;
+	}
+
+	.container-sw {
+		margin-bottom: 9rem;
+		margin-top: 5rem;
 	}
 }

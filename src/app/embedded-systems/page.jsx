@@ -51,10 +51,17 @@ export default function EmbeddedSystems() {
   }, []);
 
   const scrollToSection = (sectionRef) => {
-    window.scrollTo({
-      top: sectionRef.current.offsetTop,
-      behavior: 'smooth'
-    });
+    if (sectionRef === fifthSectionRef) {
+      window.scrollTo({
+        top: sectionRef.current.offsetTop - 500,
+        behavior: 'smooth'
+      });
+    } else {
+      window.scrollTo({
+        top: sectionRef.current.offsetTop,
+        behavior: 'smooth'
+      });
+    }
   };
 
   const handleScrollSection = (section) => {
