@@ -70,7 +70,13 @@ export default function FourthSection() {
   });
 
   function currentFrame(frame) {
-    return `./embedded/pcb3d/pcb3d${frame}.webp`;
+    if(screenWidth >= screenSizes.laptop) {
+      return `./embedded/pcb3d/pcb3d${frame}.webp`;
+    }
+
+    if(screenWidth >= screenSizes.tablet) {
+      return `./embedded/pcb3dTablet/pcb3d${frame}.webp`;
+    }
   }
 
   function getFrameRates() {
@@ -111,7 +117,10 @@ export default function FourthSection() {
 
   return (
     <section className="embedded-fourthSection">
-      <h2 className='fourthSection-title'>{content[language].EmbeddedSystems.fourthSection.title}</h2>
+      <h2 className='fourthSection-title'>
+        {content[language].EmbeddedSystems.fourthSection.title}
+        <span> {content[language].EmbeddedSystems.fourthSection.toolcase}</span>
+      </h2>
       <h3 className='fourthSection-subtitle'>
         {content[language].EmbeddedSystems.fourthSection.text1}
         <span> {content[language].EmbeddedSystems.fourthSection.tested} </span>

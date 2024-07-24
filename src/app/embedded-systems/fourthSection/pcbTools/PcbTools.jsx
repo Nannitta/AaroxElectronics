@@ -21,10 +21,10 @@ export default function PcbTools() {
       </div>
       <div>
         <Image 
-          src={blender} 
+          src={zuken} 
           height={screenWidth >= screenSizes.desktop ? 100 : 60} 
           width={screenWidth >= screenSizes.desktop ? 250 : 150} 
-          alt='Blender logo'/>
+          alt='Zuken logo'/>
       </div>
       <div>
         <Image 
@@ -35,10 +35,10 @@ export default function PcbTools() {
       </div>
       <div>
         <Image 
-          src={zuken} 
+          src={blender} 
           height={screenWidth >= screenSizes.desktop ? 100 : 60} 
           width={screenWidth >= screenSizes.desktop ? 250 : 150} 
-          alt='Zuken logo'/>
+          alt='Blender logo'/>
       </div>
     </>
   )

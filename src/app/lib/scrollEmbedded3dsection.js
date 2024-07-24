@@ -27,41 +27,49 @@ export default function handleVisibility(frame, screenWidth, screenSizes) {
         containerTools.style.opacity = 0;
       }
     }
+
+    if(screenWidth >= screenSizes.tablet) {
+      if (frame >= 9 && frame <= 23) {
+        containerTools.style.opacity = 1;
+      } else {
+        containerTools.style.opacity = 0;
+      }
+    }
   }
 
   if(pcbSchematics) {
-    if(screenWidth >= screenSizes.laptop) {
-      if (frame >= 28 && frame <= 58) {
+    if(screenWidth >= screenSizes.tablet) {
+      if (frame >= 27 && frame <= 56) {
         pcbSchematics.style.opacity = 1
       } else {
         pcbSchematics.style.opacity = 0
       }
 
-      if(frame >= 28 && frame <= 36) {
+      if(frame >= 27 && frame <= 31) {
         diagrams.style.color = '#cafb4b';
       } else {
         diagrams.style.color = '#fefffa';
       }
 
-      if(frame >= 37 && frame <= 41) {
+      if(frame >= 32 && frame <= 38) {
         variants.style.color = '#cafb4b';
       } else {
         variants.style.color = '#fefffa';
       }
 
-      if(frame >= 42 && frame <= 46) {
+      if(frame >= 39 && frame <= 44) {
         netClasses.style.color = '#cafb4b';
       } else {
         netClasses.style.color = '#fefffa';
       }
 
-      if(frame >= 47 && frame <= 51) {
+      if(frame >= 45 && frame <= 50) {
         netNaming.style.color = '#cafb4b';
       } else {
         netNaming.style.color = '#fefffa';
       }
 
-      if(frame >= 52 && frame <= 58) {
+      if(frame >= 51 && frame <= 56) {
         detailing.style.color = '#cafb4b';
       } else {
         detailing.style.color = '#fefffa';
@@ -70,38 +78,38 @@ export default function handleVisibility(frame, screenWidth, screenSizes) {
   }
 
   if(pcbComponents) {
-    if(screenWidth >= screenSizes.laptop) {
-      if (frame >= 59 && frame <= 111) {
+    if(screenWidth >= screenSizes.tablet) {
+      if (frame >= 57 && frame <= 114) {
         pcbComponents.style.opacity = 1
       } else {
         pcbComponents.style.opacity = 0
       }
 
-      if(frame >= 59 && frame <= 66) {
+      if(frame >= 57 && frame <= 67) {
         layerStack.style.color = '#cafb4b';
       } else {
         layerStack.style.color = '#2dac44';
       }
 
-      if(frame >= 67 && frame <= 75) {
+      if(frame >= 69 && frame <= 79) {
         signal.style.color = '#cafb4b';
       } else {
         signal.style.color = '#2dac44';
       }
 
-      if(frame >= 77 && frame <= 86) {
+      if(frame >= 81 && frame <= 91) {
         impedance.style.color = '#cafb4b';
       } else {
         impedance.style.color = '#2dac44';
       }
 
-      if(frame >= 88 && frame <= 101) {
+      if(frame >= 93 && frame <= 103) {
         ddr.style.color = '#cafb4b';
       } else {
         ddr.style.color = '#2dac44';
       }
 
-      if(frame >= 102 && frame <= 109) {
+      if(frame >= 105 && frame <= 114) {
         antena.style.color = '#cafb4b';
       } else {
         antena.style.color = '#2dac44';
@@ -110,20 +118,20 @@ export default function handleVisibility(frame, screenWidth, screenSizes) {
   }
 
   if(pcbMechanical) {
-    if(screenWidth >= screenSizes.laptop) {
+    if(screenWidth >= screenSizes.tablet) {
       if (frame >= 115 && frame <= 157) {
         pcbMechanical.style.opacity = 1
       } else {
         pcbMechanical.style.opacity = 0
       }
 
-      if(frame >= 117 && frame <= 124) {
+      if(frame >= 115 && frame <= 123) {
         dfm.style.color = '#cafb4b';
       } else {
         dfm.style.color = '#fefffa';
       }
 
-      if(frame >= 125 && frame <= 132) {
+      if(frame >= 124 && frame <= 132) {
         mechanical.style.color = '#cafb4b';
       } else {
         mechanical.style.color = '#fefffa';

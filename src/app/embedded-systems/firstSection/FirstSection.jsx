@@ -22,7 +22,12 @@ export default function FirstSection() {
 
   return(
     <section className='embedded-firstSection'>
-        <h1>{content[language].EmbeddedSystems.firstSection.title}</h1>
+        <h1>
+          {content[language].EmbeddedSystems.firstSection.title.text1}
+          <span> {content[language].EmbeddedSystems.firstSection.title.concept} </span>
+          {content[language].EmbeddedSystems.firstSection.title.to}
+          <span> {content[language].EmbeddedSystems.firstSection.title.production}</span>
+        </h1>
         <h2>
           {content[language].EmbeddedSystems.firstSection.subtitle}
           <span> {content[language].EmbeddedSystems.firstSection.support} </span>
