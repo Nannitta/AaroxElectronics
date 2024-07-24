@@ -44,7 +44,12 @@
     "EmbeddedSystems": {
       "scroll": "Scroll",
       "firstSection": {
-        "title": "From concept to production",
+        "title": {
+          "text1": "From",
+          "concept": "concept",
+          "to": "to",
+          "production": "production"
+        },
         "subtitle": " We can start from a spec or even from a blank sheet, we can",
         "support": "support",
         "subtitle2": "you through the whole process.",
@@ -67,7 +72,8 @@
         "subtitle": "Power Supply Calculations, Tolerances, Filters, Power Consumption, Thermals, Worst Case Analysis, Battery Life..."
       },
       "fourthSection": {
-        "title": "With many components in our toolcase",
+        "title": "With many components in our",
+        "toolcase": "toolcase",
         "text1": "PSU ICs, Microcontrollers, Processors, Memories, Transceivers, Passives, EMC Components, Relays, Displays, Connectors...",
         "tested": "tested",
         "and": "and",
@@ -84,7 +90,7 @@
           "signal": "Signal Integrity",
           "impedance": "Impedance Control",
           "ddr": "DDR Routing",
-          "antena": "Antena Design"
+          "antena": "Antenna Design"
         },
         "navMechanical": {
           "dfm": "DFM & DFA",
@@ -96,12 +102,12 @@
       },
       "fifthSection": {
         "market": {
-          "title": "We know the market",
-          "text": "With extensive experience writing software in multiple platforms and for different industries, using the main manufacturers"
+          "title": "We know the market.",
+          "text": "With extensive experience writing software in multiple platforms and for different industries, using the main manufacturers."
         },
         "sw": {
-          "title": "SW up to the top level",
-          "text": "We can build custom Kernels, integrate and develop applications, design impressive dashboards and implement FW over-the-air systems"
+          "title": "SW up to the top level.",
+          "text": "We can build custom Kernels, integrate and develop applications, design impressive dashboards and implement FW over-the-air systems."
         }
       },
       "navBar": {
@@ -169,7 +175,12 @@
     "EmbeddedSystems": {
       "scroll": "Desliza",
       "firstSection": {
-        "title": "Del concepto a producción",
+        "title": {
+          "text1": "Del",
+          "concept": "concepto",
+          "to": "a",
+          "production": "producción"
+        },
         "subtitle": "Podemos empezar por una especificación o incluso desde una hoja en blanco, podemos",
         "support": "apoyarte",
         "subtitle2": "a través de todo el proceso.",
@@ -192,7 +203,8 @@
         "subtitle": "Cálculos de suministro de energía, tolerancias, filtros, consumo de energía, térmicas, análisis del peor de los casos, duración de la batería..."
       },
       "fourthSection": {
-        "title": "Con muchos componentes en nuestra caja de herramientas",
+        "title": "Con muchos componentes en nuestra",
+        "toolcase": "caja de herramientas",
         "text1": "PSU ICs, Microcontroladores, Procesadores, Memorias, Transceptores, Pasivos, Componentes EMC, Relés, Pantallas, Conectores...",
         "tested": "testado",
         "and": "y",

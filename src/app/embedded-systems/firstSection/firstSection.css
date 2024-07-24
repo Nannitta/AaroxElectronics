@@ -17,6 +17,10 @@
 	padding-top: 3rem;
 }
 
+.embedded-firstSection h1 span {
+	color: var(--lime-green);
+}
+
 .embedded-firstSection h2 {
 	padding-top: 2rem;
 	font-size: 1.5rem;

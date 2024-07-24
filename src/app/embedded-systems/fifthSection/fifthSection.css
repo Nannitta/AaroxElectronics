@@ -10,17 +10,12 @@
 	gap: 2rem;
 }
 
-.container-sw {
-	margin-top: 15rem;
-}
-
 .market,
 .sw {
 	background-color: var(--forest-green);
 	box-shadow: #1e5a38c5 0px 2px 50px 0px;
-	width: 50%;
 	border-radius: 1.2rem;
-	padding: 3rem;
+	padding: 3.5rem;
 	display: flex;
 	flex-direction: column;
 }
@@ -28,7 +23,7 @@
 .market h2,
 .sw h2 {
 	color: var(--lime-green);
-	font-size: 3rem;
+	font-size: 2.5rem;
 	font-weight: 600;
 	padding-bottom: 3rem;
 }
@@ -45,7 +40,6 @@
 .sw-logos {
 	background-color: #fefffa86;
 	box-shadow: #1e5a38c5 0px 2px 50px 0px;
-	width: 50%;
 	border-radius: 1.2rem;
 	padding: 3rem;
 	display: flex;
@@ -57,6 +51,25 @@
 
 .container-logo img {
 	object-fit: contain;
+}
+
+@media (min-width: 768px) {
+	.container-market,
+	.container-sw {
+		margin-top: calc(-25vh - 50px);
+	}
+
+	.market-logos,
+	.sw-logos,
+	.market,
+	.sw {
+		width: 60%;
+	}
+
+	.container-sw {
+		margin-top: 2rem;
+		margin-bottom: 7rem;
+	}
 }
 
 @media (min-width: 1366px) {
@@ -73,12 +86,27 @@
 		margin-top: 3rem;
 		margin-bottom: 5rem;
 	}
+
+	.market h2,
+	.sw h2 {
+		font-size: 3rem;
+	}
 }
 
 @media (min-width: 1920px) {
+	.market,
+	.sw {
+		padding: 4rem;
+	}
+
+	.market p,
+	.sw p {
+		font-size: 1.7rem;
+		line-height: 1.5;
+	}
+
 	.market-logos,
 	.sw-logos {
-		row-gap: 0;
 		column-gap: 4rem;
 	}
 

@@ -5,7 +5,6 @@ import npx from '../../assets/images/embedded/market/npx.webp';
 import microchip from '../../assets/images/embedded/market/microchip.webp';
 import infineon from '../../assets/images/embedded/market/infineon.webp';
 import st from '../../assets/images/embedded/market/st.webp';
-import lt from '../../assets/images/embedded/market/lt.webp';
 import renesas from '../../assets/images/embedded/market/renesas.webp';
 import ti from '../../assets/images/embedded/market/ti.webp';
 import yocto from '../../assets/images/embedded/sw/yocto.webp';
@@ -56,7 +55,7 @@ export default function FifthSection() {
           </div>
           <div className='container-logo'>
             <Image 
-              src={lt} 
+              src={ti} 
               alt='NPX logo' 
               height={screenWidth <= screenSizes.laptop ? 100 : 150} 
               width={screenWidth <= screenSizes.laptop ? 100 : 150}/>
@@ -64,13 +63,6 @@ export default function FifthSection() {
           <div className='container-logo'>
             <Image 
               src={renesas} 
-              alt='NPX logo' 
-              height={screenWidth <= screenSizes.laptop ? 100 : 150} 
-              width={screenWidth <= screenSizes.laptop ? 100 : 150}/>
-          </div>
-          <div className='container-logo'>
-            <Image 
-              src={ti} 
               alt='NPX logo' 
               height={screenWidth <= screenSizes.laptop ? 100 : 150} 
               width={screenWidth <= screenSizes.laptop ? 100 : 150}/>
