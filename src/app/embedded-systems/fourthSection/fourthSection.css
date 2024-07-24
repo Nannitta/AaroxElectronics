@@ -33,6 +33,7 @@
 	position: sticky;
 	background-size: cover;
 	background-repeat: no-repeat;
+	background-position: center;
 	top: 0;
 	transition: transform 0.5s ease-out, border-radius 0.5s ease-out;
 }
@@ -53,7 +54,7 @@
 	.embedded-fourthSection .fourthSection-subtitle {
 		position: absolute;
 		z-index: 1;
-		padding: 1.5rem;
+		padding: 4rem 1.5rem;
 		top: 20rem;
 	}
 }
@@ -75,5 +76,9 @@
 		top: 20rem;
 		max-width: 800px;
 		padding: 0;
+	}
+
+	.container-pcb3d {
+		background-position: initial;
 	}
 }
