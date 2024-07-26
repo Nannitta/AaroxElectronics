@@ -4,6 +4,7 @@ import Header from './components/Header/Header.jsx';
 import SideMenu from './components/SideMenu/SideMenu.jsx';
 import Footer from './components/Footer/Footer.jsx';
 import CookiesConsent from './components/CookiesConsent/CookiesConsent';
+import { GoogleAnalytics } from '@next/third-parties/google';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -38,6 +39,7 @@ export default function RootLayout({ children }) {
         <Footer/>
         <CookiesConsent/>
       </body>
+      <GoogleAnalytics gaId="G-N2T3SH52X3" />
     </html>
   );
 }
