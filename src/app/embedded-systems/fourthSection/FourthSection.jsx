@@ -103,8 +103,13 @@ export default function FourthSection() {
       const scrollPosition = positiveTop - ((shrinkStartFrame / totalFrames) * height);
       const maxScrollPosition = (height * (1 - (shrinkStartFrame / totalFrames))) * 0.6;
       const actualScrollPosition = Math.min(scrollPosition, maxScrollPosition);
+      let scaleValue;
 
-      const scaleValue = Math.max(minScale, 1 - (actualScrollPosition / maxScrollPosition) * 0.4);
+      if(screenWidth >= screenSizes.tablet) {
+        scaleValue = Math.max(minScale, 1 - (actualScrollPosition / maxScrollPosition) * 0.4);
+      } else {
+        scaleValue = Math.max(0.9, 1 - (actualScrollPosition / maxScrollPosition) * 0.4)
+      }
       const translateYValue = ((1 - scaleValue) / 2) * 100;
 
       containerPcb3d.style.transform = `translateY(-${translateYValue}%) scale(${scaleValue})`;
