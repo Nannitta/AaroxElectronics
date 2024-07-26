@@ -53,8 +53,9 @@
 	font-size: 1rem;
 }
 
-/* .showmore-cookies a {
-} */
+.showmore-cookies {
+	width: 164px;
+}
 
 @media (min-width: 768px) {
 	.cookies-manage {

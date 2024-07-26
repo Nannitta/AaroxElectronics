@@ -77,6 +77,10 @@ export default function FourthSection() {
     if(screenWidth >= screenSizes.tablet) {
       return `./embedded/pcb3dTablet/pcb3d${frame}.webp`;
     }
+
+    if(screenWidth >= screenSizes.mobile) {
+      return `./embedded/pcb3dMobile/pcb3d${frame}.webp`;
+    }
   }
 
   function getFrameRates() {
