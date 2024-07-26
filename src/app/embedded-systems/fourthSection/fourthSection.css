@@ -10,12 +10,27 @@
 	background-color: var(--background-3dsection);
 }
 
-.embedded-fourthSection .fourthSection-title span {
-	color: var(--lime-green);
+.embedded-fourthSection .fourthSection-title {
+	position: absolute;
+	z-index: 1;
+	font-size: 2.5rem;
+	top: 5rem;
 }
 
 .embedded-fourthSection .fourthSection-subtitle {
-	font-size: 2rem;
+	position: absolute;
+	z-index: 1;
+	top: 18rem;
+	padding: 0 1rem;
+}
+
+.embedded-fourthSection .fourthSection-title span {
+	color: var(--lime-green);
+	font-size: 2.5rem;
+}
+
+.embedded-fourthSection .fourthSection-subtitle {
+	font-size: 1.5rem;
 	font-weight: 500;
 }
 
@@ -40,20 +55,11 @@
 
 @media (min-width: 768px) {
 	.embedded-fourthSection .fourthSection-title {
-		font-size: 2.5rem;
-		position: absolute;
-		z-index: 1;
 		top: 13rem;
 		max-width: 540px;
 	}
 
-	.embedded-fourthSection .fourthSection-title span {
-		font-size: 2.5rem;
-	}
-
 	.embedded-fourthSection .fourthSection-subtitle {
-		position: absolute;
-		z-index: 1;
 		padding: 4rem 1.5rem;
 		top: 20rem;
 	}
