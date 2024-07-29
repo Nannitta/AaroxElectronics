@@ -24,7 +24,7 @@ export default function SecondSection() {
           <h2>{content[language].HomePage.secondSection.title1}</h2>
           <p>{content[language].HomePage.secondSection.def1}</p>
           <p>{content[language].HomePage.secondSection.def2}</p>
-          <Link href={'/'}>
+          <Link href={'/power-electronics'}>
             <button>
               {content[language].HomePage.secondSection.textButton1}
               <Image src={limeArrow} width={16} height={16} alt='Right arrow' className='bounce'/>
