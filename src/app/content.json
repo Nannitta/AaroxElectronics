@@ -119,6 +119,18 @@
         "marketSW": "FIRMWARE & SOFTWARE"
       }
     },
+    "PowerElectronics": {
+      "scroll": "SCROLL",
+      "firstSection": {
+
+      },
+      "secondSection": {
+        "text1": "Starting from a",
+        "spec": "specification",
+        "text2": "or even from a",
+        "sheet": "blank sheet"
+      }
+    },
     "Footer": {
       "policy": "Privacy policy",
       "cookies": "Cookies",
@@ -248,6 +260,18 @@
         "component": "COMPONENTSS & MECÁNICA",
         "schematic": "ESQUEMAS & DISEÑOS DE PCB",
         "marketSW": "FIRMWARE & SOFTWARE"
+      }
+    },
+    "PowerElectronics": {
+      "scroll": "DESLIZA",
+      "firstSection": {
+
+      },
+      "secondSection": {
+        "text1": "A partir de una",
+        "spec": "especificación",
+        "text2": "o incluso de una",
+        "sheet": "hoja en blanco"
       }
     },
     "Footer": {
