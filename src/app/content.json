@@ -124,7 +124,7 @@
       "firstSection": {
         "power": "Power supplies",
         "battery": "Battery Chargers",
-        "EV": "EV OBC / DCDCs",
+        "ev": "EV OBC / DCDCs",
         "wireless": "Wireless Power",
         "bms": "Batteries / BMS",
         "inverters": "Inverters",
@@ -272,8 +272,8 @@
     "PowerElectronics": {
       "scroll": "DESLIZA",
       "firstSection": {
-        "power": "Fuentes de Alimentación",
-        "battery": "Cargadores de Batería",
+        "power": "Alimentación",
+        "battery": "Cargadores",
         "ev": "EV OBC / DCDCs",
         "wireless": "Energía inalámbrica",
         "bms": "Baterías / BMS",

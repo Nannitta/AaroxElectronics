@@ -1,6 +1,6 @@
 .power-firstSection {
 	position: relative;
-	height: 100vh;
+	height: 300vh;
 	background-size: 300% 300%;
 	background-color: #edfff5;
 	background-image: radial-gradient(
@@ -18,23 +18,30 @@
 	animation: gradient 20s linear infinite;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 }
 
 .container-defs {
+	position: fixed;
 	display: flex;
 	flex-direction: column;
-	color: #1c3e3590;
 	font-size: 3rem;
 	align-items: center;
 	padding-top: 6rem;
 	transition: opacity 0.5s, transform 0.5s;
 }
 
-.container-defs span:first-child {
+.container-defs span {
+	color: #1c3e3590;
+}
+
+.container-defs span.span-highlighted {
 	color: var(--dark-green);
 }
 
 .container-smallDashboard {
+	position: fixed;
+	top: 33rem;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -67,6 +74,10 @@
 		font-size: 5rem;
 	}
 
+	.container-smallDashboard {
+		top: 55rem;
+	}
+
 	.container-smallDashboard img {
 		width: 70%;
 	}
@@ -84,18 +95,19 @@
 		line-height: 0.8;
 		font-size: 4rem;
 		padding-top: 13rem;
+		top: 0;
 	}
 
 	.container-smallDashboard {
 		align-items: flex-end;
 		width: 60%;
-		position: relative;
+		top: 8rem;
 		right: -20px;
 	}
 
 	.container-smallDashboard img {
 		width: 100%;
-		padding-top: 9rem;
+		padding-top: 3rem;
 	}
 }
 
@@ -103,5 +115,9 @@
 	.container-defs {
 		font-size: 6rem;
 		padding-top: 11rem;
+	}
+
+	.container-smallDashboard {
+		top: 7rem;
 	}
 }
