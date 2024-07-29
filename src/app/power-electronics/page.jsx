@@ -2,8 +2,8 @@
 
 import { useEffect, useRef, useState } from 'react';
 import ScrollButton from './scrollButton/ScrollButton';
+import FirstSection from './firstSection/FirstSection';
 import SecondSection from './secondSection/SecondSection';
-import './firstSection.css';
 
 export default function PowerElectronics() {
   const firstSectionRef = useRef(null);
@@ -69,9 +69,7 @@ export default function PowerElectronics() {
   return(
     <main>
       <ScrollButton nextSection={nextSection} handleScrollSection={handleScrollSection}/>
-      <div ref={firstSectionRef}>
-        <section className='power-firstSection'></section>
-      </div>
+      <div ref={firstSectionRef}><FirstSection/></div>
       <div ref={secondSectionRef}><SecondSection/></div>
       <div ref={thirdSectionRef}>
         <section style={{backgroundColor: 'red', height: '100vh'}}></section>

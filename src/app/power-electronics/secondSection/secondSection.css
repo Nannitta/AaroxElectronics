@@ -26,7 +26,6 @@
 }
 
 .container-largeDashboard {
-	position: relative;
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -55,6 +54,10 @@
 	.container-title {
 		padding-top: 35%;
 		font-size: 2rem;
+	}
+
+	.container-largeDashboard {
+		width: 70%;
 	}
 }
 
