@@ -122,7 +122,14 @@
     "PowerElectronics": {
       "scroll": "SCROLL",
       "firstSection": {
-
+        "power": "Power supplies",
+        "battery": "Battery Chargers",
+        "EV": "EV OBC / DCDCs",
+        "wireless": "Wireless Power",
+        "bms": "Batteries / BMS",
+        "inverters": "Inverters",
+        "controls": "Motor Controls",
+        "lighting": "Lighting"
       },
       "secondSection": {
         "text1": "Starting from a",
@@ -265,7 +272,14 @@
     "PowerElectronics": {
       "scroll": "DESLIZA",
       "firstSection": {
-
+        "power": "Fuentes de Alimentación",
+        "battery": "Cargadores de Batería",
+        "ev": "EV OBC / DCDCs",
+        "wireless": "Energía inalámbrica",
+        "bms": "Baterías / BMS",
+        "inverters": "Inverters",
+        "controls": "Controles de Motor",
+        "lighting": "Iluminación"
       },
       "secondSection": {
         "text1": "A partir de una",
