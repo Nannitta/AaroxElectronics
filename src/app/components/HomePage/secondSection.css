@@ -5,7 +5,7 @@
 	position: relative;
 	top: 72px;
 	color: var(--background);
-	height: 80vh;
+	height: 90vh;
 }
 
 .green-line {
@@ -16,7 +16,7 @@
 	position: absolute;
 	height: 100%;
 	width: 100%;
-	background-color: rgba(23, 63, 53, 0.8);
+	background-color: rgba(0, 63, 26, 0.8);
 	padding-left: 18px;
 }
 
@@ -86,12 +86,22 @@
 
 	.first-article,
 	.second-article {
-		width: 80%;
+		align-items: center;
+		text-align: center;
+		text-wrap: balance;
+		line-height: 1.5rem;
+		width: 100%;
+		justify-content: center;
 	}
 
 	.first-article h2,
 	.second-article h2 {
 		font-size: 2rem;
+	}
+
+	.first-article p,
+	.second-article p {
+		text-align: center;
 	}
 }
 
@@ -118,23 +128,13 @@
 
 	.first-article,
 	.second-article {
-		align-items: center;
-		text-align: center;
-		text-wrap: balance;
-		line-height: 1.5rem;
 		padding: 0 5rem;
 		height: 100%;
-		justify-content: center;
 	}
 
 	.first-article:hover,
 	.second-article:hover {
 		background-color: var(--emerald-opacity-90);
-	}
-
-	.first-article p,
-	.second-article p {
-		text-align: center;
 	}
 }
 

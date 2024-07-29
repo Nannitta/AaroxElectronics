@@ -4,6 +4,7 @@ import content from '../../content.json';
 import CheckWindowWidth from '../../hooks/useWindowWidth.jsx';
 import { useLanguageStore } from '../../stores/languageStore.jsx';
 import lineGreenLarge from '../../assets/images/homePage/secondSection/greenLineLarge.svg';
+import lineGreenMedium from '../../assets/images/homePage/secondSection/greenLineMedium.svg';
 import lineGreen from '../../assets/images/homePage/secondSection/greenLine.svg';
 import limeArrow from '../../assets/images/homePage/secondSection/limeArrowRight.svg';
 import { screenSizes } from '../../lib/screenSizes';
@@ -16,7 +17,7 @@ export default function SecondSection() {
   return(
     <section className='home-second-section' id='second-section'>
       <div className='line-container'>
-        <Image src={screenWidth >= screenSizes.laptop ? lineGreenLarge : lineGreen} alt='Border Green' fill={true} className='green-line'/>
+        <Image src={screenWidth >= screenSizes.laptop ? lineGreenLarge : screenWidth >= screenSizes.tablet ? lineGreenMedium : lineGreen} alt='Border Green' fill={true} className='green-line'/>
       </div>
       <div className='article-container'>
         <article className='first-article'>

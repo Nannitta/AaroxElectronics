@@ -153,31 +153,32 @@
 }
 
 @media (min-width: 768px) {
+	.home-title {
+		flex-direction: row;
+	}
+
 	.home-first-section {
 		top: 96px;
 		height: calc(100vh - 96px);
 	}
 
 	.home-title {
-		padding: 1rem 1.5rem 2rem 1.5rem;
-	}
-
-	.home-title {
-		gap: 2.5rem;
+		padding: 3rem 1.5rem 2.5rem 1.5rem;
+		gap: 2rem;
 	}
 
 	.home-title h2 {
-		font-size: 2.5rem;
+		font-size: 2rem;
 	}
 
 	.border-zoom-image {
 		position: absolute;
-		margin-top: 16rem;
+		margin-top: 13rem;
 	}
 
 	.our-approach {
-		bottom: 3rem;
-		right: 9rem;
+		bottom: 4rem;
+		right: 4rem;
 	}
 
 	.our-approach p {
@@ -193,7 +194,7 @@
 	.container-first-section {
 		position: fixed;
 		top: 0;
-		width: 100dvw;
+		width: 100vw;
 	}
 
 	.scroll-arrow {
@@ -212,8 +213,8 @@
 	}
 
 	.home-title {
-		padding: 8rem 1rem 1rem 4.25rem;
-		gap: 1.5rem;
+		padding: 9rem 1rem 1rem 5.25rem;
+		gap: 2.5rem;
 	}
 
 	.home-title h2 {
@@ -234,7 +235,7 @@
 @media (min-width: 1920px) {
 	.home-title h2 {
 		max-width: 600px;
-		font-size: 3.5rem;
+		font-size: 2.5rem;
 	}
 
 	.border-zoom-image {
