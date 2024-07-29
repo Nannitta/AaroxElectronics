@@ -61,8 +61,8 @@ export default function FirstSection() {
           <Image
             src={Logo}
             alt='Logo Aarox Electronics'
-            width={screenWidth < screenSizes.tablet ? 150 : 250}
-            height={screenWidth < screenSizes.tablet ? 46 : 76}
+            width={screenWidth < screenSizes.tablet ? 197 : 329}
+            height={screenWidth < screenSizes.tablet ? 60 : 100}
             priority={true}
           />
           <h2>
