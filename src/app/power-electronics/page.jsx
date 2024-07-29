@@ -69,10 +69,10 @@ export default function PowerElectronics() {
   return(
     <main>
       <ScrollButton nextSection={nextSection} handleScrollSection={handleScrollSection}/>
-      <div ref={firstSectionRef}><FirstSection/></div>
-      <div ref={secondSectionRef}><SecondSection/></div>
+      <div ref={firstSectionRef} className='firstSection-power'><FirstSection/></div>
+      <div ref={secondSectionRef} className='secondSection-power'><SecondSection/></div>
       <div ref={thirdSectionRef}>
-        <section style={{backgroundColor: 'red', height: '100vh'}}></section>
+        <section style={{backgroundColor: 'red', height: '100vh', position: 'relative', zIndex: '2'}}></section>
       </div>
     </main>
   )
