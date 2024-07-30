@@ -14,13 +14,13 @@ const passion = Passion_One({
 
 export default function FirstSection() {
   const language = useLanguageStore((state) => state.language);
-
+  
   useEffect(() => {
     handleColorOpacity();
  
     window.addEventListener('scroll', handleColorOpacity);
     return () => window.removeEventListener('scroll', handleColorOpacity);
-  }, []);
+  });
 
   return (
     <section className='power-firstSection'>

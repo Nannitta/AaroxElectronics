@@ -3,18 +3,18 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
 	position: relative;
 	padding: 0 1rem;
 	min-height: 100vh;
 }
 
 .container-title {
-	padding-top: 130%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	font-size: 0.9rem;
+	font-size: 1.5rem;
+	text-align: center;
+	padding-top: 5rem;
 }
 
 .title-power-secondSection {
@@ -29,7 +29,13 @@
 	width: 100%;
 	display: flex;
 	justify-content: center;
-	padding-top: 1.5rem;
+	position: absolute;
+	bottom: -10rem;
+	transition: bottom 1s ease-out;
+}
+
+.container-largeDashboard.visible {
+	bottom: 5rem;
 }
 
 .container-largeDashboard img {
@@ -40,29 +46,43 @@
 
 @media (min-width: 768px) {
 	.container-title {
-		padding-top: 100%;
-		font-size: 1.5rem;
+		padding-top: 8rem;
+		font-size: 2rem;
 	}
 
 	.container-largeDashboard {
-		width: 90%;
-		padding-top: 2rem;
+		width: 85%;
+		bottom: -15rem;
+		transition: bottom 1.5s ease-out;
+	}
+
+	.container-largeDashboard.visible {
+		bottom: 10rem;
 	}
 }
 
 @media (min-width: 1366px) {
 	.container-title {
-		padding-top: 35%;
 		font-size: 2rem;
 	}
 
 	.container-largeDashboard {
 		width: 70%;
+		bottom: -80%;
+		transition: bottom 2s ease-out;
+	}
+
+	.container-largeDashboard.visible {
+		bottom: 5rem;
 	}
 }
 
 @media (min-width: 1920px) {
-	.container-title {
-		padding-top: 25%;
+	.container-largeDashboard {
+		bottom: -90%;
+	}
+
+	.container-largeDashboard.visible {
+		bottom: 5rem;
 	}
 }
