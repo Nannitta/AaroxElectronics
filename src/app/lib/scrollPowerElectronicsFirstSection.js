@@ -3,7 +3,6 @@ import { screenSizes } from './screenSizes';
 export default function handleColorOpacity() {
   const scrollPosition = window.scrollY;
   const screenWidth = window.innerWidth;
-  const screenHeight = window.innerHeight;
   
   const power = document.querySelector('#power');
   const battery = document.querySelector('#battery');

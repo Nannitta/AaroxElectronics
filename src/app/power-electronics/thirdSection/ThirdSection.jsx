@@ -7,12 +7,35 @@ import zvs from '../../assets/images/power/zvs.svg';
 import smallDashboard from '../../assets/images/power/smallDashboard.webp';
 import Image from 'next/image';
 import './thirdSection.css';
+import { useEffect, useRef } from 'react';
 
 export default function ThirdSection() {
   const language = useLanguageStore((state) => state.language);
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((ul) => {
+      ul.forEach(li => {
+        const listItems = li.target.querySelectorAll('.list-thirdSection li');
+        if (li.isIntersecting) {
+          listItems.forEach((text, index) => {
+            setTimeout(() => {
+              text.classList.add('active');
+            }, index * 300);
+          });
+        }
+      });
+    }, { threshold: 0.8 });
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+  }, []);
 
   return(
-    <section className='power-thirdSection'>
+    <section ref={sectionRef} className='power-thirdSection'>
       <div>
         <ul className='list-thirdSection'>
           <li>
