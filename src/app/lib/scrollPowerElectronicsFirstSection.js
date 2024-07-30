@@ -3,6 +3,7 @@ import { screenSizes } from './screenSizes';
 export default function handleColorOpacity() {
   const scrollPosition = window.scrollY;
   const screenWidth = window.innerWidth;
+  const screenHeight = window.innerHeight;
   
   const power = document.querySelector('#power');
   const battery = document.querySelector('#battery');
@@ -67,6 +68,14 @@ export default function handleColorOpacity() {
   if (screenWidth < screenSizes.laptop) {
     if (scrollPosition >= 1500) {
       containerDefs.style.transform = 'translateX(90%)';
+      containerSmallDashboard.style.transform = 'translateX(70%)';
+    } else {
+      containerDefs.style.transform = 'translateX(0)';
+      containerSmallDashboard.style.transform = 'translateX(0)';
+    }
+  } else if (screenWidth >= screenSizes.desktop && screenHeight >= 1200) {
+    if (scrollPosition >= 1500) {
+      containerDefs.style.transform = 'translateX(110%)';
       containerSmallDashboard.style.transform = 'translateX(70%)';
     } else {
       containerDefs.style.transform = 'translateX(0)';

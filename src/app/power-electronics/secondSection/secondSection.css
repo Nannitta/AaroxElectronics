@@ -5,7 +5,7 @@
 	align-items: center;
 	position: relative;
 	padding: 0 1rem;
-	min-height: 100vh;
+	min-height: 110vh;
 }
 
 .container-title {
@@ -30,12 +30,12 @@
 	display: flex;
 	justify-content: center;
 	position: absolute;
-	bottom: -10rem;
-	transition: bottom 1s ease-out;
+	top: 30rem;
+	transition: top 1s ease-out;
 }
 
 .container-largeDashboard.visible {
-	bottom: 5rem;
+	top: 18rem;
 }
 
 .container-largeDashboard img {
@@ -52,12 +52,11 @@
 
 	.container-largeDashboard {
 		width: 85%;
-		bottom: -15rem;
-		transition: bottom 1.5s ease-out;
+		top: 40rem;
 	}
 
 	.container-largeDashboard.visible {
-		bottom: 5rem;
+		top: 20rem;
 	}
 }
 
@@ -72,21 +71,16 @@
 
 	.container-largeDashboard {
 		width: 70%;
-		bottom: -40%;
-		transition: bottom 2s ease-out;
+		top: 50rem;
 	}
 
 	.container-largeDashboard.visible {
-		bottom: 5rem;
+		top: 20rem;
 	}
 }
 
 @media (min-width: 1920px) {
-	.container-largeDashboard {
-		bottom: -40%;
-	}
-
-	.container-largeDashboard.visible {
-		bottom: 5rem;
+	.power-secondSection {
+		min-height: 180vh;
 	}
 }
