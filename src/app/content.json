@@ -136,6 +136,24 @@
         "spec": "specification",
         "text2": "or even from a",
         "sheet": "blank sheet"
+      },
+      "thirdSection" : {
+        "bucks": {
+          "text": "From small Bucks",
+          "highlighted": "To complex ZVS topologies"
+        },
+        "projects": {
+          "text": "With multiple projects",
+          "highlighted": "Validated and tested"
+        },
+        "emc": {
+          "text": "Taking into account",
+          "highlighted": "Cost and EMC from day one"
+        },
+        "sw": {
+          "text": "Including embedded SW",
+          "highlighted": "From drive up to control"
+        }
       }
     },
     "Footer": {
@@ -286,6 +304,24 @@
         "spec": "especificación",
         "text2": "o incluso de una",
         "sheet": "hoja en blanco"
+      },
+      "thirdSection" : {
+        "bucks": {
+          "text": "Desde circuitos sencillos",
+          "highlighted": "Hasta topologías ZVS complejas"
+        },
+        "projects": {
+          "text": "Con varios proyectos",
+          "highlighted": "Validados y testados"
+        },
+        "emc": {
+          "text": "Teniendo en cuenta el",
+          "highlighted": "Costo y EMC desde el primer día"
+        },
+        "sw": {
+          "text": "Incluyendo SW embebido",
+          "highlighted": "Desde la conducción hasta el control"
+        }
       }
     },
     "Footer": {

@@ -124,5 +124,10 @@
 
 	.container-defs {
 		font-size: 6rem;
+		padding-top: 9rem;
+	}
+
+	.container-smallDashboard {
+		top: 5rem;
 	}
 }
