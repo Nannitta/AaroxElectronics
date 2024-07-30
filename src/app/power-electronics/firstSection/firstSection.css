@@ -93,6 +93,7 @@
 		flex-direction: row;
 		justify-content: space-between;
 		padding-left: 1.5rem;
+		height: 280vh;
 	}
 
 	.container-defs {
@@ -117,6 +118,10 @@
 }
 
 @media (min-width: 1920px) {
+	.power-firstSection {
+		height: 250vh;
+	}
+
 	.container-defs {
 		font-size: 6rem;
 	}

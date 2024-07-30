@@ -57,18 +57,22 @@
 	}
 
 	.container-largeDashboard.visible {
-		bottom: 10rem;
+		bottom: 5rem;
 	}
 }
 
 @media (min-width: 1366px) {
+	.power-secondSection {
+		min-height: 170vh;
+	}
+
 	.container-title {
-		font-size: 2rem;
+		font-size: 1.8rem;
 	}
 
 	.container-largeDashboard {
 		width: 70%;
-		bottom: -80%;
+		bottom: -40%;
 		transition: bottom 2s ease-out;
 	}
 
@@ -79,7 +83,7 @@
 
 @media (min-width: 1920px) {
 	.container-largeDashboard {
-		bottom: -90%;
+		bottom: -40%;
 	}
 
 	.container-largeDashboard.visible {
