@@ -72,7 +72,7 @@ export default function PowerElectronics() {
       <div ref={firstSectionRef} className='firstSection-power'><FirstSection/></div>
       <div ref={secondSectionRef} className='secondSection-power'><SecondSection/></div>
       <div ref={thirdSectionRef}>
-        <section style={{backgroundColor: 'red', height: '100vh', position: 'relative', zIndex: '2'}}></section>
+        <section style={{backgroundColor: '#edfff5', height: '100vh', position: 'relative', zIndex: '2'}}></section>
       </div>
     </main>
   )
