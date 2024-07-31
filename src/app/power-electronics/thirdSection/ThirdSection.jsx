@@ -10,6 +10,12 @@ import './thirdSection.css';
 import { screenSizes } from '../../lib/screenSizes';
 import CheckWindowWidth from '../../hooks/useWindowWidth';
 import { useEffect, useRef } from 'react';
+import { Work_Sans } from 'next/font/google';
+
+const workSans = Work_Sans({
+  weight: '700',
+  subsets: ['latin']
+});
 
 export default function ThirdSection() {
   const language = useLanguageStore((state) => state.language);
@@ -51,7 +57,7 @@ export default function ThirdSection() {
   return(
     <section ref={sectionRef} className='power-thirdSection'>
       <div>
-        <ul className='list-thirdSection'>
+        <ul className={`list-thirdSection ${workSans.className}`}>
           <li>
             <div>
               <Image 

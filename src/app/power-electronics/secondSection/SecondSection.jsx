@@ -3,7 +3,13 @@ import content from '../../content.json';
 import Image from 'next/image';
 import largeDashboard from '../../assets/images/power/largeDashboard.webp';
 import './secondSection.css';
+import { Work_Sans } from 'next/font/google';
 import { useEffect, useState } from 'react';
+
+const workSans = Work_Sans({
+  weight: '700',
+  subsets: ['latin']
+});
 
 export default function SecondSection() {
   const language = useLanguageStore((state) => state.language);
@@ -32,11 +38,11 @@ export default function SecondSection() {
   return(
     <section className='power-secondSection'>
       <div className='container-title'>
-        <h2 className='title-power-secondSection'>
+        <h2 className={`title-power-secondSection ${workSans.className}`}>
           {content[language].PowerElectronics.secondSection.text1}
           <span> {content[language].PowerElectronics.secondSection.spec}</span>
         </h2>
-        <h2 className='title-power-secondSection'>
+        <h2 className={`title-power-secondSection ${workSans.className}`}>
           {content[language].PowerElectronics.secondSection.text2}
         <span> {content[language].PowerElectronics.secondSection.sheet}</span>
         </h2>
