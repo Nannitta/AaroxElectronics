@@ -80,6 +80,14 @@ export default function handleColorOpacity() {
       containerDefs.style.transform = 'translateX(0)';
       containerSmallDashboard.style.transform = 'translateX(0)';
     }
+  } else if(screenWidth < screenSizes.desktop) {
+    if(scrollPosition >= 1500) {
+      containerDefs.style.transform = 'translateX(235%)';
+      containerSmallDashboard.style.transform = 'translateX(70%)'
+    } else {
+      containerDefs.style.transform = 'translateX(0)';
+      containerSmallDashboard.style.transform = 'translateX(0)';
+    }
   } else {
     if(scrollPosition >= 1500) {
       containerDefs.style.transform = 'translateX(200%)';
