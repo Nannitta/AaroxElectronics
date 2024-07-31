@@ -20,8 +20,6 @@ export default function SecondSection() {
 
       if (rect.top <= windowHeight * 0.1 && rect.bottom >= 0) {
         setIsImageVisible(true);
-      } else {
-        setIsImageVisible(false);
       }
     };
 

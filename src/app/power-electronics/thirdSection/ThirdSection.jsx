@@ -7,14 +7,28 @@ import zvs from '../../assets/images/power/zvs.svg';
 import smallDashboard from '../../assets/images/power/smallDashboard.webp';
 import Image from 'next/image';
 import './thirdSection.css';
+import { screenSizes } from '../../lib/screenSizes';
+import CheckWindowWidth from '../../hooks/useWindowWidth';
 import { useEffect, useRef } from 'react';
 
 export default function ThirdSection() {
   const language = useLanguageStore((state) => state.language);
+  const { screenWidth } = CheckWindowWidth();
   const sectionRef = useRef(null);
 
   useEffect(() => {
-    const observer = new IntersectionObserver((ul) => {
+    const width = window.innerWidth;
+    let thresholdValue;
+
+    if(width <= screenSizes.tablet) {
+      thresholdValue = 0.2;
+    } else if (width <= screenSizes.laptop) {
+      thresholdValue = 0.3;
+    } else {
+      thresholdValue = 0.8;
+    }
+
+    const observerListItems = new IntersectionObserver((ul) => {
       ul.forEach(li => {
         const listItems = li.target.querySelectorAll('.list-thirdSection li');
         if (li.isIntersecting) {
@@ -25,13 +39,13 @@ export default function ThirdSection() {
           });
         }
       });
-    }, { threshold: 0.8 });
+    }, { threshold: thresholdValue });
 
     if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+      observerListItems.observe(sectionRef.current);
     }
 
-    return () => observer.disconnect();
+    return () => observerListItems.disconnect();
   }, []);
 
   return(
@@ -40,7 +54,12 @@ export default function ThirdSection() {
         <ul className='list-thirdSection'>
           <li>
             <div>
-              <Image src={zvs} width={36} height={36} alt='ZVS icon'/>
+              <Image 
+                src={zvs} 
+                width={screenWidth <= screenSizes.mobile ? 36 : 60} 
+                height={screenWidth <= screenSizes.mobile ? 36 : 60} 
+                alt='ZVS icon'
+              />
             </div>
             <div className='list-text'>
               <p>{content[language].PowerElectronics.thirdSection.bucks.text}</p>
@@ -49,7 +68,12 @@ export default function ThirdSection() {
           </li>
           <li>
             <div>
-              <Image src={tested} width={36} height={36} alt='Tested icon'/>
+              <Image 
+                src={tested} 
+                width={screenWidth <= screenSizes.mobile ? 36 : 60} 
+                height={screenWidth <= screenSizes.mobile ? 36 : 60} 
+                alt='Tested icon'
+              />
             </div>
             <div className='list-text'>
               <p>{content[language].PowerElectronics.thirdSection.projects.text}</p>
@@ -58,7 +82,12 @@ export default function ThirdSection() {
           </li>
           <li>
             <div>
-              <Image src={cost} width={36} height={36} alt='Cost icon'/>
+              <Image 
+                src={cost} 
+                width={screenWidth <= screenSizes.mobile ? 36 : 60} 
+                height={screenWidth <= screenSizes.mobile ? 36 : 60} 
+                alt='Cost icon'
+              />
             </div>
             <div className='list-text'>
               <p>{content[language].PowerElectronics.thirdSection.emc.text}</p>
@@ -67,7 +96,12 @@ export default function ThirdSection() {
           </li>
           <li>
             <div>
-              <Image src={software} width={36} height={36} alt='Software icon'/>
+              <Image 
+                src={software} 
+                width={screenWidth <= screenSizes.mobile ? 36 : 60} 
+                height={screenWidth <= screenSizes.mobile ? 36 : 60} 
+                alt='Software icon'
+              />
             </div>
             <div className='list-text'>
               <p>{content[language].PowerElectronics.thirdSection.sw.text}</p>
@@ -78,6 +112,15 @@ export default function ThirdSection() {
       </div>
       <div className='container-imgDashboard'>
         <Image src={smallDashboard} alt='Small Dashboard' fill={true}/>
+        <div className="features-circles">
+          <div className="circle0 circle"></div>
+          <div className="circle1 circle"></div>
+          <div className="circle2 circle"></div>
+          <div className="circle3 circle"></div>
+          <div className="circle4 circle"></div>
+          <div className="circle5 circle"></div>
+          <div className="circle6 circle"></div>
+        </div>
       </div>
     </section>
   )

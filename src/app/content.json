@@ -127,9 +127,9 @@
         "ev": "EV OBC / DCDCs",
         "wireless": "Wireless Power",
         "bms": "Batteries / BMS",
-        "inverters": "Inverters",
+        "inverters": "PV / Inverters",
         "controls": "Motor Controls",
-        "lighting": "Lighting"
+        "lighting": "LED Lighting"
       },
       "secondSection": {
         "text1": "Starting from a",
@@ -295,9 +295,9 @@
         "ev": "EV OBC / DCDCs",
         "wireless": "Energía inalámbrica",
         "bms": "Baterías / BMS",
-        "inverters": "Inverters",
+        "inverters": "PV / Inverters",
         "controls": "Controles de Motor",
-        "lighting": "Iluminación"
+        "lighting": "Iluminación LED"
       },
       "secondSection": {
         "text1": "A partir de una",
