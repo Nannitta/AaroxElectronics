@@ -5,12 +5,14 @@ import ScrollButton from './scrollButton/ScrollButton';
 import FirstSection from './firstSection/FirstSection';
 import SecondSection from './secondSection/SecondSection';
 import ThirdSection from './thirdSection/ThirdSection';
+import FourthSection from './fourthSection/FourthSection';
 
 export default function PowerElectronics() {
   const firstSectionRef = useRef(null);
   const secondSectionRef = useRef(null);
   const thirdSectionRef = useRef(null);
   const fourthSectionRef = useRef(null);
+  const fifthSectionRef = useRef(null);
 
   const [nextSection, setNextSection] = useState('secondSection-power');
 
@@ -22,7 +24,8 @@ export default function PowerElectronics() {
         { ref: firstSectionRef, id: 'firstSection-power' },
         { ref: secondSectionRef, id: 'secondSection-power' },
         { ref: thirdSectionRef, id: 'thirdSection-power' },
-        { ref: fourthSectionRef, id: 'fourthSection-power' }
+        { ref: fourthSectionRef, id: 'fourthSection-power' },
+        { ref: fourthSectionRef, id: 'fifthSection-power' }
       ];
 
       let foundActive = false;
@@ -67,6 +70,9 @@ export default function PowerElectronics() {
       case 'fourthSection-power':
         scrollToSection(fourthSectionRef);
         break;
+      case 'fifthSection-power':
+        scrollToSection(fifthSectionRef);
+        break;
       default:
         break;
     }
@@ -77,8 +83,9 @@ export default function PowerElectronics() {
       <ScrollButton nextSection={nextSection} handleScrollSection={handleScrollSection}/>
       <div ref={firstSectionRef} className='firstSection-power'><FirstSection/></div>
       <div ref={secondSectionRef} className='secondSection-power'><SecondSection/></div>
-      <div ref={thirdSectionRef}><ThirdSection/></div>
-      <div ref={fourthSectionRef}>
+      <div ref={thirdSectionRef} className='thirdSection-power'><ThirdSection/></div>
+      <div ref={fourthSectionRef} className='fourthSection-power'><FourthSection/></div>
+      <div ref={fifthSectionRef}>
         <section style={{backgroundColor: 'blue', height: '100vh', position: 'relative', zIndex: '2'}}></section>
       </div>
     </main>
