@@ -64,16 +64,24 @@ export default function handleColorOpacity() {
     lighting.classList.remove('span-highlighted');
   }
 
-  if (screenWidth < screenSizes.laptop) {
-    if (scrollPosition >= 1500) {
-      containerDefs.style.transform = 'translateX(90%)';
+  if(screenWidth < screenSizes.tablet) {
+    if(scrollPosition >= 1500) {
+      containerDefs.style.transform = 'translateX(45%)';
+      containerSmallDashboard.style.transform = 'translateX(70%)';
+    } else  {
+      containerDefs.style.transform = 'translateX(0)';
+      containerSmallDashboard.style.transform = 'translateX(0)';
+    }
+  } else if(screenWidth < screenSizes.laptop) {
+    if(scrollPosition >= 1500) {
+      containerDefs.style.transform = 'translateX(55%)';
       containerSmallDashboard.style.transform = 'translateX(70%)';
     } else {
       containerDefs.style.transform = 'translateX(0)';
       containerSmallDashboard.style.transform = 'translateX(0)';
     }
   } else {
-    if (scrollPosition >= 1500) {
+    if(scrollPosition >= 1500) {
       containerDefs.style.transform = 'translateX(200%)';
       containerSmallDashboard.style.transform = 'translateX(70%)';
     } else {
