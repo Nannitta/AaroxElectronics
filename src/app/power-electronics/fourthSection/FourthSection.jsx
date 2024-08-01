@@ -1,4 +1,5 @@
 import smallDashboard from '../../assets/images/power/smallDashboard.webp';
+import test from '../../assets/images/power/test.webp';
 import Image from 'next/image';
 import { useLanguageStore } from '../../stores/languageStore';
 import content from '../../content.json';
@@ -10,6 +11,8 @@ const workSans = Work_Sans({
   weight: ['600', '700'],
   subsets: ['latin']
 });
+
+const images = [smallDashboard, test, smallDashboard, test, smallDashboard];
 
 export default function FourthSection() {
   const language = useLanguageStore((state) => state.language);
@@ -73,7 +76,14 @@ export default function FourthSection() {
   return (
     <section className={`power-fourthSection ${workSans.className}`} ref={topRef}>
       <div className={`container-img-fourthSection ${isSticky ? 'sticky' : ''}`} ref={imgRef}>
-        <Image src={smallDashboard} alt='Dashboard' fill={true} />
+        {images.map((image, index) => (
+          <div
+            key={index}
+            className={`image-wrapper ${activeIndex === index ? 'active' : ''}`}
+          >
+            <Image src={image} alt={`Dashboard ${index}`} fill={true} />
+          </div>
+        ))}
       </div>
       <ol className={`list-fourthSection ${isSticky ? 'sticky' : ''}`} ref={listRef}>
         {['topology', 'magnetics', 'modeling', 'simulations', 'control'].map((id, index) => (
