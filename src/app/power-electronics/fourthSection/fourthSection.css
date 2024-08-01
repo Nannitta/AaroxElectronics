@@ -1,0 +1,99 @@
+.power-fourthSection {
+	height: 400vh;
+	background-color: var(--background-power);
+	position: relative;
+	z-index: 1;
+	padding: 0 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+}
+
+.container-img-fourthSection {
+	position: relative;
+	align-self: center;
+	margin-top: 4rem;
+	height: 256px;
+	width: 100%;
+}
+
+.container-img-fourthSection.sticky {
+	position: sticky;
+	inset: 7rem;
+}
+
+.container-img-fourthSection img {
+	object-fit: contain;
+}
+
+.image-wrapper {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	transition: opacity 0.5s ease-in-out;
+	opacity: 0;
+}
+
+.image-wrapper.active {
+	opacity: 1;
+}
+
+.list-fourthSection {
+	display: flex;
+	overflow: scroll;
+	position: relative;
+	height: 250px;
+	transition: transform 0.5s ease-in-out;
+}
+
+.list-fourthSection.sticky {
+	position: sticky;
+	inset: 25rem;
+}
+
+.list-fourthSection li {
+	display: flex;
+	flex-direction: column;
+	gap: 1.2rem;
+	min-width: 90vw;
+	color: var(--dark-green);
+	line-height: 1.5;
+	font-weight: 600;
+	position: absolute;
+	inset: 0;
+	gap: 1.5rem;
+	hyphens: auto;
+	opacity: 0;
+	transition: opacity 0.5s ease-in-out;
+	transform: translateX(100%);
+}
+
+.list-fourthSection li span {
+	font-size: 1.5rem;
+	font-weight: 700;
+	color: var(--emerald-green);
+}
+
+.list-fourthSection li.active,
+.list-fourthSection li.last {
+	opacity: 1;
+	transform: translateX(0);
+}
+
+.list-fourthSection li.inactive {
+	opacity: 0;
+	transform: translateX(-100%);
+}
+
+@media (min-width: 768px) {
+	.container-img-fourthSection {
+		width: 80%;
+	}
+}
+
+@media (min-width: 1366px) {
+	.container-img-fourthSection {
+		width: 100%;
+		height: 16%;
+	}
+}

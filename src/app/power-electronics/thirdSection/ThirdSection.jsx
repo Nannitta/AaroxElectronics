@@ -62,8 +62,8 @@ export default function ThirdSection() {
             <div>
               <Image 
                 src={zvs} 
-                width={screenWidth <= screenSizes.mobile ? 36 : 60} 
-                height={screenWidth <= screenSizes.mobile ? 36 : 60} 
+                width={screenWidth < screenSizes.laptop ? 36 : 60} 
+                height={screenWidth < screenSizes.laptop ? 36 : 60} 
                 alt='ZVS icon'
               />
             </div>
@@ -76,8 +76,8 @@ export default function ThirdSection() {
             <div>
               <Image 
                 src={tested} 
-                width={screenWidth <= screenSizes.mobile ? 36 : 60} 
-                height={screenWidth <= screenSizes.mobile ? 36 : 60} 
+                width={screenWidth < screenSizes.laptop ? 36 : 60} 
+                height={screenWidth < screenSizes.laptop ? 36 : 60} 
                 alt='Tested icon'
               />
             </div>
@@ -90,8 +90,8 @@ export default function ThirdSection() {
             <div>
               <Image 
                 src={cost} 
-                width={screenWidth <= screenSizes.mobile ? 36 : 60} 
-                height={screenWidth <= screenSizes.mobile ? 36 : 60} 
+                width={screenWidth < screenSizes.laptop ? 36 : 60} 
+                height={screenWidth < screenSizes.laptop ? 36 : 60} 
                 alt='Cost icon'
               />
             </div>
@@ -104,8 +104,8 @@ export default function ThirdSection() {
             <div>
               <Image 
                 src={software} 
-                width={screenWidth <= screenSizes.mobile ? 36 : 60} 
-                height={screenWidth <= screenSizes.mobile ? 36 : 60} 
+                width={screenWidth < screenSizes.laptop ? 36 : 60} 
+                height={screenWidth < screenSizes.laptop ? 36 : 60} 
                 alt='Software icon'
               />
             </div>

@@ -154,6 +154,28 @@
           "text": "Including embedded SW",
           "highlighted": "From drive up to control"
         }
+      },
+      "fourthSection": {
+        "1": {
+          "title": "Topology Calculations",
+          "text": "We have a proprietary SW to fully calculate and analyze many topologies and power systems. With this, we can easily compare and optimize a design from a very early stage, giving extremely accurate results, including COST."
+        },
+        "2": {
+          "title": "Magnetics Design",
+          "text": "We understand the complexity behind these components, so we get involved to the minimum detail in designing, optimizing, testing and manufacturing the CORE of a power system."
+        },
+        "3": {
+          "title": "Modeling",
+          "text": "We have behavioral models for many components, developed over the years. With these, we can accelerate the development TIME, achieving full working samples in record time."
+        },
+        "4": {
+          "title": "Simulations",
+          "text": "In complex projects or areas, we get supported by simulation SW, to predict behavior or understand conditions that we can not reproduce effectively on the LAB."
+        },
+        "5": {
+          "title": "Control",
+          "text": "We understand analog and digital control, being participated even in IC developments in the past. We already have in our TOOLBOX, controllers, circuits and libraries for the digital DSPs."
+        }
       }
     },
     "Footer": {
@@ -321,6 +343,28 @@
         "sw": {
           "text": "Incluyendo SW embebido",
           "highlighted": "Desde la conducción hasta el control"
+        }
+      },
+      "fourthSection": {
+        "1": {
+          "title": "Cálculos de topología",
+          "text": "Contamos con un SW propio para calcular y analizar por completo muchas topologías y sistemas de potencia. Podemos comparar y optimizar fácilmente un diseño desde una etapa muy temprana, brindando resultados extremadamente precisos, incluido el COSTE."
+        },
+        "2": {
+          "title": "Diseño magnético",
+          "text": "Entendemos perfectamente la complejidad detrás de estos componentes, por lo que nos involucramos hasta el mínimo detalle en el diseño, la optimización, las pruebas y la fabricación del NÚCLEO de un sistema de potencia."
+        },
+        "3": {
+          "title": "Modelado",
+          "text": "Disponemos de modelos de comportamiento para numerosos componentes, desarrollados a lo largo de los años. Con ellos, podemos acelerar el TIEMPO de desarrollo, logrando prototipos completos en tiempo récord."
+        },
+        "4": {
+          "title": "Simulaciones",
+          "text": "En proyectos o áreas complejas, nos apoyamos en SW de simulación para predecir comportamientos o entender condiciones que no podemos reproducir de manera efectiva en el laboratorio."
+        },
+        "5": {
+          "title": "Control",
+          "text": "Entendemos el control analógico y digital, participando incluso en el desarrollo de ICs en el pasado. Ya disponemos en nuestra CAJA DE HERRAMIENTAS de controladores, circuitos y bibliotecas para los DSPs digitales."
         }
       }
     },
