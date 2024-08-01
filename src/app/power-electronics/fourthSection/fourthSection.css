@@ -19,7 +19,7 @@
 
 .container-img-fourthSection.sticky {
 	position: sticky;
-	top: 10rem;
+	inset: 10rem;
 }
 
 .container-img-fourthSection img {
@@ -29,13 +29,13 @@
 .list-fourthSection {
 	display: flex;
 	overflow: scroll;
-	gap: 1.5rem;
 	position: relative;
+	height: 250px;
 }
 
 .list-fourthSection.sticky {
 	position: sticky;
-	top: 28rem;
+	inset: 28rem;
 }
 
 .list-fourthSection li {
@@ -46,13 +46,27 @@
 	color: var(--dark-green);
 	line-height: 1.5;
 	font-weight: 600;
-	text-wrap: balance;
+	position: absolute;
+	inset: 0;
+	transition: opacity 0.3s ease-in;
 }
 
 .list-fourthSection li span {
 	font-size: 1.5rem;
 	font-weight: 700;
 	color: var(--emerald-green);
+}
+
+.list-fourthSection li.active {
+	opacity: 1;
+}
+
+.list-fourthSection li.last {
+	opacity: 1;
+}
+
+.list-fourthSection li.inactive {
+	opacity: 0;
 }
 
 @media (min-width: 768px) {
