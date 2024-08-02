@@ -85,7 +85,7 @@ export default function PowerElectronics() {
       <div ref={secondSectionRef} className='secondSection-power'><SecondSection/></div>
       <div ref={thirdSectionRef} className='thirdSection-power'><ThirdSection/></div>
       <div ref={fourthSectionRef} className='fourthSection-power'><FourthSection/></div>
-      <div ref={fifthSectionRef}>
+      <div ref={fifthSectionRef} className='fifthSection-power'>
         <section style={{backgroundColor: 'blue', height: '100vh', position: 'relative', zIndex: '2'}}></section>
       </div>
     </main>
