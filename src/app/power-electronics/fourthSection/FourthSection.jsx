@@ -16,34 +16,32 @@ const images = [smallDashboard, test, smallDashboard, test, smallDashboard];
 
 export default function FourthSection() {
   const language = useLanguageStore((state) => state.language);
-  const imgRef = useRef(null);
-  const listRef = useRef(null);
-  const [isSticky, setSticky] = useState(false);
+  const [isFixed, setFixed] = useState(false);
   const topRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
 
   useEffect(() => {
-    const observerImgAndList = new IntersectionObserver((entries) => {
+    const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setSticky(true);
+          console.log('arriba');
+          setFixed(true);
+        } else {
+          console.log('abajo');
+          setFixed(false);
         }
       });
-    }, { threshold: 0.01 });
+    }, { threshold: [0, 1] });
 
-    if (imgRef.current) {
-      observerImgAndList.observe(imgRef.current);
+    if (topRef.current) {
+      observer.observe(topRef.current);
     }
 
-    if (listRef.current) {
-      observerImgAndList.observe(listRef.current);
-    }
-
-    return () => observerImgAndList.disconnect();
-  }, []);
+    return () => observer.disconnect();
+  });
 
   useEffect(() => {
-    const handleScroll = () => {
+    const handleScrollFourthSection = () => {
       const section = document.querySelector('.power-fourthSection');
       if (!section) return;
 
@@ -65,27 +63,38 @@ export default function FourthSection() {
       else index = 4;
 
       setActiveIndex(index);
+      
+      const imgContainer = document.querySelector('.container-img-fourthSection');
+      const listItems = document.querySelector('.list-fourthSection');
+
+      if (isFixed && sectionTop <= 0) {
+        imgContainer.classList.add('fixed');
+        listItems.classList.add('fixed');
+      } else {
+        imgContainer.classList.remove('fixed');
+        listItems.classList.remove('fixed');
+      }
     };
     
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScrollFourthSection);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleScrollFourthSection);
     };
-  }, []);
+  }, [isFixed]);
 
   return (
     <section className={`power-fourthSection ${workSans.className}`} ref={topRef}>
-      <div className={`container-img-fourthSection ${isSticky ? 'sticky' : ''}`} ref={imgRef}>
+      <div className={`container-img-fourthSection`}>
         {images.map((image, index) => (
           <div
             key={index}
-            className={`image-wrapper ${activeIndex === index ? 'active' : ''}`}
+            className={`image-wrapper ${activeIndex === index ? 'active' : ''} ${index === 0 ? 'initial' : ''}`}
           >
             <Image src={image} alt={`Dashboard ${index}`} fill={true} />
           </div>
         ))}
       </div>
-      <ol className={`list-fourthSection ${isSticky ? 'sticky' : ''}`} ref={listRef}>
+      <ol className={`list-fourthSection`}>
         {['topology', 'magnetics', 'modeling', 'simulations', 'control'].map((id, index) => (
           <li
             key={id}
