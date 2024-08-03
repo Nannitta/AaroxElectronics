@@ -26,6 +26,7 @@
 
 .container-img-fourthSection img {
 	object-fit: contain;
+	filter: drop-shadow(0 2px 8px #1c3e35);
 }
 
 .image-wrapper {
@@ -75,6 +76,11 @@
 	font-size: 1.5rem;
 	font-weight: 700;
 	color: var(--emerald-green);
+	transition: color 0.5s ease-in-out;
+}
+
+.list-fourthSection li p {
+	font-weight: 400;
 }
 
 .list-fourthSection li.active,
@@ -143,5 +149,47 @@
 
 	.list-fourthSection li p {
 		font-size: 1rem;
+	}
+}
+
+@media (min-width: 1920px) {
+	.container-img-fourthSection {
+		height: 12%;
+	}
+
+	.container-img-fourthSection.fixed {
+		width: 787px;
+		height: 519px;
+	}
+
+	.list-fourthSection {
+		width: 1592px;
+		height: 300px;
+		gap: 2rem;
+	}
+
+	.list-fourthSection.fixed {
+		top: 41rem;
+		width: 1592px;
+	}
+
+	.list-fourthSection li {
+		position: relative;
+	}
+
+	.list-fourthSection li span {
+		font-size: 1.25rem;
+	}
+
+	.list-fourthSection li p {
+		font-size: 0.9rem;
+	}
+
+	.list-fourthSection li.inactive {
+		opacity: 0.3;
+	}
+
+	.list-fourthSection li.inactive span {
+		color: var(--dark-green);
 	}
 }
