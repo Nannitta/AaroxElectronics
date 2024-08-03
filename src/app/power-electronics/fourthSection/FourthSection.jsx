@@ -54,7 +54,29 @@ export default function FourthSection() {
 
       const scrollPercentage = (scrollPosition / sectionHeight) * 100;
       const currentPart = Math.floor((scrollPercentage / 100) * 6);
-      
+      const widthLinePercenetage = ((scrollPercentage / 100) * 6).toFixed(2).split('.')[1];
+      const indexLineWidth = ((scrollPercentage / 100) * 6).toFixed(2).split('.')[0];
+      const widhtLinePercentageDesktop = ((((scrollPercentage / 100) * 6) - 1) / 5) * 100;
+           
+      if(screenWidth < screenSizes.desktop) {
+        const line = document.querySelectorAll('.light-line');
+
+        if(indexLineWidth >= 1) {
+          line.forEach((item) => {
+            item.style.width = `${widthLinePercenetage}%`;
+          })
+        }
+
+        if(indexLineWidth > 5) {
+          line.forEach((item) => {
+            item.style.width = '100%';
+          })
+        }
+      } else {
+        const line = document.querySelector('.light-line');
+        line.style.width = `${widhtLinePercentageDesktop}%`;
+      }
+
       let index;
 
       if (currentPart === 0 || currentPart === 1) index = 0;
@@ -96,6 +118,13 @@ export default function FourthSection() {
         ))}
       </div>
       <ol className={`list-fourthSection`}>
+        {
+          screenWidth >= screenSizes.desktop &&
+          <div className='container-line'>
+            <span className='line'></span>
+            <span className='light-line'></span>
+          </div>
+        }
         {['topology', 'magnetics', 'modeling', 'simulations', 'control'].map((id, index) => (
           <li
             key={id}
@@ -111,6 +140,13 @@ export default function FourthSection() {
             ].join(' ')}
           >
             <span>{index + 1}. {content[language].PowerElectronics.fourthSection[`${index + 1}`].title}</span>
+            {
+              screenWidth < screenSizes.desktop &&
+              <div className='container-line'>
+                <span className='line'></span>
+                <span className='light-line'></span>
+              </div>
+            }
             <p>{content[language].PowerElectronics.fourthSection[`${index + 1}`].text}</p>
           </li>
         ))}
