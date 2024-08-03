@@ -24,10 +24,8 @@ export default function FourthSection() {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          console.log('arriba');
           setFixed(true);
         } else {
-          console.log('abajo');
           setFixed(false);
         }
       });
