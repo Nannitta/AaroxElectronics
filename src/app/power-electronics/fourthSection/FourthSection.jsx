@@ -6,9 +6,11 @@ import content from '../../content.json';
 import { Work_Sans } from 'next/font/google';
 import './fourthSection.css';
 import { useEffect, useRef, useState } from 'react';
+import CheckWindowWidth from '../../hooks/useWindowWidth';
+import { screenSizes } from '../../lib/screenSizes';
 
 const workSans = Work_Sans({
-  weight: ['600', '700'],
+  weight: ['400', '600', '700'],
   subsets: ['latin']
 });
 
@@ -19,6 +21,7 @@ export default function FourthSection() {
   const [isFixed, setFixed] = useState(false);
   const topRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const { screenWidth } = CheckWindowWidth();
 
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
@@ -59,7 +62,7 @@ export default function FourthSection() {
       else if (currentPart === 3) index = 2;
       else if (currentPart === 4) index = 3;
       else index = 4;
-
+      
       setActiveIndex(index);
       
       const imgContainer = document.querySelector('.container-img-fourthSection');
@@ -71,7 +74,7 @@ export default function FourthSection() {
       } else {
         imgContainer.classList.remove('fixed');
         listItems.classList.remove('fixed');
-      }
+      }    
     };
     
     window.addEventListener('scroll', handleScrollFourthSection);
@@ -97,7 +100,11 @@ export default function FourthSection() {
           <li
             key={id}
             id={id}
-            className={[
+            className={(screenWidth >= screenSizes.desktop) ? [
+              index <= activeIndex ? 'active' : '',
+              index === 4 ? 'last' : '',
+              index > activeIndex ? 'inactive' : ''
+            ].join(' ') : [
               index === activeIndex ? 'active' : '',
               index === 4 ? 'last' : '',
               index !== activeIndex ? 'inactive' : ''
