@@ -405,7 +405,7 @@
         "title": "Con muchos componentes en nuestra caja de herramientas",
         "subtitle": "PSU ICs, Microcontroladores, Procesadores, Memorias, Transceptores, Pasivos, Componentes EMC, Relés, Pantallas, Conectores... testado y probado",
         "listItems": {
-          "si&SiC": "Si & SiC Mosfets",
+          "siSiC": "Si & SiC Mosfets",
           "mosfets": "Mosfets for ZVS",
           "nonIsolated": "Non-isolated Drivers",
           "isolated": "Isolated Drivers",
@@ -421,7 +421,7 @@
           "emc": "EMC Countermeasures",
           "controllers": "Flyback Controllers",
           "pfcCont": "PFC Controllers",
-          "pfc&llc": "PFC + LLC Controllers",
+          "pfcyllc": "PFC + LLC Controllers",
           "llcCont": "LLC Controllers",
           "psfbcont": "PSFB Controllers",
           "multiphase": "Multiphase Controllers",
