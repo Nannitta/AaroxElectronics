@@ -4,7 +4,7 @@ import cost from '../../assets/images/power/cost.svg';
 import software from '../../assets/images/power/software.svg';
 import tested from '../../assets/images/power/tested.svg';
 import zvs from '../../assets/images/power/zvs.svg';
-import smallDashboard from '../../assets/images/power/smallDashboard.webp';
+import topology from '../../assets/images/power/topology.webp';
 import Image from 'next/image';
 import './thirdSection.css';
 import { screenSizes } from '../../lib/screenSizes';
@@ -117,7 +117,7 @@ export default function ThirdSection() {
         </ul>
       </div>
       <div className='container-imgDashboard'>
-        <Image src={smallDashboard} alt='Small Dashboard' fill={true}/>
+        <Image src={topology} alt='Topology Dashboard' fill={true}/>
         <div className="features-circles">
           <div className="circle0 circle"></div>
           <div className="circle1 circle"></div>
