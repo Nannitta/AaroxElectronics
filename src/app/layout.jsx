@@ -39,7 +39,7 @@ export default function RootLayout({ children }) {
         <Footer/>
         <CookiesConsent/>
       </body>
-      <GoogleAnalytics gaId="G-N2T3SH52X3" />
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID} />
     </html>
   );
 }

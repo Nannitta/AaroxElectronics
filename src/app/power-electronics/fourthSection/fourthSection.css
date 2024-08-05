@@ -15,6 +15,7 @@
 	margin-top: 8rem;
 	height: 256px;
 	width: 100%;
+	filter: drop-shadow(0 2px 8px #1c3e35);
 }
 
 .container-img-fourthSection.fixed {
@@ -26,7 +27,6 @@
 
 .container-img-fourthSection img {
 	object-fit: contain;
-	filter: drop-shadow(0 2px 8px #1c3e35);
 }
 
 .image-wrapper {
