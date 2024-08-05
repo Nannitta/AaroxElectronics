@@ -1,5 +1,6 @@
 import smallDashboard from '../../assets/images/power/smallDashboard.webp';
 import test from '../../assets/images/power/test.webp';
+import magnetics from '../../assets/images/power/magentics.webp';
 import Image from 'next/image';
 import { useLanguageStore } from '../../stores/languageStore';
 import content from '../../content.json';
@@ -14,7 +15,7 @@ const workSans = Work_Sans({
   subsets: ['latin']
 });
 
-const images = [smallDashboard, test, smallDashboard, test, smallDashboard];
+const images = [smallDashboard, magnetics, smallDashboard, test, smallDashboard];
 
 export default function FourthSection() {
   const language = useLanguageStore((state) => state.language);
@@ -103,7 +104,7 @@ export default function FourthSection() {
     return () => {
       window.removeEventListener('scroll', handleScrollFourthSection);
     };
-  }, [isFixed]);
+  }, [isFixed, screenWidth]);
 
   return (
     <section className={`power-fourthSection ${workSans.className}`} ref={topRef}>
