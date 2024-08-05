@@ -1,6 +1,7 @@
 import smallDashboard from '../../assets/images/power/smallDashboard.webp';
 import test from '../../assets/images/power/test.webp';
 import magnetics from '../../assets/images/power/magentics.webp';
+import modeling from '../../assets/images/power/modeling.webp';
 import Image from 'next/image';
 import { useLanguageStore } from '../../stores/languageStore';
 import content from '../../content.json';
@@ -15,7 +16,7 @@ const workSans = Work_Sans({
   subsets: ['latin']
 });
 
-const images = [smallDashboard, magnetics, smallDashboard, test, smallDashboard];
+const images = [smallDashboard, magnetics, modeling, test, smallDashboard];
 
 export default function FourthSection() {
   const language = useLanguageStore((state) => state.language);

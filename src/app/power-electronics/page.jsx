@@ -6,6 +6,7 @@ import FirstSection from './firstSection/FirstSection';
 import SecondSection from './secondSection/SecondSection';
 import ThirdSection from './thirdSection/ThirdSection';
 import FourthSection from './fourthSection/FourthSection';
+import FifthSection from './fifthSection/FifthSection';
 
 export default function PowerElectronics() {
   const firstSectionRef = useRef(null);
@@ -13,6 +14,7 @@ export default function PowerElectronics() {
   const thirdSectionRef = useRef(null);
   const fourthSectionRef = useRef(null);
   const fifthSectionRef = useRef(null);
+  const sixthSectionRef = useRef(null);
 
   const [nextSection, setNextSection] = useState('secondSection-power');
 
@@ -25,7 +27,8 @@ export default function PowerElectronics() {
         { ref: secondSectionRef, id: 'secondSection-power' },
         { ref: thirdSectionRef, id: 'thirdSection-power' },
         { ref: fourthSectionRef, id: 'fourthSection-power' },
-        { ref: fourthSectionRef, id: 'fifthSection-power' }
+        { ref: fifthSectionRef, id: 'fifthSection-power' },
+        { ref: sixthSectionRef, id: 'sixthSection-power' },
       ];
 
       let foundActive = false;
@@ -73,6 +76,9 @@ export default function PowerElectronics() {
       case 'fifthSection-power':
         scrollToSection(fifthSectionRef);
         break;
+      case 'sixthSection-power':
+        scrollToSection(fifthSectionRef);
+        break;
       default:
         break;
     }
@@ -85,7 +91,8 @@ export default function PowerElectronics() {
       <div ref={secondSectionRef} className='secondSection-power'><SecondSection/></div>
       <div ref={thirdSectionRef} className='thirdSection-power'><ThirdSection/></div>
       <div ref={fourthSectionRef} className='fourthSection-power'><FourthSection/></div>
-      <div ref={fifthSectionRef} className='fifthSection-power'>
+      <div ref={fifthSectionRef} className='fifthSection-power'><FifthSection/></div>
+      <div ref={sixthSectionRef} className='sixthSection-power'>
         <section style={{backgroundColor: 'blue', height: '100vh', position: 'relative', zIndex: '2'}}></section>
       </div>
     </main>

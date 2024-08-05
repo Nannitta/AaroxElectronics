@@ -176,6 +176,40 @@
           "title": "Control",
           "text": "We understand analog and digital control, being participated even in IC developments in the past. We already have in our TOOLBOX, controllers, circuits and libraries for the digital DSPs."
         }
+      },
+      "fifthSection": {
+        "title": "With many components in our toolcase",
+        "subtitle": "PSU ICs, Microcontrollers, Processors, Memories, Transceivers, Passives, EMC Components, Relays, Displays, Connectors... tested and proven",
+        "listItems": {
+          "siSiC": "Si & SiC Mosfets",
+          "mosfets": "Mosfets for ZVS",
+          "nonIsolated": "Non-isolated Drivers",
+          "isolated": "Isolated Drivers",
+          "magnetics": "Magnetics up to KW range",
+          "cmcs": "Cost-effective CMCs",
+          "pfc": "PFC Chokes",
+          "flyback": "Flyback Transformers",
+          "llc": "LLC + Lr Transformers",
+          "bidirectional": "Bidirectional Transformers",
+          "psfb": "PSFB Transformers",
+          "resonant": "Resonant Chokes",
+          "costEffec": "Cost-effective Cores",
+          "emc": "EMC Countermeasures",
+          "controllers": "Flyback Controllers",
+          "pfcCont": "PFC Controllers",
+          "pfcyllc": "PFC + LLC Controllers",
+          "llcCont": "LLC Controllers",
+          "psfbcont": "PSFB Controllers",
+          "multiphase": "Multiphase Controllers",
+          "buck": "Buck / Boost / Sepic ICs",
+          "orIng": "OR-ing & SYNC Rectification",
+          "sensors": "Current Sensors",
+          "opAmp": "Op-Amp Circuits",
+          "shortCirc": "Short-circuit protections",
+          "ti": "TI C2000 DSPs & Libraries",
+          "thermal": "Thermal interfaces",
+          "water": "Water cooling techniques"
+        }
       }
     },
     "Footer": {
@@ -365,6 +399,40 @@
         "5": {
           "title": "Control",
           "text": "Entendemos el control analógico y digital, participando en el desarrollo de ICs en el pasado. Ya disponemos en nuestra CAJA DE HERRAMIENTAS de controladores, circuitos y bibliotecas para los DSPs digitales."
+        }
+      },
+      "fifthSection": {
+        "title": "Con muchos componentes en nuestra caja de herramientas",
+        "subtitle": "PSU ICs, Microcontroladores, Procesadores, Memorias, Transceptores, Pasivos, Componentes EMC, Relés, Pantallas, Conectores... testado y probado",
+        "listItems": {
+          "si&SiC": "Si & SiC Mosfets",
+          "mosfets": "Mosfets for ZVS",
+          "nonIsolated": "Non-isolated Drivers",
+          "isolated": "Isolated Drivers",
+          "magnetics": "Magnetics up to KW range",
+          "cmcs": "Cost-effective CMCs",
+          "pfc": "PFC Chokes",
+          "flyback": "Flyback Transformers",
+          "llc": "LLC + Lr Transformers",
+          "bidirectional": "Bidirectional Transformers",
+          "psfb": "PSFB Transformers",
+          "resonant": "Resonant Chokes",
+          "costEffec": "Cost-effective Cores",
+          "emc": "EMC Countermeasures",
+          "controllers": "Flyback Controllers",
+          "pfcCont": "PFC Controllers",
+          "pfc&llc": "PFC + LLC Controllers",
+          "llcCont": "LLC Controllers",
+          "psfbcont": "PSFB Controllers",
+          "multiphase": "Multiphase Controllers",
+          "buck": "Buck / Boost / Sepic ICs",
+          "orIng": "OR-ing & SYNC Rectification",
+          "sensors": "Current Sensors",
+          "opAmp": "Op-Amp Circuits",
+          "shortCirc": "Short-circuit protections",
+          "ti": "TI C2000 DSPs & Libraries",
+          "thermal": "Thermal interfaces",
+          "water": "Water cooling techniques"
         }
       }
     },
