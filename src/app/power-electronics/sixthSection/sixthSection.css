@@ -3,4 +3,34 @@
 	background-color: var(--background-power);
 	position: relative;
 	z-index: 1;
+	display: flex;
+	flex-direction: column;
+}
+
+.container-arrow {
+	width: 100%;
+	height: 500vh;
+	position: absolute;
+}
+
+.arrow-sixthSection {
+	width: 100%;
+	height: 500vh;
+	object-fit: cover;
+}
+
+.container-smallArrow {
+	align-self: center;
+	width: 20px;
+	margin: 3rem 0;
+}
+
+.container-img-validation {
+	position: relative;
+	width: 250px;
+	height: 250px;
+}
+
+.container-img-validation img {
+	object-fit: contain;
 }
