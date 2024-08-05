@@ -1,10 +1,10 @@
 import { useLanguageStore } from '../../stores/languageStore';
 import content from '../../content.json';
-import cost from '../../assets/images/power/cost.svg';
-import software from '../../assets/images/power/software.svg';
-import tested from '../../assets/images/power/tested.svg';
-import zvs from '../../assets/images/power/zvs.svg';
-import topology from '../../assets/images/power/topology.webp';
+import cost from '../../assets/images/power/thirdSection/icones/cost.svg';
+import software from '../../assets/images/power/thirdSection/icones/software.svg';
+import tested from '../../assets/images/power/thirdSection/icones/tested.svg';
+import zvs from '../../assets/images/power/thirdSection/icones/zvs.svg';
+import topology from '../../assets/images/power/thirdSection/topology.webp';
 import Image from 'next/image';
 import './thirdSection.css';
 import { screenSizes } from '../../lib/screenSizes';

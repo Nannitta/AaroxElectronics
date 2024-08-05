@@ -1,7 +1,7 @@
 import { useLanguageStore } from '../../stores/languageStore';
 import content from '../../content.json';
 import Image from 'next/image';
-import largeDashboard from '../../assets/images/power/largeDashboard.webp';
+import largeDashboard from '../../assets/images/power/secondSection/largeDashboard.webp';
 import './secondSection.css';
 import { Work_Sans } from 'next/font/google';
 import { useEffect, useState } from 'react';

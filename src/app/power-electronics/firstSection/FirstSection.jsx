@@ -2,7 +2,7 @@ import { useLanguageStore } from '../../stores/languageStore';
 import content from '../../content.json';
 import { Passion_One } from 'next/font/google';
 import Image from 'next/image';
-import smallDashboard from '../../assets/images/power/smallDashboard.webp';
+import smallDashboard from '../../assets/images/power/firstSection/smallDashboard.webp';
 import './firstSection.css';
 import { useEffect } from 'react';
 import handleColorOpacity from '../../lib/scrollPowerElectronicsFirstSection';

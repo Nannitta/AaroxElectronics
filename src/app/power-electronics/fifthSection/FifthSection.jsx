@@ -1,6 +1,6 @@
 import { useLanguageStore } from '../../stores/languageStore';
 import content from '../../content.json';
-import calculations from '../../assets/images/power/calculations.webp';
+import calculations from '../../assets/images/power/fifthSection/calculations.webp';
 import Image from 'next/image';
 import { Work_Sans } from 'next/font/google';
 import './fifthSection.css';

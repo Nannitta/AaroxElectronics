@@ -210,6 +210,32 @@
           "thermal": "Thermal interfaces",
           "water": "Water cooling techniques"
         }
+      },
+      "sixthSection": {
+        "schematic": {
+          "title": "SCHEMATIC Drawing",
+          "subtitle": "Including all detailing to move to the next step: current and voltage levels, classes, ground star points, etc."
+        },
+        "pcb": {
+          "title": "PCB / LAYOUT Routing",
+          "subtitle": "With decades of experience routing boards for different industries and different applications. Taking EMC, DFM and DFA into account from day one."
+        },
+        "mechanical": {
+          "title": "MECHANICAL Definition",
+          "subtitle": "Integrating electronics in many materials cases, from simple convectional air cooled to complex water cooling systems, with several interface materials."
+        },
+        "prototype": {
+          "title": "PROTOTYPE Build",
+          "subtitle": "Our design process allow us to achieve representative prototypes in record time. Being able to accelerate market launch to the maximum."
+        },
+        "debugging": {
+          "title": "DEBUGGING Process",
+          "subtitle": "With many techniques developed over the years to debug, anticipate and solve problems that will raise in the validation stage or would occur in the field."
+        },
+        "validation": {
+          "title": "VALIDATION and EMC",
+          "subtitle": "With experience introducing products in high volume markets, up to several million, where the validation process and EMC must be taken to the extreme, to ensure top quality over the expected lifetime."
+        }
       }
     },
     "Footer": {
@@ -433,6 +459,32 @@
           "ti": "TI C2000 DSPs & Libraries",
           "thermal": "Thermal interfaces",
           "water": "Water cooling techniques"
+        }
+      },
+      "sixthSection": {
+        "schematic": {
+          "title": "Diseño de ESQUEMÁTICOS",
+          "subtitle": "Incluyendo todos los detalles para pasar al siguiente paso: niveles de corriente y tensión, clases, puntos de masa en estrella, etc."
+        },
+        "pcb": {
+          "title": "Enrutado de PCB",
+          "subtitle": "Con décadas de experiencia en el enrutamiento de placas para diferentes industrias y diferentes aplicaciones. Teniendo en cuenta EMC, DFM y DFA desde el primer día."
+        },
+        "mechanical": {
+          "title": "Definición MECÁNICA",
+          "subtitle": "Integración de electrónica en muchos tipos de materiales, desde simples sistemas de refrigeración por convección de aire hasta complejos sistemas de refrigeración líquida, con varios materales de interfaz."
+        },
+        "prototype": {
+          "title": "Construcción de PROTOTIPO",
+          "subtitle": "Nuestro proceso de diseño nos permite conseguir prototipos representativos en tiempo récord, pudiendo acelerar al máximo el lanzamiento al mercado."
+        },
+        "debugging": {
+          "title": "Proceso de DEPURADO",
+          "subtitle": "Con multitud de técnicas desarrolladas a lo largo de los años para depurar, anticipar y resolver problemas que surgirán en la etapa de validación o que ocurrirían en campo."
+        },
+        "validation": {
+          "title": "VALIDACIÓN y EMC",
+          "subtitle": "Con experiencia en la introducción de productos en mercados de gran volumen, hasta varios millones, donde el proceso de validación y EMC debe llevarse al extremo, para garantizar la máxima calidad durante la vida útil esperada."
         }
       }
     },

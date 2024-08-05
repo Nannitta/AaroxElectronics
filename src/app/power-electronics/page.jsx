@@ -7,6 +7,7 @@ import SecondSection from './secondSection/SecondSection';
 import ThirdSection from './thirdSection/ThirdSection';
 import FourthSection from './fourthSection/FourthSection';
 import FifthSection from './fifthSection/FifthSection';
+import SixthSection from './sixthSection/SixthSection';
 
 export default function PowerElectronics() {
   const firstSectionRef = useRef(null);
@@ -92,9 +93,7 @@ export default function PowerElectronics() {
       <div ref={thirdSectionRef} className='thirdSection-power'><ThirdSection/></div>
       <div ref={fourthSectionRef} className='fourthSection-power'><FourthSection/></div>
       <div ref={fifthSectionRef} className='fifthSection-power'><FifthSection/></div>
-      <div ref={sixthSectionRef} className='sixthSection-power'>
-        <section style={{backgroundColor: 'blue', height: '100vh', position: 'relative', zIndex: '2'}}></section>
-      </div>
+      <div ref={sixthSectionRef} className='sixthSection-power'><SixthSection/></div>
     </main>
   )
 }
