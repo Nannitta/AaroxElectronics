@@ -1,0 +1,6 @@
+.power-sixthSection {
+	min-height: 100vh;
+	background-color: var(--background-power);
+	position: relative;
+	z-index: 1;
+}

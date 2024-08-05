@@ -1,7 +1,7 @@
-import smallDashboard from '../../assets/images/power/smallDashboard.webp';
+import smallDashboard from '../../assets/images/power/firstSection/smallDashboard.webp';
 import test from '../../assets/images/power/test.webp';
-import magnetics from '../../assets/images/power/magentics.webp';
-import modeling from '../../assets/images/power/modeling.webp';
+import magnetics from '../../assets/images/power/fourthSection/magentics.webp';
+import modeling from '../../assets/images/power/fourthSection/modeling.webp';
 import Image from 'next/image';
 import { useLanguageStore } from '../../stores/languageStore';
 import content from '../../content.json';
