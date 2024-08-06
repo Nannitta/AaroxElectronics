@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import content from '../../content.json';
 import { useLanguageStore } from '../../stores/languageStore';
 import PcbTools from './pcbTools/PcbTools';
@@ -24,6 +24,7 @@ export default function FourthSection() {
   const totalFrames = 169;
   const shrinkStartFrame = 157;
   const minScale = 0.6;
+  const canvasRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -102,7 +103,31 @@ export default function FourthSection() {
     const img = new Image();
     img.src = currentFrame(frames);
     img.onload = () => {
-      containerPcb3d.style.backgroundImage = `url(${img.src})`;
+      const canvas = canvasRef.current;
+      const context = canvas.getContext('2d');
+      const dpr = window.devicePixelRatio || 1;
+      canvas.width = canvas.clientWidth * dpr;
+      canvas.height = canvas.clientHeight * dpr;
+
+      context.scale(dpr, dpr);
+      context.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
+
+      const imgAspectRatio = img.width / img.height;
+      const canvasAspectRatio = canvas.clientWidth / canvas.clientHeight;
+      let drawWidth, drawHeight;
+
+      if (canvasAspectRatio > imgAspectRatio) {
+        drawWidth = canvas.clientWidth;
+        drawHeight = canvas.clientWidth / imgAspectRatio;
+      } else {
+        drawHeight = canvas.clientHeight;
+        drawWidth = canvas.clientHeight * imgAspectRatio;
+      }
+
+      const drawX = (canvas.clientWidth - drawWidth) / 2;
+      const drawY = (canvas.clientHeight - drawHeight) / 2;
+
+      context.drawImage(img, drawX, drawY, drawWidth, drawHeight);
     };
 
     if (frames >= shrinkStartFrame) {
@@ -155,7 +180,7 @@ export default function FourthSection() {
         <MechanicalNav />
       </div>
       <div className="container-pcb3d">
-        <canvas id="canvas-pcb3d"></canvas>
+        <canvas id="canvas-pcb3d" ref={canvasRef}></canvas>
       </div>
     </section>
   );

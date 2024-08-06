@@ -161,7 +161,7 @@
 @media (min-width: 1366px) {
 	.container-img-fourthSection {
 		width: 100%;
-		height: 14%;
+		height: 430px;
 		margin-top: 7rem;
 	}
 
@@ -173,6 +173,7 @@
 
 	.list-fourthSection {
 		width: 656px;
+		overflow: hidden;
 	}
 
 	.list-fourthSection.fixed {
