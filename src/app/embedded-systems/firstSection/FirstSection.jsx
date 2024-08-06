@@ -1,7 +1,13 @@
 import { useEffect } from 'react';
 import content from '../../content.json';
 import { useLanguageStore } from '../../stores/languageStore';
+import { Work_Sans } from 'next/font/google';
 import './firstSection.css';
+
+const workSans = Work_Sans({
+  weight: ['400', '700'],
+  subsets: ['latin']
+});
 
 export default function FirstSection() {
   const language = useLanguageStore((state) => state.language);
@@ -22,7 +28,7 @@ export default function FirstSection() {
 
   return(
     <section className='embedded-firstSection'>
-        <h1>
+        <h1 className={workSans.className}>
           {content[language].EmbeddedSystems.firstSection.title.text1}
           <span> {content[language].EmbeddedSystems.firstSection.title.concept} </span>
           {content[language].EmbeddedSystems.firstSection.title.to}

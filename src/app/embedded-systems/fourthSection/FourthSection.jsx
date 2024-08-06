@@ -8,7 +8,13 @@ import handleVisibility from '../../lib/scrollEmbedded3dsection';
 import SchematicsNav from './schematics/SchematicsNav';
 import ComponentsNav from './componentsPcb/ComponentsNav';
 import MechanicalNav from './mechanical/MechanicalNav';
+import { Work_Sans } from 'next/font/google';
 import './fourthSection.css';
+
+const workSans = Work_Sans({
+  weight: ['400', '700'],
+  subsets: ['latin']
+});
 
 export default function FourthSection() {
   const language = useLanguageStore((state) => state.language);
@@ -126,7 +132,7 @@ export default function FourthSection() {
 
   return (
     <section className="embedded-fourthSection">
-      <h2 className='fourthSection-title'>
+      <h2 className={`fourthSection-title ${workSans.className}`}>
         {content[language].EmbeddedSystems.fourthSection.title}
         <span> {content[language].EmbeddedSystems.fourthSection.toolcase}</span>
       </h2>

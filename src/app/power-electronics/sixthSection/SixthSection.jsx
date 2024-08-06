@@ -1,8 +1,9 @@
 import { useLanguageStore } from '../../stores/languageStore';
 import content from '../../content.json';
-import img from '../../assets/images/power/sixthSection/img.png';
+import schematicsImg from '../../assets/images/power/sixthSection/schematics.webp';
 import last from '../../assets/images/power/sixthSection/last.png'
 import schematics from '../../assets/images/power/sixthSection/icones/schematics.svg';
+import pcbImg from '../../assets/images/power/sixthSection/pcb.webp';
 import pcb from '../../assets/images/power/sixthSection/icones/pcb.svg';
 import mechanical from '../../assets/images/power/sixthSection/icones/mechanical.svg';
 import prototyping from '../../assets/images/power/sixthSection/icones/prototyping.svg';
@@ -66,7 +67,7 @@ export default function SixthSection() {
       }
       <AsideSection 
         icon={schematics} 
-        image={img} 
+        image={schematicsImg} 
         altIcon={'Schematics icon'} 
         altImg={'Schematics image'}
         title={content[language].PowerElectronics.sixthSection.schematic.title}
@@ -74,7 +75,7 @@ export default function SixthSection() {
       />
       <AsideSection 
         icon={pcb} 
-        image={img} 
+        image={pcbImg} 
         altIcon={'PCB icon'} 
         altImg={'PCB image'}
         title={content[language].PowerElectronics.sixthSection.pcb.title}
@@ -82,7 +83,7 @@ export default function SixthSection() {
       />
       <AsideSection 
         icon={mechanical} 
-        image={img} 
+        image={pcbImg} 
         altIcon={'Mechanical icon'} 
         altImg={'Mechanical image'}
         title={content[language].PowerElectronics.sixthSection.mechanical.title}
@@ -90,7 +91,7 @@ export default function SixthSection() {
       />
       <AsideSection 
         icon={prototyping} 
-        image={img} 
+        image={pcbImg} 
         altIcon={'Prototyping icon'} 
         altImg={'Prototyping image'}
         title={content[language].PowerElectronics.sixthSection.prototype.title}
@@ -98,7 +99,7 @@ export default function SixthSection() {
       />
       <AsideSection 
         icon={debugging} 
-        image={img} 
+        image={pcbImg} 
         altIcon={'Debugging icon'} 
         altImg={'Debugging image'}
         title={content[language].PowerElectronics.sixthSection.debugging.title}
