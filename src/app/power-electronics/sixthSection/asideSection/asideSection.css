@@ -4,7 +4,7 @@
 	flex-direction: column;
 	justify-content: center;
 	position: relative;
-	z-index: 2;
+	z-index: 1;
 }
 
 .container-text {
@@ -48,7 +48,7 @@
 }
 
 .container-img-schematics img {
-	object-fit: contain;
+	object-fit: cover;
 }
 
 @media (min-width: 768px) {
@@ -109,4 +109,21 @@
 }
 
 @media (min-width: 1920px) {
+	.aside-section h2 {
+		font-size: 2.5rem;
+	}
+
+	.aside-section p {
+		font-size: 1.3rem;
+	}
+	.aside-section:nth-child(2) .container-text,
+	.aside-section:nth-child(4) .container-text,
+	.aside-section:nth-child(6) .container-text {
+		margin-right: 10rem;
+	}
+
+	.aside-section:nth-child(3) .container-text,
+	.aside-section:nth-child(5) .container-text {
+		margin-left: 10rem;
+	}
 }

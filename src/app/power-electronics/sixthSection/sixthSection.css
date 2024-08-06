@@ -18,11 +18,16 @@
 }
 
 @media (min-width: 1366px) {
-	.container-arrow {
+	.power-sixthSection {
+		stroke-dasharray: 3200;
+	}
+
+	.arrow {
 		width: 740px;
-		height: 2287px;
+		height: 2250px;
 		position: absolute;
 		align-self: center;
 		margin-top: 20rem;
+		transition: fill 0.3s, stroke 0.3s, background-color 0.3s, color 0.3s;
 	}
 }

@@ -14,6 +14,7 @@ import { Work_Sans } from 'next/font/google';
 import CheckWindowWidth from '../../hooks/useWindowWidth';
 import { screenSizes } from '../../lib/screenSizes';
 import './sixthSection.css';
+import { useEffect, useRef, useState } from 'react';
 
 const workSans = Work_Sans({
   weight: ['400', '700'],
@@ -23,14 +24,52 @@ const workSans = Work_Sans({
 export default function SixthSection() {
   const language = useLanguageStore((state) => state.language);
   const { screenWidth } = CheckWindowWidth();
+  const [strokeDashoffset, setStrokeDashoffset] = useState(0);
+  const containerArrowSection = useRef(null);
+  const [scrollFraction, setScrollFraction] = useState(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setStrokeDashoffset(3200 * scrollFraction);
+        }
+      });
+    }, { threshold: 0.15 });
+
+    if (containerArrowSection.current) {
+      observer.observe(containerArrowSection.current);
+    }
+
+    return () => observer.disconnect();
+  });
+
+  useEffect(() => {
+    const handleScrollSixthSection = () => {
+      const sixthSection = document.querySelector('.power-sixthSection');
+      if(!sixthSection) return;
+
+      const rect = sixthSection.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+      const sectionHeight = rect.height;
+     
+      const scrollTop = viewportHeight - (rect.top + 320);
+      const visibleHeight = Math.max(0, Math.min(sectionHeight, scrollTop));
+      setScrollFraction(visibleHeight / sectionHeight);
+    };
+
+    window.addEventListener('scroll', handleScrollSixthSection);
+
+    return () => {
+      window.removeEventListener('scroll', handleScrollSixthSection);
+    };
+  }, []);
 
   return(
-    <section className={`power-sixthSection ${workSans.className}`}>
+    <section className={`power-sixthSection ${workSans.className}`} ref={containerArrowSection}>
       {
         screenWidth >= screenSizes.laptop
-          && <div className='container-arrow'>
-              <Arrow width={740} height={"100%"}/>
-            </div>
+          && <Arrow className="arrow" strokeDashoffset={strokeDashoffset}/>
       }
       <AsideSection 
         icon={schematics} 
