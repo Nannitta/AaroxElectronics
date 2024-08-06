@@ -41,8 +41,8 @@
 
 .container-img-schematics {
 	position: relative;
-	width: 90%;
-	height: 50%;
+	width: 100%;
+	min-height: 250px;
 	align-self: center;
 	margin-top: 1rem;
 }
@@ -67,11 +67,12 @@
 	}
 
 	.container-smallArrow {
-		margin: 0;
+		margin-bottom: 2rem;
 	}
 
 	.container-img-schematics {
 		margin-top: 3rem;
+		min-height: 450px;
 	}
 }
 
@@ -107,7 +108,7 @@
 
 	.container-img-schematics {
 		width: 576px;
-		height: 400px;
+		height: 450px;
 		margin-top: 0;
 	}
 

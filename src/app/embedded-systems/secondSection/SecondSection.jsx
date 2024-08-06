@@ -2,6 +2,12 @@ import { useLanguageStore } from '../../stores/languageStore';
 import content from '../../content.json';
 import './secondSection.css';
 import { useEffect, useState } from 'react';
+import { Work_Sans } from 'next/font/google';
+
+const workSans = Work_Sans({
+  weight: ['400', '700'],
+  subsets: ['latin']
+});
 
 export default function SecondSection({ refSection }) {
   const language = useLanguageStore((state) => state.language);
@@ -67,7 +73,7 @@ export default function SecondSection({ refSection }) {
 
   return (
     <section className="embedded-secondSection" ref={refSection}>
-      <h2 className="title-secondSection">
+      <h2 className={`title-secondSection ${workSans.className}`}>
         {content[language].EmbeddedSystems.secondSection.text1}{' '}
         <span>{content[language].EmbeddedSystems.secondSection.texthighlighted}</span>{' '}
         {content[language].EmbeddedSystems.secondSection.text2}

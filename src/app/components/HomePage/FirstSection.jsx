@@ -14,7 +14,13 @@ import arrowRight from '../../assets/images/homePage/arrowRight.svg';
 import ScrollArrow from '../HomePage/scrollArrow.jsx';
 import { useEffect, useRef, useState } from 'react';
 import { screenSizes } from '../../lib/screenSizes';
+import { Work_Sans } from 'next/font/google';
 import './firstSection.css';
+
+const workSans = Work_Sans({
+  weight: ['400', '700'],
+  subsets: ['latin']
+});
 
 export default function FirstSection() {
   const { screenWidth } = CheckWindowWidth();
@@ -65,7 +71,7 @@ export default function FirstSection() {
             height={screenWidth < screenSizes.tablet ? 60 : 100}
             priority={true}
           />
-          <h2>
+          <h2 className={workSans.className}>
             {content[language].HomePage.title}
             <br/>
             {content[language].HomePage.subtitle}
