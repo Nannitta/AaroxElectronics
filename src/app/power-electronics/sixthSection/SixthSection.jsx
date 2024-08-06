@@ -14,7 +14,7 @@ import { Work_Sans } from 'next/font/google';
 import CheckWindowWidth from '../../hooks/useWindowWidth';
 import { screenSizes } from '../../lib/screenSizes';
 import './sixthSection.css';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const workSans = Work_Sans({
   weight: ['400', '700'],
@@ -25,24 +25,6 @@ export default function SixthSection() {
   const language = useLanguageStore((state) => state.language);
   const { screenWidth } = CheckWindowWidth();
   const [strokeDashoffset, setStrokeDashoffset] = useState(0);
-  const containerArrowSection = useRef(null);
-  const [scrollFraction, setScrollFraction] = useState(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          setStrokeDashoffset(3200 * scrollFraction);
-        }
-      });
-    }, { threshold: 0.15 });
-
-    if (containerArrowSection.current) {
-      observer.observe(containerArrowSection.current);
-    }
-
-    return () => observer.disconnect();
-  });
 
   useEffect(() => {
     const handleScrollSixthSection = () => {
@@ -51,11 +33,12 @@ export default function SixthSection() {
 
       const rect = sixthSection.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
-      const sectionHeight = rect.height;
-     
-      const scrollTop = viewportHeight - (rect.top + 320);
+      const sectionHeight = rect.height - viewportHeight;
+      const scrollTop = viewportHeight - (rect.top + 380);
       const visibleHeight = Math.max(0, Math.min(sectionHeight, scrollTop));
-      setScrollFraction(visibleHeight / sectionHeight);
+      const scrollFraction = (visibleHeight / sectionHeight);
+
+      setStrokeDashoffset(3200 * scrollFraction);
     };
 
     window.addEventListener('scroll', handleScrollSixthSection);
@@ -66,7 +49,7 @@ export default function SixthSection() {
   }, []);
 
   return(
-    <section className={`power-sixthSection ${workSans.className}`} ref={containerArrowSection}>
+    <section className={`power-sixthSection ${workSans.className}`}>
       {
         screenWidth >= screenSizes.laptop
           && <Arrow className="arrow" strokeDashoffset={strokeDashoffset}/>
@@ -111,10 +94,12 @@ export default function SixthSection() {
         title={content[language].PowerElectronics.sixthSection.debugging.title}
         text={content[language].PowerElectronics.sixthSection.debugging.subtitle}
       />
-      <h2>{content[language].PowerElectronics.sixthSection.validation.title}</h2>
-      <h3>{content[language].PowerElectronics.sixthSection.validation.subtitle}</h3>
-      <div className='container-img-validation'>
-        <Image src={last} alt='Validation image' fill={true}/>
+      <div className='last-section'>
+        <h2>{content[language].PowerElectronics.sixthSection.validation.title}</h2>
+        <h3>{content[language].PowerElectronics.sixthSection.validation.subtitle}</h3>
+        <div className='container-img-validation'>
+          <Image src={last} alt='Validation image' fill={true}/>
+        </div>
       </div>
     </section>
   )
