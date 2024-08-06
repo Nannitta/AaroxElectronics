@@ -1,7 +1,8 @@
-import smallDashboard from '../../assets/images/power/firstSection/smallDashboard.webp';
-import test from '../../assets/images/power/test.webp';
+import topology from '../../assets/images/power/fourthSection/topology.webp';
 import magnetics from '../../assets/images/power/fourthSection/magentics.webp';
 import modeling from '../../assets/images/power/fourthSection/modeling.webp';
+import simulations from '../../assets/images/power/fourthSection/simulations.webp';
+import control from '../../assets/images/power/fourthSection/control.webp';
 import Image from 'next/image';
 import { useLanguageStore } from '../../stores/languageStore';
 import content from '../../content.json';
@@ -16,7 +17,7 @@ const workSans = Work_Sans({
   subsets: ['latin']
 });
 
-const images = [smallDashboard, magnetics, modeling, test, smallDashboard];
+const images = [topology, magnetics, modeling, simulations, control];
 
 export default function FourthSection() {
   const language = useLanguageStore((state) => state.language);

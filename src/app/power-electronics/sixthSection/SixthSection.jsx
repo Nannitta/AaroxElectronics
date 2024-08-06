@@ -29,6 +29,8 @@ export default function SixthSection() {
   useEffect(() => {
     const handleScrollSixthSection = () => {
       const sixthSection = document.querySelector('.power-sixthSection');
+      const arrow =  document.querySelector('.st01');
+           
       if(!sixthSection) return;
 
       const rect = sixthSection.getBoundingClientRect();
@@ -39,6 +41,14 @@ export default function SixthSection() {
       const scrollFraction = (visibleHeight / sectionHeight);
 
       setStrokeDashoffset(3200 * scrollFraction);
+
+      if(arrow) {
+        if(strokeDashoffset >= 3200) {
+          arrow.style.opacity = 1
+        } else {
+          arrow.style.opacity = 0
+        }
+      }
     };
 
     window.addEventListener('scroll', handleScrollSixthSection);
@@ -46,7 +56,7 @@ export default function SixthSection() {
     return () => {
       window.removeEventListener('scroll', handleScrollSixthSection);
     };
-  }, []);
+  }, [strokeDashoffset]);
 
   return(
     <section className={`power-sixthSection ${workSans.className}`}>
