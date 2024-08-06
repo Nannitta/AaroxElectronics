@@ -80,6 +80,10 @@
 		width: 700px;
 		align-self: center;
 	}
+
+	.container-img-validation {
+		height: 430px;
+	}
 }
 
 @media (min-width: 1920px) {
@@ -94,5 +98,9 @@
 	.last-section h3 {
 		font-size: 1.5rem;
 		width: 900px;
+	}
+
+	.container-img-validation {
+		height: 519px;
 	}
 }

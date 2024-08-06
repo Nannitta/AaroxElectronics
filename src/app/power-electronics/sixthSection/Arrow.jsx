@@ -13,7 +13,7 @@ export default function Arrow({ className, strokeDashoffset }) {
       <style type="text/css">
         {`
           .st01 {
-            fill: #2BB065;
+            fill: #2bac44;
           }
           .st11 {
             fill: none;
@@ -23,7 +23,7 @@ export default function Arrow({ className, strokeDashoffset }) {
           }
           .st21 {
             fill: none;
-            stroke: #2BB065;
+            stroke: #2bac44;
             stroke-width: 2;
             stroke-linecap: round;
             stroke-linejoin: round;
@@ -35,7 +35,6 @@ export default function Arrow({ className, strokeDashoffset }) {
       <path
         className="st01"
         d="M361,2287l-11-18h22L361,2287z"
-        style={{ opacity: 1 }}
       />
       <path
         className="st21"

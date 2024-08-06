@@ -1,6 +1,6 @@
 import { useLanguageStore } from '../../stores/languageStore';
 import content from '../../content.json';
-import calculations from '../../assets/images/power/fifthSection/calculations.webp';
+import components from '../../assets/images/power/fifthSection/components.webp';
 import Image from 'next/image';
 import { Work_Sans } from 'next/font/google';
 import './fifthSection.css';
@@ -49,7 +49,7 @@ export default function FifthSection() {
       </ol>
       <aside className='aside-calculations'> 
         <div className='container-calculations'>
-          <Image src={calculations} alt='Calculations Dashboard' fill={true}/>
+          <Image src={components} alt='Calculations Dashboard' fill={true}/>
         </div>
       </aside>
     </section>
