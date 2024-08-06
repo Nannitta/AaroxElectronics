@@ -142,9 +142,7 @@
 	.cookies-section p a:hover {
 		color: var(--emerald-green);
 	}
-}
 
-@media (min-width: 1920px) {
 	.cookies-table2 table thead tr th:nth-child(3) {
 		min-width: 200px;
 		max-width: 200px;

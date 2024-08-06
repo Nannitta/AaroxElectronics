@@ -43,7 +43,7 @@
 }
 
 .container-pcb3d {
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 	position: sticky;
 	background-size: cover;
@@ -51,6 +51,11 @@
 	background-position: center;
 	top: 0;
 	transition: transform 0.5s ease-out, border-radius 0.5s ease-out;
+}
+
+.container-pcb3d canvas {
+	width: 100vw;
+	height: 100vh;
 }
 
 @media (min-width: 768px) {
