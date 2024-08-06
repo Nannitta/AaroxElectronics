@@ -9,14 +9,16 @@ export default function AsideSection({ icon, image, altIcon, altImg, title, text
   return(
     <>
     <aside className='aside-section'>
-      <Image 
-        src={icon}
-        width={60} 
-        height={60} 
-        alt={altIcon}
-        className='aside-icon'/>
-      <h2>{title}</h2>
-      <p>{text}</p>
+      <div className='container-text'>
+        <Image
+          src={icon}
+          width={60}
+          height={60}
+          alt={altIcon}
+          className='aside-icon'/>
+        <h2>{title}</h2>
+        <p>{text}</p>
+      </div>
       <div className='container-img-schematics'>
         <Image src={image} alt={altImg} fill={true}/>
       </div>

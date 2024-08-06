@@ -29,7 +29,7 @@ export default function SixthSection() {
       {
         screenWidth >= screenSizes.laptop
           && <div className='container-arrow'>
-              <Arrow width={"100%"} height={"100%"}/>
+              <Arrow width={740} height={"100%"}/>
             </div>
       }
       <AsideSection 
