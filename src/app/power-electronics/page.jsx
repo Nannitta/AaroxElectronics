@@ -78,7 +78,7 @@ export default function PowerElectronics() {
         scrollToSection(fifthSectionRef);
         break;
       case 'sixthSection-power':
-        scrollToSection(fifthSectionRef);
+        scrollToSection(sixthSectionRef);
         break;
       default:
         break;
