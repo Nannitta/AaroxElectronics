@@ -1,5 +1,5 @@
 .aside-section {
-	height: 100vh;
+	height: 60vh;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -48,7 +48,7 @@
 }
 
 .container-img-schematics img {
-	object-fit: cover;
+	object-fit: contain;
 }
 
 @media (min-width: 768px) {
@@ -64,6 +64,10 @@
 
 	.aside-section p {
 		font-size: 1.5rem;
+	}
+
+	.container-smallArrow {
+		margin: 0;
 	}
 
 	.container-img-schematics {
@@ -105,6 +109,10 @@
 		width: 576px;
 		height: 400px;
 		margin-top: 0;
+	}
+
+	.container-img-schematics img {
+		object-fit: cover;
 	}
 }
 

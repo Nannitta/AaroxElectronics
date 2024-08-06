@@ -22,13 +22,13 @@ export default function AsideSection({ icon, image, altIcon, altImg, title, text
       <div className='container-img-schematics'>
         <Image src={image} alt={altImg} fill={true}/>
       </div>
+    </aside>
     {
-      screenWidth <= screenSizes.tablet
+      screenWidth < screenSizes.laptop
         && <div className='container-smallArrow'>
             <SmallArrow width={"100%"} height={"100%"}/>
           </div>
     }
-    </aside>
     </>
   )
 }
