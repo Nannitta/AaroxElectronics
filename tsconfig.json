@@ -7,7 +7,7 @@
     ],
     "allowJs": true,
     "skipLibCheck": true,
-    "strict": false,
+    "strict": true,
     "noEmit": true,
     "incremental": true,
     "module": "esnext",
@@ -26,8 +26,9 @@
     "next-env.d.ts",
     ".next/types/**/*.ts",
     "**/*.ts",
-    "**/*.tsx"
-, "src/app/hooks/useWindowWidth.jsx"  ],
+    "**/*.tsx",
+    "**/*.js",
+    "src/app/hooks/useWindowWidth.jsx"  ],
   "exclude": [
     "node_modules"
   ]
