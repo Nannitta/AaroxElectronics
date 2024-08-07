@@ -104,6 +104,9 @@ export default function FourthSection() {
     img.src = currentFrame(frames);
     img.onload = () => {
       const canvas = canvasRef.current;
+
+      if(!canvas) return;
+      
       const context = canvas.getContext('2d');
       const dpr = window.devicePixelRatio || 1;
       canvas.width = canvas.clientWidth * dpr;
