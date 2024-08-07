@@ -24,7 +24,7 @@ export default function LoadingScreen({ setLoading }) {
     }, 1000);
 
     return () => clearTimeout(timer);
-  })
+  });
 
   if(firstSesion) {
     return(
@@ -33,7 +33,7 @@ export default function LoadingScreen({ setLoading }) {
           <Image src={logo} alt='Logo Aarox Electronics' fill={true}/>
         </div>
       </div>
-    )
+    );
   }
 
   return null;

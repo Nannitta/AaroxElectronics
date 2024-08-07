@@ -71,7 +71,7 @@ export default function handleColorOpacity() {
       if(scrollPosition >= 1500) {
         containerDefs.style.transform = 'translateX(45%)';
         containerSmallDashboard.style.transform = 'translateX(70%)';
-      } else  {
+      } else {
         containerDefs.style.transform = 'translateX(0)';
         containerSmallDashboard.style.transform = 'translateX(0)';
       }
@@ -86,7 +86,7 @@ export default function handleColorOpacity() {
     } else if(screenWidth < screenSizes.desktop) {
       if(scrollPosition >= 1500) {
         containerDefs.style.transform = 'translateX(235%)';
-        containerSmallDashboard.style.transform = 'translateX(70%)'
+        containerSmallDashboard.style.transform = 'translateX(70%)';
       } else {
         containerDefs.style.transform = 'translateX(0)';
         containerSmallDashboard.style.transform = 'translateX(0)';

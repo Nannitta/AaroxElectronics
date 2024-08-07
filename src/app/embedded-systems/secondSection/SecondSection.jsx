@@ -18,8 +18,8 @@ export default function SecondSection({ refSection }) {
 
   useEffect(() => {
     const start = () => {
-      const embeddedSectionSelected = document.querySelector(".embedded-secondSection");
-      const containerPyramidSelected = document.querySelector(".container-pyramid");
+      const embeddedSectionSelected = document.querySelector('.embedded-secondSection');
+      const containerPyramidSelected = document.querySelector('.container-pyramid');
       const h2Title = document.querySelector('.title-secondSection');
       setEmbeddedSection(embeddedSectionSelected);
       setContainerPyramid(containerPyramidSelected);
@@ -35,13 +35,13 @@ export default function SecondSection({ refSection }) {
       }
 
       preloadImages();
-      window.addEventListener("scroll", getFrameRates);
+      window.addEventListener('scroll', getFrameRates);
     };
 
     start();
 
     return () => {
-      window.removeEventListener("scroll", getFrameRates);
+      window.removeEventListener('scroll', getFrameRates);
     };
   });
 
@@ -52,7 +52,7 @@ export default function SecondSection({ refSection }) {
   function getFrameRates() {
     const rect = embeddedSection?.getBoundingClientRect();
     const positiveTop = rect?.top <= 0 ? Math.abs(rect?.top) : 0;
-    const height = rect.height - window.innerHeight
+    const height = rect.height - window.innerHeight;
     const finalPercentage = Math.floor((totalFrames * positiveTop) / height);
     let frames = finalPercentage <= totalFrames ? finalPercentage : totalFrames;
 

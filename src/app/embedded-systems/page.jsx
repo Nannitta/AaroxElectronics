@@ -67,24 +67,24 @@ export default function EmbeddedSystems() {
 
   const handleScrollSection = (section) => {
     switch (section) {
-      case 'concept':
-        scrollToSection(firstSectionRef);
-        break;
-      case 'architecture':
-        scrollToSection(secondSectionRef);
-        break;
-      case 'calculations':
-        scrollToSection(thirdSectionRef);
-        break;
-      case 'schematics':
-        scrollToSection(fourthSectionRef);
-        break;
-      case 'market-sw':
-        scrollToSection(fifthSectionRef);
-      default:
-        break;
+    case 'concept':
+      scrollToSection(firstSectionRef);
+      break;
+    case 'architecture':
+      scrollToSection(secondSectionRef);
+      break;
+    case 'calculations':
+      scrollToSection(thirdSectionRef);
+      break;
+    case 'schematics':
+      scrollToSection(fourthSectionRef);
+      break;
+    case 'market-sw':
+      scrollToSection(fifthSectionRef);
+    default:
+      break;
     }
-  }
+  };
 
   return(
     <main className='main-embedded'>
@@ -96,5 +96,5 @@ export default function EmbeddedSystems() {
       <div ref={fifthSectionRef} className='fifthSection-embedded'><FifthSection/></div>
       <ScrollButton nextSection={nextSection} handleScrollSection={handleScrollSection}/>
     </main>
-  )
+  );
 }

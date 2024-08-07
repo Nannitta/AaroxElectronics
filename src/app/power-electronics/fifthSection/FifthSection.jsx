@@ -53,5 +53,5 @@ export default function FifthSection() {
         </div>
       </aside>
     </section>
-  )
+  );
 }

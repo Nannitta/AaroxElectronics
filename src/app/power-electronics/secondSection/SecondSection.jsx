@@ -44,12 +44,12 @@ export default function SecondSection() {
         </h2>
         <h2 className={`title-power-secondSection ${workSans.className}`}>
           {content[language].PowerElectronics.secondSection.text2}
-        <span> {content[language].PowerElectronics.secondSection.sheet}</span>
+          <span> {content[language].PowerElectronics.secondSection.sheet}</span>
         </h2>
       </div>
       <div className={`container-largeDashboard ${isImageVisible ? 'visible' : ''}`}>
         <Image src={largeDashboard} alt='Small Dashboard' />
       </div>
     </section>
-  )
+  );
 }

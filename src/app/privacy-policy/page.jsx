@@ -57,5 +57,5 @@ export default function PrivacyPolicy() {
         <p>{privacy[language].rights.eigthParagraph}</p>
       </section>
     </main>
-  )
+  );
 }

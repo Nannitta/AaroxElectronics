@@ -80,55 +80,55 @@ export default function FifthSection() {
         </div>
       </section>
       <section className='container-sw'>
-      <div className='sw'>
-        <h2 className={workSans.className}>{content[language].EmbeddedSystems.fifthSection.sw.title}</h2>
-        <p>{content[language].EmbeddedSystems.fifthSection.sw.text}</p>
-      </div>
-      <div className='sw-logos'>
-        <div className='container-logo'>
-          <Image 
-            src={yocto} 
-            alt='NPX logo' 
-            height={screenWidth <= screenSizes.laptop ? 100 : 150} 
-            width={screenWidth <= screenSizes.laptop ? 100 : 150}/>
+        <div className='sw'>
+          <h2 className={workSans.className}>{content[language].EmbeddedSystems.fifthSection.sw.title}</h2>
+          <p>{content[language].EmbeddedSystems.fifthSection.sw.text}</p>
         </div>
-        <div className='container-logo'>
-          <Image 
-            src={qt} 
-            alt='NPX logo' 
-            height={screenWidth <= screenSizes.laptop ? 100 : 150} 
-            width={screenWidth <= screenSizes.laptop ? 100 : 150}/>
+        <div className='sw-logos'>
+          <div className='container-logo'>
+            <Image 
+              src={yocto} 
+              alt='NPX logo' 
+              height={screenWidth <= screenSizes.laptop ? 100 : 150} 
+              width={screenWidth <= screenSizes.laptop ? 100 : 150}/>
+          </div>
+          <div className='container-logo'>
+            <Image 
+              src={qt} 
+              alt='NPX logo' 
+              height={screenWidth <= screenSizes.laptop ? 100 : 150} 
+              width={screenWidth <= screenSizes.laptop ? 100 : 150}/>
+          </div>
+          <div className='container-logo'>
+            <Image 
+              src={grafana} 
+              alt='NPX logo' 
+              height={screenWidth <= screenSizes.laptop ? 100 : 150} 
+              width={screenWidth <= screenSizes.laptop ? 100 : 150}/>
+          </div>
+          <div className='container-logo'>
+            <Image 
+              src={buildRoot} 
+              alt='NPX logo' 
+              height={screenWidth <= screenSizes.laptop ? 100 : 150} 
+              width={screenWidth <= screenSizes.laptop ? 100 : 150}/>
+          </div>
+          <div className='container-logo'>
+            <Image 
+              src={docker} 
+              alt='NPX logo' 
+              height={screenWidth <= screenSizes.laptop ? 100 : 150} 
+              width={screenWidth <= screenSizes.laptop ? 100 : 150}/>
+          </div>
+          <div className='container-logo'>
+            <Image 
+              src={wayland} 
+              alt='NPX logo' 
+              height={screenWidth <= screenSizes.laptop ? 100 : 150} 
+              width={screenWidth <= screenSizes.laptop ? 100 : 150}/>
+          </div>
         </div>
-        <div className='container-logo'>
-          <Image 
-            src={grafana} 
-            alt='NPX logo' 
-            height={screenWidth <= screenSizes.laptop ? 100 : 150} 
-            width={screenWidth <= screenSizes.laptop ? 100 : 150}/>
-        </div>
-        <div className='container-logo'>
-          <Image 
-            src={buildRoot} 
-            alt='NPX logo' 
-            height={screenWidth <= screenSizes.laptop ? 100 : 150} 
-            width={screenWidth <= screenSizes.laptop ? 100 : 150}/>
-        </div>
-        <div className='container-logo'>
-          <Image 
-            src={docker} 
-            alt='NPX logo' 
-            height={screenWidth <= screenSizes.laptop ? 100 : 150} 
-            width={screenWidth <= screenSizes.laptop ? 100 : 150}/>
-        </div>
-        <div className='container-logo'>
-          <Image 
-            src={wayland} 
-            alt='NPX logo' 
-            height={screenWidth <= screenSizes.laptop ? 100 : 150} 
-            width={screenWidth <= screenSizes.laptop ? 100 : 150}/>
-        </div>
-      </div>
       </section>
     </>
-  )
+  );
 }

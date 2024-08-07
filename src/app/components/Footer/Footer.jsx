@@ -8,7 +8,7 @@ import logo from '../../assets/images/logo.svg';
 import Linkedin from './Linkedin';
 import Email from './Email';
 import './footer.css';
-import { usePathname } from 'next/navigation'
+import { usePathname } from 'next/navigation';
 
 export default function Footer() {
   const language = useLanguageStore((state) => state.language);
@@ -44,5 +44,5 @@ export default function Footer() {
         <div className="wave"></div>
       </div>
     </footer>
-  )
+  );
 }

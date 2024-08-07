@@ -41,5 +41,5 @@ export default function PcbTools() {
           alt='Blender logo'/>
       </div>
     </>
-  )
+  );
 }

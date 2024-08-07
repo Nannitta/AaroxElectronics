@@ -10,5 +10,5 @@ export default function ToggleLanguage() {
       <input className="toggle" id="toggle" type="checkbox" checked={language === 'EN'} onChange={toggleLanguage}/>
       <label className="toggle-btn" htmlFor="toggle"></label>
     </div>
-  )
+  );
 }

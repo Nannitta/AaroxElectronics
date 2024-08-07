@@ -13,7 +13,7 @@ export default function Home() {
 
   useEffect(() => {
     setNotFound(false);
-  })
+  });
 
   useEffect(() => {
     if (!loading) {
@@ -21,7 +21,7 @@ export default function Home() {
       body.style.overflow = 'auto';
     } else {
       const body = document.querySelector('body');
-      body.style.overflow = 'hidden'
+      body.style.overflow = 'hidden';
     }
   }, [loading]);
 

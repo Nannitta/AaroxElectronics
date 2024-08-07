@@ -26,5 +26,5 @@ export default function NotFound() {
         <Image src={arrowRight} width={screenWidth < screenSizes.tablet ? 16 : 24} height={screenWidth < screenSizes.tablet ? 16 : 24} alt='Right arrow' className='bounce-arrow'/>
       </Link>
     </main>
-  )
+  );
 }

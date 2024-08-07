@@ -28,26 +28,26 @@ export default function FirstSection() {
 
   return(
     <section className='embedded-firstSection'>
-        <h1 className={workSans.className}>
-          {content[language].EmbeddedSystems.firstSection.title.text1}
-          <span> {content[language].EmbeddedSystems.firstSection.title.concept} </span>
-          {content[language].EmbeddedSystems.firstSection.title.to}
-          <span> {content[language].EmbeddedSystems.firstSection.title.production}</span>
-        </h1>
-        <h2>
-          {content[language].EmbeddedSystems.firstSection.subtitle}
-          <span> {content[language].EmbeddedSystems.firstSection.support} </span>
-          {content[language].EmbeddedSystems.firstSection.subtitle2}
-        </h2>
-        <aside>
-          <p>{content[language].EmbeddedSystems.firstSection.application}</p>
-          <p>{content[language].EmbeddedSystems.firstSection.industry}</p>
-          <p>{content[language].EmbeddedSystems.firstSection.standards}</p>
-          <p>{content[language].EmbeddedSystems.firstSection.dimensions}</p>
-          <p>{content[language].EmbeddedSystems.firstSection.weight}</p>
-          <p>{content[language].EmbeddedSystems.firstSection.cost}</p>
-          <p>{content[language].EmbeddedSystems.firstSection.lifetime}</p>
-        </aside>
-       </section>
-  )
+      <h1 className={workSans.className}>
+        {content[language].EmbeddedSystems.firstSection.title.text1}
+        <span> {content[language].EmbeddedSystems.firstSection.title.concept} </span>
+        {content[language].EmbeddedSystems.firstSection.title.to}
+        <span> {content[language].EmbeddedSystems.firstSection.title.production}</span>
+      </h1>
+      <h2>
+        {content[language].EmbeddedSystems.firstSection.subtitle}
+        <span> {content[language].EmbeddedSystems.firstSection.support} </span>
+        {content[language].EmbeddedSystems.firstSection.subtitle2}
+      </h2>
+      <aside>
+        <p>{content[language].EmbeddedSystems.firstSection.application}</p>
+        <p>{content[language].EmbeddedSystems.firstSection.industry}</p>
+        <p>{content[language].EmbeddedSystems.firstSection.standards}</p>
+        <p>{content[language].EmbeddedSystems.firstSection.dimensions}</p>
+        <p>{content[language].EmbeddedSystems.firstSection.weight}</p>
+        <p>{content[language].EmbeddedSystems.firstSection.cost}</p>
+        <p>{content[language].EmbeddedSystems.firstSection.lifetime}</p>
+      </aside>
+    </section>
+  );
 }

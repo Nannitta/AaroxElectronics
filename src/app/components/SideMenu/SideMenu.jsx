@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import './sideMenu.css'
+import './sideMenu.css';
 import { useSideMenuStore } from '../../stores/sideMenuStore.jsx';
 import CheckWindowWidth from '../../hooks/useWindowWidth.jsx';
 import { useLanguageStore } from '../../stores/languageStore.jsx';

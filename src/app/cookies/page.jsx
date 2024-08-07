@@ -184,5 +184,5 @@ export default function Cookies() {
         <p>{cookies[language].cookies.eightParagraph}</p>
       </section>
     </main>
-  )
+  );
 }

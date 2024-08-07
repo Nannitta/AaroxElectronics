@@ -20,7 +20,7 @@ export default function ScrollButton({ nextSection, handleScrollSection }) {
           <Image src={arrowDown} alt='Scroll button' width={24} height={24}/>
         </div>
       </button>
-    )
+    );
   }
 
   return null;

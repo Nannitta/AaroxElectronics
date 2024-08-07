@@ -86,5 +86,5 @@ export default function ThirdSection() {
         </div>
       </article>
     </section>
-  )
+  );
 }

@@ -1,7 +1,7 @@
 import { useLanguageStore } from '../../stores/languageStore';
 import content from '../../content.json';
 import schematicsImg from '../../assets/images/power/sixthSection/schematics.webp';
-import last from '../../assets/images/power/sixthSection/last.png'
+import last from '../../assets/images/power/sixthSection/last.png';
 import schematics from '../../assets/images/power/sixthSection/icones/schematics.svg';
 import pcbImg from '../../assets/images/power/sixthSection/pcb.webp';
 import pcb from '../../assets/images/power/sixthSection/icones/pcb.svg';
@@ -30,7 +30,7 @@ export default function SixthSection() {
   useEffect(() => {
     const handleScrollSixthSection = () => {
       const sixthSection = document.querySelector('.power-sixthSection');
-      const arrow =  document.querySelector('.st01');
+      const arrow = document.querySelector('.st01');
            
       if(!sixthSection) return;
 
@@ -45,9 +45,9 @@ export default function SixthSection() {
 
       if(arrow) {
         if(strokeDashoffset >= 3200) {
-          arrow.style.opacity = 1
+          arrow.style.opacity = 1;
         } else {
-          arrow.style.opacity = 0
+          arrow.style.opacity = 0;
         }
       }
     };
@@ -113,5 +113,5 @@ export default function SixthSection() {
         </div>
       </div>
     </section>
-  )
+  );
 }

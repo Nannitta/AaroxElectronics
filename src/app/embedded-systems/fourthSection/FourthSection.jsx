@@ -51,8 +51,8 @@ export default function FourthSection() {
 
   useEffect(() => {
     const start = () => {
-      const embeddedSectionSelected = document.querySelector(".embedded-fourthSection");
-      const containerPcb3d = document.querySelector(".container-pcb3d");
+      const embeddedSectionSelected = document.querySelector('.embedded-fourthSection');
+      const containerPcb3d = document.querySelector('.container-pcb3d');
       setEmbeddedSection(embeddedSectionSelected);
       setContainerPcb3d(containerPcb3d);
       
@@ -66,13 +66,13 @@ export default function FourthSection() {
       }
 
       preloadImages();
-      window.addEventListener("scroll", getFrameRates);
+      window.addEventListener('scroll', getFrameRates);
     };
 
     start();
 
     return () => {
-      window.removeEventListener("scroll", getFrameRates);
+      window.removeEventListener('scroll', getFrameRates);
     };
   });
 
@@ -139,17 +139,17 @@ export default function FourthSection() {
       if(screenWidth >= screenSizes.tablet) {
         scaleValue = Math.max(minScale, 1 - (actualScrollPosition / maxScrollPosition) * 0.4);
       } else {
-        scaleValue = Math.max(0.9, 1 - (actualScrollPosition / maxScrollPosition) * 0.4)
+        scaleValue = Math.max(0.9, 1 - (actualScrollPosition / maxScrollPosition) * 0.4);
       }
       const translateYValue = ((1 - scaleValue) / 2) * 100;
 
       containerPcb3d.style.transform = `translateY(-${translateYValue}%) scale(${scaleValue})`;
       containerPcb3d.style.borderRadius = '2.5rem';
-      containerPcb3d.style.boxShadow = '0px 2px 100px 0px #1e5a38c5'
+      containerPcb3d.style.boxShadow = '0px 2px 100px 0px #1e5a38c5';
     } else {
       containerPcb3d.style.transform = 'initial';
       containerPcb3d.style.borderRadius = 'initial';
-      containerPcb3d.style.boxShadow = 'initial'
+      containerPcb3d.style.boxShadow = 'initial';
     }
 
     handleVisibility(frames, screenWidth, screenSizes);

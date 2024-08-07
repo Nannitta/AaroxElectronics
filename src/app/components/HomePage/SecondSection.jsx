@@ -44,5 +44,5 @@ export default function SecondSection() {
         </article>
       </div>
     </section>
-  )
+  );
 }

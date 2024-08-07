@@ -25,5 +25,5 @@ export default function NavBar({ activeSection, handleScrollSection }) {
         </li>
       </ul>
     </nav>
-  )
+  );
 }

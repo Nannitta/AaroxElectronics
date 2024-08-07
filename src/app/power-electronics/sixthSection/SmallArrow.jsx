@@ -26,7 +26,7 @@ export default function SmallArrow() {
       <path
         d="M8 88L0 75H16L8 88Z"
         fill="#2bac44"
-        style={{ opacity: "1" }}
+        style={{ opacity: '1' }}
       />
     </svg>
   );

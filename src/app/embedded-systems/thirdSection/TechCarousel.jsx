@@ -25,5 +25,5 @@ export default function TechCarousel() {
         <div className="slide"><Image src={matlab} alt='Matlab' fill={true} /></div>
       </div>
     </div>
-  )
+  );
 }

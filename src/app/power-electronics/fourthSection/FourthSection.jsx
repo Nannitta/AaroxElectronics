@@ -67,13 +67,13 @@ export default function FourthSection() {
         if(indexLineWidth >= 1) {
           line.forEach((item) => {
             item.style.width = `${widthLinePercenetage}%`;
-          })
+          });
         }
 
         if(indexLineWidth > 5) {
           line.forEach((item) => {
             item.style.width = '100%';
-          })
+          });
         }
       } else {
         const line = document.querySelector('.light-line');
@@ -110,7 +110,7 @@ export default function FourthSection() {
 
   return (
     <section className={`power-fourthSection ${workSans.className}`} ref={topRef}>
-      <div className={`container-img-fourthSection`}>
+      <div className='container-img-fourthSection'>
         {images.map((image, index) => (
           <div
             key={index}
@@ -120,7 +120,7 @@ export default function FourthSection() {
           </div>
         ))}
       </div>
-      <ol className={`list-fourthSection`}>
+      <ol className='list-fourthSection'>
         {
           screenWidth >= screenSizes.desktop &&
           <div className='container-line'>

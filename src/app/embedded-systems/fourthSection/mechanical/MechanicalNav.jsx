@@ -13,5 +13,5 @@ export default function MechanicalNav() {
       <li id='prototyping'>{content[language].EmbeddedSystems.fourthSection.navMechanical.prototyping}</li>
       <li id='production'>{content[language].EmbeddedSystems.fourthSection.navMechanical.production}</li>
     </ul>
-  )
+  );
 }

@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useEffect, useRef, useState } from 'react';
 import ScrollButton from './scrollButton/ScrollButton';
@@ -62,28 +62,28 @@ export default function PowerElectronics() {
 
   const handleScrollSection = (section) => {
     switch (section) {
-      case 'firstSection-power':
-        scrollToSection(firstSectionRef);
-        break;
-      case 'secondSection-power':
-        scrollToSection(secondSectionRef);
-        break;
-      case 'thirdSection-power':
-        scrollToSection(thirdSectionRef);
-        break;
-      case 'fourthSection-power':
-        scrollToSection(fourthSectionRef);
-        break;
-      case 'fifthSection-power':
-        scrollToSection(fifthSectionRef);
-        break;
-      case 'sixthSection-power':
-        scrollToSection(sixthSectionRef);
-        break;
-      default:
-        break;
+    case 'firstSection-power':
+      scrollToSection(firstSectionRef);
+      break;
+    case 'secondSection-power':
+      scrollToSection(secondSectionRef);
+      break;
+    case 'thirdSection-power':
+      scrollToSection(thirdSectionRef);
+      break;
+    case 'fourthSection-power':
+      scrollToSection(fourthSectionRef);
+      break;
+    case 'fifthSection-power':
+      scrollToSection(fifthSectionRef);
+      break;
+    case 'sixthSection-power':
+      scrollToSection(sixthSectionRef);
+      break;
+    default:
+      break;
     }
-  }
+  };
 
   return(
     <main>
@@ -95,5 +95,5 @@ export default function PowerElectronics() {
       <div ref={fifthSectionRef} className='fifthSection-power'><FifthSection/></div>
       <div ref={sixthSectionRef} className='sixthSection-power'><SixthSection/></div>
     </main>
-  )
+  );
 }

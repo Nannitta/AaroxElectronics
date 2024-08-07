@@ -37,9 +37,9 @@ export default function handleVisibility(frame, screenWidth, screenSizes) {
 
   if(pcbSchematics) {
     if (frame >= 27 && frame <= 56) {
-      pcbSchematics.style.opacity = 1
+      pcbSchematics.style.opacity = 1;
     } else {
-      pcbSchematics.style.opacity = 0
+      pcbSchematics.style.opacity = 0;
     }
 
     if(frame >= 27 && frame <= 31) {
@@ -75,9 +75,9 @@ export default function handleVisibility(frame, screenWidth, screenSizes) {
 
   if(pcbComponents) {
     if (frame >= 57 && frame <= 114) {
-      pcbComponents.style.opacity = 1
+      pcbComponents.style.opacity = 1;
     } else {
-      pcbComponents.style.opacity = 0
+      pcbComponents.style.opacity = 0;
     }
 
     if(frame >= 57 && frame <= 67) {
@@ -113,9 +113,9 @@ export default function handleVisibility(frame, screenWidth, screenSizes) {
 
   if(pcbMechanical) {
     if (frame >= 115 && frame <= 157) {
-      pcbMechanical.style.opacity = 1
+      pcbMechanical.style.opacity = 1;
     } else {
-      pcbMechanical.style.opacity = 0
+      pcbMechanical.style.opacity = 0;
     }
 
     if(frame >= 115 && frame <= 123) {

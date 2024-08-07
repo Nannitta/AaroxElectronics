@@ -3,4 +3,4 @@ export const screenSizes = {
   tablet: 768,
   laptop: 1366,
   desktop: 1920
-}
+};

@@ -13,5 +13,5 @@ export default function ComponentsNav() {
       <li id='ddr'>{content[language].EmbeddedSystems.fourthSection.navComponents.ddr}</li>
       <li id='antena'>{content[language].EmbeddedSystems.fourthSection.navComponents.antena}</li>
     </ul>
-  )
+  );
 }

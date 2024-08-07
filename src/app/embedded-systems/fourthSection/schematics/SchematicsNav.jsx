@@ -13,5 +13,5 @@ export default function SchematicsNav() {
       <li id='net-naming'>{content[language].EmbeddedSystems.fourthSection.navSchematics.netNaming}</li>
       <li id='detailing'>{content[language].EmbeddedSystems.fourthSection.navSchematics.detailing}</li>
     </ul>
-  )
+  );
 }

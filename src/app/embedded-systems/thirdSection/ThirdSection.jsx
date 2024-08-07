@@ -20,5 +20,5 @@ export default function ThirdSection() {
       </h3>
       <TechCarousel/>
     </section>
-  )
+  );
 }
