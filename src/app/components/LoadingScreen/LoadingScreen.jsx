@@ -24,7 +24,7 @@ export default function LoadingScreen({ setLoading }) {
     }, 1000);
 
     return () => clearTimeout(timer);
-  });
+  }, [toggleFirstSesion]);
 
   if(firstSesion) {
     return(

@@ -46,7 +46,7 @@ export default function SecondSection({ refSection }) {
   });
 
   function currentFrame(frame) {
-    return `./embedded/pyramid/pyramid${frame}.webp`;
+    return `../embedded/pyramid/pyramid${frame}.webp`;
   }
 
   function getFrameRates() {
