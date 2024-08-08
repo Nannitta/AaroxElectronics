@@ -2,33 +2,40 @@
 
 import logo from '../../assets/images/logo.svg';
 import Image from 'next/image';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useFirstSesionStore } from '../../stores/firstSesionStore';
 import './loading.css';
 
 export default function LoadingScreen({ setLoading }) {
   const firstSesion = useFirstSesionStore((state) => state.firstSesion);
   const toggleFirstSesion = useFirstSesionStore((state) => state.toggleFirstSesion);
+  const loadingScreenRef = useRef(null);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 1500);
+    if (firstSesion) {
+      const element = loadingScreenRef.current;
 
-    return () => clearTimeout(timer);
-  }, [setLoading]);
+      const timer1 = setTimeout(() => {
+        if (element) {
+          element.classList.add('slide-up');
+        }
+      }, 1000);
 
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      toggleFirstSesion(false);
-    }, 1000);
+      const timer2 = setTimeout(() => {
+        setLoading(false);
+        toggleFirstSesion(false);
+      }, 1500);
 
-    return () => clearTimeout(timer);
-  }, [toggleFirstSesion]);
+      return () => {
+        clearTimeout(timer1);
+        clearTimeout(timer2);
+      };
+    }
+  }, [firstSesion, setLoading, toggleFirstSesion]);
 
   if(firstSesion) {
     return(
-      <div className='loading-screen'>
+      <div className='loading-screen' ref={loadingScreenRef}>
         <div className='logo-loading'>
           <Image src={logo} alt='Logo Aarox Electronics' fill={true}/>
         </div>

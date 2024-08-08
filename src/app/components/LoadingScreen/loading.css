@@ -9,8 +9,6 @@
 	align-items: center;
 	justify-content: center;
 	z-index: 10;
-	animation: slideUp 0.5s forwards;
-	animation-delay: 1s;
 }
 
 .logo-loading {
@@ -22,6 +20,11 @@
 
 .logo-loading img {
 	object-fit: cover;
+}
+
+.loading-screen.slide-up {
+	animation-delay: 0.5s;
+	animation: slideUp 0.5s forwards;
 }
 
 @keyframes fadeIn {

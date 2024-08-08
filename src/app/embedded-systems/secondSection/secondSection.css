@@ -18,6 +18,7 @@
 	font-size: 2.5rem;
 	transition: opacity 0.5s;
 	max-width: 540px;
+	z-index: 2;
 }
 
 .embedded-secondSection .title-secondSection span {
@@ -26,23 +27,22 @@
 }
 
 .container-pyramid {
-	width: 100%;
-	height: 80vh;
+	width: 340px;
+	height: 340px;
 	position: sticky;
-	top: 180px;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-position: center;
+	top: 250px;
 	margin-top: 2rem;
 }
 
 @media (min-width: 768px) {
 	.embedded-secondSection .title-secondSection {
-		padding-top: 10rem;
+		padding-top: 12rem;
 	}
 
 	.container-pyramid {
-		width: 90%;
+		width: 620px;
+		height: 600px;
+		top: 250px;
 	}
 }
 
@@ -57,7 +57,14 @@
 	}
 
 	.container-pyramid {
-		width: 50%;
-		height: 70vh;
+		width: 590px;
+		height: 540px;
+		top: 150px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.container-pyramid {
+		top: 250px;
 	}
 }
