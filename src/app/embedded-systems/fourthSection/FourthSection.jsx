@@ -78,15 +78,15 @@ export default function FourthSection() {
 
   function currentFrame(frame) {
     if(screenWidth >= screenSizes.laptop) {
-      return `./embedded/pcb3d/pcb3d${frame}.webp`;
+      return `../embedded/pcb3d/pcb3d${frame}.webp`;
     }
 
     if(screenWidth >= screenSizes.tablet) {
-      return `./embedded/pcb3dTablet/pcb3d${frame}.webp`;
+      return `../embedded/pcb3dTablet/pcb3d${frame}.webp`;
     }
 
     if(screenWidth >= screenSizes.mobile) {
-      return `./embedded/pcb3dMobile/pcb3d${frame}.webp`;
+      return `../embedded/pcb3dMobile/pcb3d${frame}.webp`;
     }
   }
 
@@ -133,7 +133,9 @@ export default function FourthSection() {
       context.drawImage(img, drawX, drawY, drawWidth, drawHeight);
     };
 
-    if (frames >= shrinkStartFrame) {
+    const canvasElement = document.querySelector('#canvas-pcb3d');
+
+    if (frames >= shrinkStartFrame) {     
       const scrollPosition = positiveTop - ((shrinkStartFrame / totalFrames) * height);
       const maxScrollPosition = (height * (1 - (shrinkStartFrame / totalFrames))) * 0.6;
       const actualScrollPosition = Math.min(scrollPosition, maxScrollPosition);
@@ -146,10 +148,16 @@ export default function FourthSection() {
       }
       const translateYValue = ((1 - scaleValue) / 2) * 100;
 
+      if(canvasElement) {
+        canvasElement.style.borderRadius = '1.2rem';
+      }
       containerPcb3d.style.transform = `translateY(-${translateYValue}%) scale(${scaleValue})`;
-      containerPcb3d.style.borderRadius = '2.5rem';
+      containerPcb3d.style.borderRadius = '1.2rem';
       containerPcb3d.style.boxShadow = '0px 2px 100px 0px #1e5a38c5';
     } else {
+      if(canvasElement) {
+        canvasElement.style.borderRadius = 'initial';
+      }
       containerPcb3d.style.transform = 'initial';
       containerPcb3d.style.borderRadius = 'initial';
       containerPcb3d.style.boxShadow = 'initial';
