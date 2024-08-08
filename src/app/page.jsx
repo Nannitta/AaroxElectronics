@@ -22,7 +22,7 @@ export default function Home() {
     } else {
       const body = document.querySelector('body');
       body.style.overflow = 'hidden';
-    }
+    }    
   }, [loading]);
 
   return (
