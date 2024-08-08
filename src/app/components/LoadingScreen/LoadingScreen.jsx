@@ -18,6 +18,7 @@ export default function LoadingScreen({ setLoading }) {
       const timer1 = setTimeout(() => {
         if (element) {
           element.classList.add('slide-up');
+          setLoading(false);
         }
       }, 1000);
 
