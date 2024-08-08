@@ -42,7 +42,7 @@ export default function SecondSection({ refSection }) {
     return () => {
       window.removeEventListener('scroll', onScroll);
     };
-  }, [embeddedSection, title]);
+  });
 
   function currentFrame(frame) {
     return `../embedded/pyramid/pyramid${frame}.webp`;
@@ -79,8 +79,6 @@ export default function SecondSection({ refSection }) {
 
       const context = canvas.getContext('2d');
       const dpr = window.devicePixelRatio || 1;
-
-      // Configura el tamaño del canvas
       const canvasWidth = canvas.clientWidth;
       const canvasHeight = window.innerHeight * 0.8;
 
@@ -90,7 +88,6 @@ export default function SecondSection({ refSection }) {
       context.scale(dpr, dpr);
       context.clearRect(0, 0, canvas.width, canvas.height);
 
-      // Ajusta el tamaño y posición de la imagen para que llene el canvas
       context.drawImage(img, 0, 0, canvasWidth, canvasHeight);
     };
 
